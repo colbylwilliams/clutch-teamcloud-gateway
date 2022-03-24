@@ -4,6 +4,82 @@ import * as $protobuf from "protobufjs";
 /** Namespace colbylwilliams. */
 export namespace colbylwilliams {
 
+    /** Namespace config. */
+    namespace config {
+
+        /** Namespace service. */
+        namespace service {
+
+            /** Namespace teamcloud. */
+            namespace teamcloud {
+
+                /** Namespace v1. */
+                namespace v1 {
+
+                    /** Properties of a Config. */
+                    interface IConfig {
+
+                        /** Config host */
+                        host?: (string|null);
+
+                        /** Config tenantId */
+                        tenantId?: (string|null);
+
+                        /** Config clientId */
+                        clientId?: (string|null);
+                    }
+
+                    /** Represents a Config. */
+                    class Config implements IConfig {
+
+                        /**
+                         * Constructs a new Config.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: colbylwilliams.config.service.teamcloud.v1.IConfig);
+
+                        /** Config host. */
+                        public host: string;
+
+                        /** Config tenantId. */
+                        public tenantId: string;
+
+                        /** Config clientId. */
+                        public clientId: string;
+
+                        /**
+                         * Verifies a Config message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a Config message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns Config
+                         */
+                        public static fromObject(object: { [k: string]: any }): colbylwilliams.config.service.teamcloud.v1.Config;
+
+                        /**
+                         * Creates a plain object from a Config message. Also converts values to other types if specified.
+                         * @param message Config
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: colbylwilliams.config.service.teamcloud.v1.Config, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this Config to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+                }
+            }
+        }
+    }
+
     /** Namespace echo. */
     namespace echo {
 
@@ -137,6 +213,11165 @@ export namespace colbylwilliams {
 
                 /**
                  * Converts this SayHelloResponse to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+        }
+    }
+
+    /** Namespace teamcloud. */
+    namespace teamcloud {
+
+        /** Namespace v1. */
+        namespace v1 {
+
+            /** Properties of an AdapterInformationListDataResult. */
+            interface IAdapterInformationListDataResult {
+
+                /** AdapterInformationListDataResult code */
+                code?: (number|null);
+
+                /** AdapterInformationListDataResult status */
+                status?: (string|null);
+
+                /** AdapterInformationListDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IAdapterInformation[]|null);
+
+                /** AdapterInformationListDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents an AdapterInformationListDataResult. */
+            class AdapterInformationListDataResult implements IAdapterInformationListDataResult {
+
+                /**
+                 * Constructs a new AdapterInformationListDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IAdapterInformationListDataResult);
+
+                /** AdapterInformationListDataResult code. */
+                public code: number;
+
+                /** AdapterInformationListDataResult status. */
+                public status?: (string|null);
+
+                /** AdapterInformationListDataResult data. */
+                public data: colbylwilliams.teamcloud.v1.IAdapterInformation[];
+
+                /** AdapterInformationListDataResult location. */
+                public location?: (string|null);
+
+                /** AdapterInformationListDataResult _status. */
+                public _status?: "status";
+
+                /** AdapterInformationListDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies an AdapterInformationListDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an AdapterInformationListDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns AdapterInformationListDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.AdapterInformationListDataResult;
+
+                /**
+                 * Creates a plain object from an AdapterInformationListDataResult message. Also converts values to other types if specified.
+                 * @param message AdapterInformationListDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.AdapterInformationListDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this AdapterInformationListDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an AdapterInformation. */
+            interface IAdapterInformation {
+
+                /** AdapterInformation type */
+                type?: (colbylwilliams.teamcloud.v1.AdapterInformation.TypeEnum|null);
+
+                /** AdapterInformation displayName */
+                displayName?: (string|null);
+
+                /** AdapterInformation inputDataSchema */
+                inputDataSchema?: (string|null);
+
+                /** AdapterInformation inputDataForm */
+                inputDataForm?: (string|null);
+            }
+
+            /** Represents an AdapterInformation. */
+            class AdapterInformation implements IAdapterInformation {
+
+                /**
+                 * Constructs a new AdapterInformation.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IAdapterInformation);
+
+                /** AdapterInformation type. */
+                public type: colbylwilliams.teamcloud.v1.AdapterInformation.TypeEnum;
+
+                /** AdapterInformation displayName. */
+                public displayName?: (string|null);
+
+                /** AdapterInformation inputDataSchema. */
+                public inputDataSchema?: (string|null);
+
+                /** AdapterInformation inputDataForm. */
+                public inputDataForm?: (string|null);
+
+                /** AdapterInformation _displayName. */
+                public _displayName?: "displayName";
+
+                /** AdapterInformation _inputDataSchema. */
+                public _inputDataSchema?: "inputDataSchema";
+
+                /** AdapterInformation _inputDataForm. */
+                public _inputDataForm?: "inputDataForm";
+
+                /**
+                 * Verifies an AdapterInformation message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an AdapterInformation message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns AdapterInformation
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.AdapterInformation;
+
+                /**
+                 * Creates a plain object from an AdapterInformation message. Also converts values to other types if specified.
+                 * @param message AdapterInformation
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.AdapterInformation, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this AdapterInformation to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace AdapterInformation {
+
+                /** TypeEnum enum. */
+                enum TypeEnum {
+                    AZURERESOURCEMANAGER = 0,
+                    AZUREDEVOPS = 1,
+                    GITHUB = 2,
+                    KUBERNETES = 3
+                }
+            }
+
+            /** Represents an AdapterAPI */
+            class AdapterAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new AdapterAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls GetAdapters.
+                 * @param request Empty message or plain object
+                 * @param callback Node-style callback called with the error, if any, and AdapterInformationListDataResult
+                 */
+                public getAdapters(request: google.protobuf.IEmpty, callback: colbylwilliams.teamcloud.v1.AdapterAPI.GetAdaptersCallback): void;
+
+                /**
+                 * Calls GetAdapters.
+                 * @param request Empty message or plain object
+                 * @returns Promise
+                 */
+                public getAdapters(request: google.protobuf.IEmpty): Promise<colbylwilliams.teamcloud.v1.AdapterInformationListDataResult>;
+            }
+
+            namespace AdapterAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.AdapterAPI#getAdapters}.
+                 * @param error Error, if any
+                 * @param [response] AdapterInformationListDataResult
+                 */
+                type GetAdaptersCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.AdapterInformationListDataResult) => void;
+            }
+
+            /** Properties of an ErrorResult. */
+            interface IErrorResult {
+
+                /** ErrorResult code */
+                code?: (number|null);
+
+                /** ErrorResult status */
+                status?: (string|null);
+
+                /** ErrorResult errors */
+                errors?: (colbylwilliams.teamcloud.v1.IResultError[]|null);
+            }
+
+            /** Represents an ErrorResult. */
+            class ErrorResult implements IErrorResult {
+
+                /**
+                 * Constructs a new ErrorResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IErrorResult);
+
+                /** ErrorResult code. */
+                public code: number;
+
+                /** ErrorResult status. */
+                public status?: (string|null);
+
+                /** ErrorResult errors. */
+                public errors: colbylwilliams.teamcloud.v1.IResultError[];
+
+                /** ErrorResult _status. */
+                public _status?: "status";
+
+                /**
+                 * Verifies an ErrorResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an ErrorResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ErrorResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ErrorResult;
+
+                /**
+                 * Creates a plain object from an ErrorResult message. Also converts values to other types if specified.
+                 * @param message ErrorResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ErrorResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ErrorResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ResultError. */
+            interface IResultError {
+
+                /** ResultError code */
+                code?: (colbylwilliams.teamcloud.v1.ResultError.CodeEnum|null);
+
+                /** ResultError message */
+                message?: (string|null);
+
+                /** ResultError errors */
+                errors?: (colbylwilliams.teamcloud.v1.IValidationError[]|null);
+            }
+
+            /** Represents a ResultError. */
+            class ResultError implements IResultError {
+
+                /**
+                 * Constructs a new ResultError.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IResultError);
+
+                /** ResultError code. */
+                public code: colbylwilliams.teamcloud.v1.ResultError.CodeEnum;
+
+                /** ResultError message. */
+                public message?: (string|null);
+
+                /** ResultError errors. */
+                public errors: colbylwilliams.teamcloud.v1.IValidationError[];
+
+                /** ResultError _message. */
+                public _message?: "message";
+
+                /**
+                 * Verifies a ResultError message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ResultError message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ResultError
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ResultError;
+
+                /**
+                 * Creates a plain object from a ResultError message. Also converts values to other types if specified.
+                 * @param message ResultError
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ResultError, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ResultError to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace ResultError {
+
+                /** CodeEnum enum. */
+                enum CodeEnum {
+                    UNKNOWN = 0,
+                    FAILED = 1,
+                    CONFLICT = 2,
+                    NOTFOUND = 3,
+                    SERVERERROR = 4,
+                    VALIDATIONERROR = 5,
+                    UNAUTHORIZED = 6,
+                    FORBIDDEN = 7
+                }
+            }
+
+            /** Properties of a ValidationError. */
+            interface IValidationError {
+
+                /** ValidationError field */
+                field?: (string|null);
+
+                /** ValidationError message */
+                message?: (string|null);
+            }
+
+            /** Represents a ValidationError. */
+            class ValidationError implements IValidationError {
+
+                /**
+                 * Constructs a new ValidationError.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IValidationError);
+
+                /** ValidationError field. */
+                public field?: (string|null);
+
+                /** ValidationError message. */
+                public message?: (string|null);
+
+                /** ValidationError _field. */
+                public _field?: "field";
+
+                /** ValidationError _message. */
+                public _message?: "message";
+
+                /**
+                 * Verifies a ValidationError message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ValidationError message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ValidationError
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ValidationError;
+
+                /**
+                 * Creates a plain object from a ValidationError message. Also converts values to other types if specified.
+                 * @param message ValidationError
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ValidationError, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ValidationError to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an AlternateIdentity. */
+            interface IAlternateIdentity {
+
+                /** AlternateIdentity login */
+                login?: (string|null);
+            }
+
+            /** Represents an AlternateIdentity. */
+            class AlternateIdentity implements IAlternateIdentity {
+
+                /**
+                 * Constructs a new AlternateIdentity.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IAlternateIdentity);
+
+                /** AlternateIdentity login. */
+                public login?: (string|null);
+
+                /** AlternateIdentity _login. */
+                public _login?: "login";
+
+                /**
+                 * Verifies an AlternateIdentity message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an AlternateIdentity message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns AlternateIdentity
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.AlternateIdentity;
+
+                /**
+                 * Creates a plain object from an AlternateIdentity message. Also converts values to other types if specified.
+                 * @param message AlternateIdentity
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.AlternateIdentity, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this AlternateIdentity to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a CommandAuditEntityDataResult. */
+            interface ICommandAuditEntityDataResult {
+
+                /** CommandAuditEntityDataResult code */
+                code?: (number|null);
+
+                /** CommandAuditEntityDataResult status */
+                status?: (string|null);
+
+                /** CommandAuditEntityDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.ICommandAuditEntity|null);
+
+                /** CommandAuditEntityDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a CommandAuditEntityDataResult. */
+            class CommandAuditEntityDataResult implements ICommandAuditEntityDataResult {
+
+                /**
+                 * Constructs a new CommandAuditEntityDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICommandAuditEntityDataResult);
+
+                /** CommandAuditEntityDataResult code. */
+                public code: number;
+
+                /** CommandAuditEntityDataResult status. */
+                public status?: (string|null);
+
+                /** CommandAuditEntityDataResult data. */
+                public data?: (colbylwilliams.teamcloud.v1.ICommandAuditEntity|null);
+
+                /** CommandAuditEntityDataResult location. */
+                public location?: (string|null);
+
+                /** CommandAuditEntityDataResult _status. */
+                public _status?: "status";
+
+                /** CommandAuditEntityDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a CommandAuditEntityDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CommandAuditEntityDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CommandAuditEntityDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CommandAuditEntityDataResult;
+
+                /**
+                 * Creates a plain object from a CommandAuditEntityDataResult message. Also converts values to other types if specified.
+                 * @param message CommandAuditEntityDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CommandAuditEntityDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CommandAuditEntityDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a CommandAuditEntity. */
+            interface ICommandAuditEntity {
+
+                /** CommandAuditEntity partitionKey */
+                partitionKey?: (string|null);
+
+                /** CommandAuditEntity rowKey */
+                rowKey?: (string|null);
+
+                /** CommandAuditEntity timestamp */
+                timestamp?: (string|null);
+
+                /** CommandAuditEntity eTag */
+                eTag?: (string|null);
+
+                /** CommandAuditEntity commandId */
+                commandId?: (string|null);
+
+                /** CommandAuditEntity organizationId */
+                organizationId?: (string|null);
+
+                /** CommandAuditEntity commandJson */
+                commandJson?: (string|null);
+
+                /** CommandAuditEntity resultJson */
+                resultJson?: (string|null);
+
+                /** CommandAuditEntity projectId */
+                projectId?: (string|null);
+
+                /** CommandAuditEntity userId */
+                userId?: (string|null);
+
+                /** CommandAuditEntity parentId */
+                parentId?: (string|null);
+
+                /** CommandAuditEntity command */
+                command?: (string|null);
+
+                /** CommandAuditEntity componentTask */
+                componentTask?: (string|null);
+
+                /** CommandAuditEntity runtimeStatus */
+                runtimeStatus?: (colbylwilliams.teamcloud.v1.CommandAuditEntity.RuntimeStatusEnum|null);
+
+                /** CommandAuditEntity customStatus */
+                customStatus?: (string|null);
+
+                /** CommandAuditEntity errors */
+                errors?: (string|null);
+
+                /** CommandAuditEntity created */
+                created?: (string|null);
+
+                /** CommandAuditEntity updated */
+                updated?: (string|null);
+            }
+
+            /** Represents a CommandAuditEntity. */
+            class CommandAuditEntity implements ICommandAuditEntity {
+
+                /**
+                 * Constructs a new CommandAuditEntity.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICommandAuditEntity);
+
+                /** CommandAuditEntity partitionKey. */
+                public partitionKey?: (string|null);
+
+                /** CommandAuditEntity rowKey. */
+                public rowKey?: (string|null);
+
+                /** CommandAuditEntity timestamp. */
+                public timestamp?: (string|null);
+
+                /** CommandAuditEntity eTag. */
+                public eTag?: (string|null);
+
+                /** CommandAuditEntity commandId. */
+                public commandId?: (string|null);
+
+                /** CommandAuditEntity organizationId. */
+                public organizationId?: (string|null);
+
+                /** CommandAuditEntity commandJson. */
+                public commandJson?: (string|null);
+
+                /** CommandAuditEntity resultJson. */
+                public resultJson?: (string|null);
+
+                /** CommandAuditEntity projectId. */
+                public projectId?: (string|null);
+
+                /** CommandAuditEntity userId. */
+                public userId?: (string|null);
+
+                /** CommandAuditEntity parentId. */
+                public parentId?: (string|null);
+
+                /** CommandAuditEntity command. */
+                public command?: (string|null);
+
+                /** CommandAuditEntity componentTask. */
+                public componentTask?: (string|null);
+
+                /** CommandAuditEntity runtimeStatus. */
+                public runtimeStatus: colbylwilliams.teamcloud.v1.CommandAuditEntity.RuntimeStatusEnum;
+
+                /** CommandAuditEntity customStatus. */
+                public customStatus?: (string|null);
+
+                /** CommandAuditEntity errors. */
+                public errors?: (string|null);
+
+                /** CommandAuditEntity created. */
+                public created?: (string|null);
+
+                /** CommandAuditEntity updated. */
+                public updated?: (string|null);
+
+                /** CommandAuditEntity _partitionKey. */
+                public _partitionKey?: "partitionKey";
+
+                /** CommandAuditEntity _rowKey. */
+                public _rowKey?: "rowKey";
+
+                /** CommandAuditEntity _timestamp. */
+                public _timestamp?: "timestamp";
+
+                /** CommandAuditEntity _eTag. */
+                public _eTag?: "eTag";
+
+                /** CommandAuditEntity _commandId. */
+                public _commandId?: "commandId";
+
+                /** CommandAuditEntity _organizationId. */
+                public _organizationId?: "organizationId";
+
+                /** CommandAuditEntity _commandJson. */
+                public _commandJson?: "commandJson";
+
+                /** CommandAuditEntity _resultJson. */
+                public _resultJson?: "resultJson";
+
+                /** CommandAuditEntity _projectId. */
+                public _projectId?: "projectId";
+
+                /** CommandAuditEntity _userId. */
+                public _userId?: "userId";
+
+                /** CommandAuditEntity _parentId. */
+                public _parentId?: "parentId";
+
+                /** CommandAuditEntity _command. */
+                public _command?: "command";
+
+                /** CommandAuditEntity _componentTask. */
+                public _componentTask?: "componentTask";
+
+                /** CommandAuditEntity _customStatus. */
+                public _customStatus?: "customStatus";
+
+                /** CommandAuditEntity _errors. */
+                public _errors?: "errors";
+
+                /** CommandAuditEntity _created. */
+                public _created?: "created";
+
+                /** CommandAuditEntity _updated. */
+                public _updated?: "updated";
+
+                /**
+                 * Verifies a CommandAuditEntity message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CommandAuditEntity message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CommandAuditEntity
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CommandAuditEntity;
+
+                /**
+                 * Creates a plain object from a CommandAuditEntity message. Also converts values to other types if specified.
+                 * @param message CommandAuditEntity
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CommandAuditEntity, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CommandAuditEntity to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace CommandAuditEntity {
+
+                /** RuntimeStatusEnum enum. */
+                enum RuntimeStatusEnum {
+                    RUNNING = 0,
+                    COMPLETED = 1,
+                    CONTINUEDASNEW = 2,
+                    FAILED = 3,
+                    CANCELED = 4,
+                    TERMINATED = 5,
+                    PENDING = 6,
+                    UNKNOWN = 7
+                }
+            }
+
+            /** Properties of a CommandAuditEntityListDataResult. */
+            interface ICommandAuditEntityListDataResult {
+
+                /** CommandAuditEntityListDataResult code */
+                code?: (number|null);
+
+                /** CommandAuditEntityListDataResult status */
+                status?: (string|null);
+
+                /** CommandAuditEntityListDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.ICommandAuditEntity[]|null);
+
+                /** CommandAuditEntityListDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a CommandAuditEntityListDataResult. */
+            class CommandAuditEntityListDataResult implements ICommandAuditEntityListDataResult {
+
+                /**
+                 * Constructs a new CommandAuditEntityListDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICommandAuditEntityListDataResult);
+
+                /** CommandAuditEntityListDataResult code. */
+                public code: number;
+
+                /** CommandAuditEntityListDataResult status. */
+                public status?: (string|null);
+
+                /** CommandAuditEntityListDataResult data. */
+                public data: colbylwilliams.teamcloud.v1.ICommandAuditEntity[];
+
+                /** CommandAuditEntityListDataResult location. */
+                public location?: (string|null);
+
+                /** CommandAuditEntityListDataResult _status. */
+                public _status?: "status";
+
+                /** CommandAuditEntityListDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a CommandAuditEntityListDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CommandAuditEntityListDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CommandAuditEntityListDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CommandAuditEntityListDataResult;
+
+                /**
+                 * Creates a plain object from a CommandAuditEntityListDataResult message. Also converts values to other types if specified.
+                 * @param message CommandAuditEntityListDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CommandAuditEntityListDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CommandAuditEntityListDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ComponentDataResult. */
+            interface IComponentDataResult {
+
+                /** ComponentDataResult code */
+                code?: (number|null);
+
+                /** ComponentDataResult status */
+                status?: (string|null);
+
+                /** ComponentDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IComponent|null);
+
+                /** ComponentDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ComponentDataResult. */
+            class ComponentDataResult implements IComponentDataResult {
+
+                /**
+                 * Constructs a new ComponentDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentDataResult);
+
+                /** ComponentDataResult code. */
+                public code: number;
+
+                /** ComponentDataResult status. */
+                public status?: (string|null);
+
+                /** ComponentDataResult data. */
+                public data?: (colbylwilliams.teamcloud.v1.IComponent|null);
+
+                /** ComponentDataResult location. */
+                public location?: (string|null);
+
+                /** ComponentDataResult _status. */
+                public _status?: "status";
+
+                /** ComponentDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ComponentDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentDataResult;
+
+                /**
+                 * Creates a plain object from a ComponentDataResult message. Also converts values to other types if specified.
+                 * @param message ComponentDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a Component. */
+            interface IComponent {
+
+                /** Component href */
+                href?: (string|null);
+
+                /** Component organization */
+                organization?: (string|null);
+
+                /** Component organizationName */
+                organizationName?: (string|null);
+
+                /** Component templateId */
+                templateId?: (string|null);
+
+                /** Component projectId */
+                projectId?: (string|null);
+
+                /** Component projectName */
+                projectName?: (string|null);
+
+                /** Component creator */
+                creator?: (string|null);
+
+                /** Component displayName */
+                displayName?: (string|null);
+
+                /** Component description */
+                description?: (string|null);
+
+                /** Component inputJson */
+                inputJson?: (string|null);
+
+                /** Component valueJson */
+                valueJson?: (string|null);
+
+                /** Component type */
+                type?: (colbylwilliams.teamcloud.v1.Component.TypeEnum|null);
+
+                /** Component resourceId */
+                resourceId?: (string|null);
+
+                /** Component resourceUrl */
+                resourceUrl?: (string|null);
+
+                /** Component resourceState */
+                resourceState?: (colbylwilliams.teamcloud.v1.Component.ResourceStateEnum|null);
+
+                /** Component deploymentScopeId */
+                deploymentScopeId?: (string|null);
+
+                /** Component deploymentScopeName */
+                deploymentScopeName?: (string|null);
+
+                /** Component identityId */
+                identityId?: (string|null);
+
+                /** Component deleted */
+                deleted?: (string|null);
+
+                /** Component ttl */
+                ttl?: (number|null);
+
+                /** Component slug */
+                slug?: (string|null);
+
+                /** Component id */
+                id?: (string|null);
+            }
+
+            /** Represents a Component. */
+            class Component implements IComponent {
+
+                /**
+                 * Constructs a new Component.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponent);
+
+                /** Component href. */
+                public href?: (string|null);
+
+                /** Component organization. */
+                public organization: string;
+
+                /** Component organizationName. */
+                public organizationName: string;
+
+                /** Component templateId. */
+                public templateId: string;
+
+                /** Component projectId. */
+                public projectId: string;
+
+                /** Component projectName. */
+                public projectName: string;
+
+                /** Component creator. */
+                public creator: string;
+
+                /** Component displayName. */
+                public displayName?: (string|null);
+
+                /** Component description. */
+                public description?: (string|null);
+
+                /** Component inputJson. */
+                public inputJson?: (string|null);
+
+                /** Component valueJson. */
+                public valueJson?: (string|null);
+
+                /** Component type. */
+                public type: colbylwilliams.teamcloud.v1.Component.TypeEnum;
+
+                /** Component resourceId. */
+                public resourceId?: (string|null);
+
+                /** Component resourceUrl. */
+                public resourceUrl?: (string|null);
+
+                /** Component resourceState. */
+                public resourceState: colbylwilliams.teamcloud.v1.Component.ResourceStateEnum;
+
+                /** Component deploymentScopeId. */
+                public deploymentScopeId?: (string|null);
+
+                /** Component deploymentScopeName. */
+                public deploymentScopeName?: (string|null);
+
+                /** Component identityId. */
+                public identityId?: (string|null);
+
+                /** Component deleted. */
+                public deleted?: (string|null);
+
+                /** Component ttl. */
+                public ttl?: (number|null);
+
+                /** Component slug. */
+                public slug: string;
+
+                /** Component id. */
+                public id: string;
+
+                /** Component _href. */
+                public _href?: "href";
+
+                /** Component _displayName. */
+                public _displayName?: "displayName";
+
+                /** Component _description. */
+                public _description?: "description";
+
+                /** Component _inputJson. */
+                public _inputJson?: "inputJson";
+
+                /** Component _valueJson. */
+                public _valueJson?: "valueJson";
+
+                /** Component _resourceId. */
+                public _resourceId?: "resourceId";
+
+                /** Component _resourceUrl. */
+                public _resourceUrl?: "resourceUrl";
+
+                /** Component _deploymentScopeId. */
+                public _deploymentScopeId?: "deploymentScopeId";
+
+                /** Component _deploymentScopeName. */
+                public _deploymentScopeName?: "deploymentScopeName";
+
+                /** Component _identityId. */
+                public _identityId?: "identityId";
+
+                /** Component _deleted. */
+                public _deleted?: "deleted";
+
+                /** Component _ttl. */
+                public _ttl?: "ttl";
+
+                /**
+                 * Verifies a Component message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a Component message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns Component
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.Component;
+
+                /**
+                 * Creates a plain object from a Component message. Also converts values to other types if specified.
+                 * @param message Component
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.Component, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this Component to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace Component {
+
+                /** TypeEnum enum. */
+                enum TypeEnum {
+                    ENVIRONMENT = 0,
+                    REPOSITORY = 1,
+                    NAMESPACE = 2
+                }
+
+                /** ResourceStateEnum enum. */
+                enum ResourceStateEnum {
+                    PENDING = 0,
+                    INITIALIZING = 1,
+                    PROVISIONING = 2,
+                    PROVISIONED = 3,
+                    DEPROVISIONING = 4,
+                    DEPROVISIONED = 5,
+                    FAILED = 6
+                }
+            }
+
+            /** Properties of a ComponentDefinition. */
+            interface IComponentDefinition {
+
+                /** ComponentDefinition templateId */
+                templateId?: (string|null);
+
+                /** ComponentDefinition displayName */
+                displayName?: (string|null);
+
+                /** ComponentDefinition inputJson */
+                inputJson?: (string|null);
+
+                /** ComponentDefinition deploymentScopeId */
+                deploymentScopeId?: (string|null);
+            }
+
+            /** Represents a ComponentDefinition. */
+            class ComponentDefinition implements IComponentDefinition {
+
+                /**
+                 * Constructs a new ComponentDefinition.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentDefinition);
+
+                /** ComponentDefinition templateId. */
+                public templateId: string;
+
+                /** ComponentDefinition displayName. */
+                public displayName: string;
+
+                /** ComponentDefinition inputJson. */
+                public inputJson?: (string|null);
+
+                /** ComponentDefinition deploymentScopeId. */
+                public deploymentScopeId?: (string|null);
+
+                /** ComponentDefinition _inputJson. */
+                public _inputJson?: "inputJson";
+
+                /** ComponentDefinition _deploymentScopeId. */
+                public _deploymentScopeId?: "deploymentScopeId";
+
+                /**
+                 * Verifies a ComponentDefinition message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentDefinition message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentDefinition
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentDefinition;
+
+                /**
+                 * Creates a plain object from a ComponentDefinition message. Also converts values to other types if specified.
+                 * @param message ComponentDefinition
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentDefinition, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentDefinition to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ComponentListDataResult. */
+            interface IComponentListDataResult {
+
+                /** ComponentListDataResult code */
+                code?: (number|null);
+
+                /** ComponentListDataResult status */
+                status?: (string|null);
+
+                /** ComponentListDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IComponent[]|null);
+
+                /** ComponentListDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ComponentListDataResult. */
+            class ComponentListDataResult implements IComponentListDataResult {
+
+                /**
+                 * Constructs a new ComponentListDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentListDataResult);
+
+                /** ComponentListDataResult code. */
+                public code: number;
+
+                /** ComponentListDataResult status. */
+                public status?: (string|null);
+
+                /** ComponentListDataResult data. */
+                public data: colbylwilliams.teamcloud.v1.IComponent[];
+
+                /** ComponentListDataResult location. */
+                public location?: (string|null);
+
+                /** ComponentListDataResult _status. */
+                public _status?: "status";
+
+                /** ComponentListDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ComponentListDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentListDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentListDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentListDataResult;
+
+                /**
+                 * Creates a plain object from a ComponentListDataResult message. Also converts values to other types if specified.
+                 * @param message ComponentListDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentListDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentListDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a ComponentsAPI */
+            class ComponentsAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new ComponentsAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls CreateComponent.
+                 * @param request CreateComponentRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ComponentDataResult
+                 */
+                public createComponent(request: colbylwilliams.teamcloud.v1.ICreateComponentRequest, callback: colbylwilliams.teamcloud.v1.ComponentsAPI.CreateComponentCallback): void;
+
+                /**
+                 * Calls CreateComponent.
+                 * @param request CreateComponentRequest message or plain object
+                 * @returns Promise
+                 */
+                public createComponent(request: colbylwilliams.teamcloud.v1.ICreateComponentRequest): Promise<colbylwilliams.teamcloud.v1.ComponentDataResult>;
+
+                /**
+                 * Calls DeleteComponent.
+                 * @param request DeleteComponentRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StatusResult
+                 */
+                public deleteComponent(request: colbylwilliams.teamcloud.v1.IDeleteComponentRequest, callback: colbylwilliams.teamcloud.v1.ComponentsAPI.DeleteComponentCallback): void;
+
+                /**
+                 * Calls DeleteComponent.
+                 * @param request DeleteComponentRequest message or plain object
+                 * @returns Promise
+                 */
+                public deleteComponent(request: colbylwilliams.teamcloud.v1.IDeleteComponentRequest): Promise<colbylwilliams.teamcloud.v1.StatusResult>;
+
+                /**
+                 * Calls GetComponent.
+                 * @param request GetComponentRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ComponentDataResult
+                 */
+                public getComponent(request: colbylwilliams.teamcloud.v1.IGetComponentRequest, callback: colbylwilliams.teamcloud.v1.ComponentsAPI.GetComponentCallback): void;
+
+                /**
+                 * Calls GetComponent.
+                 * @param request GetComponentRequest message or plain object
+                 * @returns Promise
+                 */
+                public getComponent(request: colbylwilliams.teamcloud.v1.IGetComponentRequest): Promise<colbylwilliams.teamcloud.v1.ComponentDataResult>;
+
+                /**
+                 * Calls GetComponents.
+                 * @param request GetComponentsRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ComponentListDataResult
+                 */
+                public getComponents(request: colbylwilliams.teamcloud.v1.IGetComponentsRequest, callback: colbylwilliams.teamcloud.v1.ComponentsAPI.GetComponentsCallback): void;
+
+                /**
+                 * Calls GetComponents.
+                 * @param request GetComponentsRequest message or plain object
+                 * @returns Promise
+                 */
+                public getComponents(request: colbylwilliams.teamcloud.v1.IGetComponentsRequest): Promise<colbylwilliams.teamcloud.v1.ComponentListDataResult>;
+            }
+
+            namespace ComponentsAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ComponentsAPI#createComponent}.
+                 * @param error Error, if any
+                 * @param [response] ComponentDataResult
+                 */
+                type CreateComponentCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ComponentDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ComponentsAPI#deleteComponent}.
+                 * @param error Error, if any
+                 * @param [response] StatusResult
+                 */
+                type DeleteComponentCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StatusResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ComponentsAPI#getComponent}.
+                 * @param error Error, if any
+                 * @param [response] ComponentDataResult
+                 */
+                type GetComponentCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ComponentDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ComponentsAPI#getComponents}.
+                 * @param error Error, if any
+                 * @param [response] ComponentListDataResult
+                 */
+                type GetComponentsCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ComponentListDataResult) => void;
+            }
+
+            /** Properties of a CreateComponentRequest. */
+            interface ICreateComponentRequest {
+
+                /** CreateComponentRequest organizationId */
+                organizationId?: (string|null);
+
+                /** CreateComponentRequest projectId */
+                projectId?: (string|null);
+
+                /** CreateComponentRequest componentDefinition */
+                componentDefinition?: (colbylwilliams.teamcloud.v1.IComponentDefinition|null);
+            }
+
+            /** Represents a CreateComponentRequest. */
+            class CreateComponentRequest implements ICreateComponentRequest {
+
+                /**
+                 * Constructs a new CreateComponentRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICreateComponentRequest);
+
+                /** CreateComponentRequest organizationId. */
+                public organizationId: string;
+
+                /** CreateComponentRequest projectId. */
+                public projectId: string;
+
+                /** CreateComponentRequest componentDefinition. */
+                public componentDefinition?: (colbylwilliams.teamcloud.v1.IComponentDefinition|null);
+
+                /**
+                 * Verifies a CreateComponentRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CreateComponentRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CreateComponentRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CreateComponentRequest;
+
+                /**
+                 * Creates a plain object from a CreateComponentRequest message. Also converts values to other types if specified.
+                 * @param message CreateComponentRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CreateComponentRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CreateComponentRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a DeleteComponentRequest. */
+            interface IDeleteComponentRequest {
+
+                /** DeleteComponentRequest componentId */
+                componentId?: (string|null);
+
+                /** DeleteComponentRequest organizationId */
+                organizationId?: (string|null);
+
+                /** DeleteComponentRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a DeleteComponentRequest. */
+            class DeleteComponentRequest implements IDeleteComponentRequest {
+
+                /**
+                 * Constructs a new DeleteComponentRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IDeleteComponentRequest);
+
+                /** DeleteComponentRequest componentId. */
+                public componentId: string;
+
+                /** DeleteComponentRequest organizationId. */
+                public organizationId: string;
+
+                /** DeleteComponentRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a DeleteComponentRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a DeleteComponentRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns DeleteComponentRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.DeleteComponentRequest;
+
+                /**
+                 * Creates a plain object from a DeleteComponentRequest message. Also converts values to other types if specified.
+                 * @param message DeleteComponentRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.DeleteComponentRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this DeleteComponentRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetComponentRequest. */
+            interface IGetComponentRequest {
+
+                /** GetComponentRequest componentId */
+                componentId?: (string|null);
+
+                /** GetComponentRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetComponentRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a GetComponentRequest. */
+            class GetComponentRequest implements IGetComponentRequest {
+
+                /**
+                 * Constructs a new GetComponentRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetComponentRequest);
+
+                /** GetComponentRequest componentId. */
+                public componentId: string;
+
+                /** GetComponentRequest organizationId. */
+                public organizationId: string;
+
+                /** GetComponentRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a GetComponentRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetComponentRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetComponentRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetComponentRequest;
+
+                /**
+                 * Creates a plain object from a GetComponentRequest message. Also converts values to other types if specified.
+                 * @param message GetComponentRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetComponentRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetComponentRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetComponentsRequest. */
+            interface IGetComponentsRequest {
+
+                /** GetComponentsRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetComponentsRequest projectId */
+                projectId?: (string|null);
+
+                /** GetComponentsRequest deleted */
+                deleted?: (boolean|null);
+            }
+
+            /** Represents a GetComponentsRequest. */
+            class GetComponentsRequest implements IGetComponentsRequest {
+
+                /**
+                 * Constructs a new GetComponentsRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetComponentsRequest);
+
+                /** GetComponentsRequest organizationId. */
+                public organizationId: string;
+
+                /** GetComponentsRequest projectId. */
+                public projectId: string;
+
+                /** GetComponentsRequest deleted. */
+                public deleted: boolean;
+
+                /**
+                 * Verifies a GetComponentsRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetComponentsRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetComponentsRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetComponentsRequest;
+
+                /**
+                 * Creates a plain object from a GetComponentsRequest message. Also converts values to other types if specified.
+                 * @param message GetComponentsRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetComponentsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetComponentsRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a StatusResult. */
+            interface IStatusResult {
+
+                /** StatusResult code */
+                code?: (number|null);
+
+                /** StatusResult status */
+                status?: (string|null);
+
+                /** StatusResult state */
+                state?: (string|null);
+
+                /** StatusResult stateMessage */
+                stateMessage?: (string|null);
+
+                /** StatusResult location */
+                location?: (string|null);
+
+                /** StatusResult errors */
+                errors?: (colbylwilliams.teamcloud.v1.IResultError[]|null);
+
+                /** StatusResult UnderscoretrackingId */
+                UnderscoretrackingId?: (string|null);
+            }
+
+            /** Represents a StatusResult. */
+            class StatusResult implements IStatusResult {
+
+                /**
+                 * Constructs a new StatusResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IStatusResult);
+
+                /** StatusResult code. */
+                public code: number;
+
+                /** StatusResult status. */
+                public status?: (string|null);
+
+                /** StatusResult state. */
+                public state?: (string|null);
+
+                /** StatusResult stateMessage. */
+                public stateMessage?: (string|null);
+
+                /** StatusResult location. */
+                public location?: (string|null);
+
+                /** StatusResult errors. */
+                public errors: colbylwilliams.teamcloud.v1.IResultError[];
+
+                /** StatusResult UnderscoretrackingId. */
+                public UnderscoretrackingId?: (string|null);
+
+                /** StatusResult _status. */
+                public _status?: "status";
+
+                /** StatusResult _state. */
+                public _state?: "state";
+
+                /** StatusResult _stateMessage. */
+                public _stateMessage?: "stateMessage";
+
+                /** StatusResult _location. */
+                public _location?: "location";
+
+                /** StatusResult _UnderscoretrackingId. */
+                public _UnderscoretrackingId?: "UnderscoretrackingId";
+
+                /**
+                 * Verifies a StatusResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a StatusResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns StatusResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.StatusResult;
+
+                /**
+                 * Creates a plain object from a StatusResult message. Also converts values to other types if specified.
+                 * @param message StatusResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.StatusResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this StatusResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ComponentTaskDataResult. */
+            interface IComponentTaskDataResult {
+
+                /** ComponentTaskDataResult code */
+                code?: (number|null);
+
+                /** ComponentTaskDataResult status */
+                status?: (string|null);
+
+                /** ComponentTaskDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IComponentTask|null);
+
+                /** ComponentTaskDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ComponentTaskDataResult. */
+            class ComponentTaskDataResult implements IComponentTaskDataResult {
+
+                /**
+                 * Constructs a new ComponentTaskDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentTaskDataResult);
+
+                /** ComponentTaskDataResult code. */
+                public code: number;
+
+                /** ComponentTaskDataResult status. */
+                public status?: (string|null);
+
+                /** ComponentTaskDataResult data. */
+                public data?: (colbylwilliams.teamcloud.v1.IComponentTask|null);
+
+                /** ComponentTaskDataResult location. */
+                public location?: (string|null);
+
+                /** ComponentTaskDataResult _status. */
+                public _status?: "status";
+
+                /** ComponentTaskDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ComponentTaskDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentTaskDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentTaskDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentTaskDataResult;
+
+                /**
+                 * Creates a plain object from a ComponentTaskDataResult message. Also converts values to other types if specified.
+                 * @param message ComponentTaskDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentTaskDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentTaskDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ComponentTask. */
+            interface IComponentTask {
+
+                /** ComponentTask organization */
+                organization?: (string|null);
+
+                /** ComponentTask organizationName */
+                organizationName?: (string|null);
+
+                /** ComponentTask componentId */
+                componentId?: (string|null);
+
+                /** ComponentTask componentName */
+                componentName?: (string|null);
+
+                /** ComponentTask projectId */
+                projectId?: (string|null);
+
+                /** ComponentTask projectName */
+                projectName?: (string|null);
+
+                /** ComponentTask requestedBy */
+                requestedBy?: (string|null);
+
+                /** ComponentTask scheduleId */
+                scheduleId?: (string|null);
+
+                /** ComponentTask type */
+                type?: (colbylwilliams.teamcloud.v1.ComponentTask.TypeEnum|null);
+
+                /** ComponentTask typeName */
+                typeName?: (string|null);
+
+                /** ComponentTask created */
+                created?: (string|null);
+
+                /** ComponentTask started */
+                started?: (string|null);
+
+                /** ComponentTask finished */
+                finished?: (string|null);
+
+                /** ComponentTask inputJson */
+                inputJson?: (string|null);
+
+                /** ComponentTask output */
+                output?: (string|null);
+
+                /** ComponentTask resourceId */
+                resourceId?: (string|null);
+
+                /** ComponentTask taskState */
+                taskState?: (colbylwilliams.teamcloud.v1.ComponentTask.TaskStateEnum|null);
+
+                /** ComponentTask exitCode */
+                exitCode?: (number|null);
+
+                /** ComponentTask id */
+                id?: (string|null);
+            }
+
+            /** Represents a ComponentTask. */
+            class ComponentTask implements IComponentTask {
+
+                /**
+                 * Constructs a new ComponentTask.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentTask);
+
+                /** ComponentTask organization. */
+                public organization: string;
+
+                /** ComponentTask organizationName. */
+                public organizationName: string;
+
+                /** ComponentTask componentId. */
+                public componentId: string;
+
+                /** ComponentTask componentName. */
+                public componentName: string;
+
+                /** ComponentTask projectId. */
+                public projectId: string;
+
+                /** ComponentTask projectName. */
+                public projectName: string;
+
+                /** ComponentTask requestedBy. */
+                public requestedBy?: (string|null);
+
+                /** ComponentTask scheduleId. */
+                public scheduleId?: (string|null);
+
+                /** ComponentTask type. */
+                public type: colbylwilliams.teamcloud.v1.ComponentTask.TypeEnum;
+
+                /** ComponentTask typeName. */
+                public typeName?: (string|null);
+
+                /** ComponentTask created. */
+                public created: string;
+
+                /** ComponentTask started. */
+                public started?: (string|null);
+
+                /** ComponentTask finished. */
+                public finished?: (string|null);
+
+                /** ComponentTask inputJson. */
+                public inputJson?: (string|null);
+
+                /** ComponentTask output. */
+                public output?: (string|null);
+
+                /** ComponentTask resourceId. */
+                public resourceId?: (string|null);
+
+                /** ComponentTask taskState. */
+                public taskState: colbylwilliams.teamcloud.v1.ComponentTask.TaskStateEnum;
+
+                /** ComponentTask exitCode. */
+                public exitCode?: (number|null);
+
+                /** ComponentTask id. */
+                public id: string;
+
+                /** ComponentTask _requestedBy. */
+                public _requestedBy?: "requestedBy";
+
+                /** ComponentTask _scheduleId. */
+                public _scheduleId?: "scheduleId";
+
+                /** ComponentTask _typeName. */
+                public _typeName?: "typeName";
+
+                /** ComponentTask _started. */
+                public _started?: "started";
+
+                /** ComponentTask _finished. */
+                public _finished?: "finished";
+
+                /** ComponentTask _inputJson. */
+                public _inputJson?: "inputJson";
+
+                /** ComponentTask _output. */
+                public _output?: "output";
+
+                /** ComponentTask _resourceId. */
+                public _resourceId?: "resourceId";
+
+                /** ComponentTask _exitCode. */
+                public _exitCode?: "exitCode";
+
+                /**
+                 * Verifies a ComponentTask message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentTask message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentTask
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentTask;
+
+                /**
+                 * Creates a plain object from a ComponentTask message. Also converts values to other types if specified.
+                 * @param message ComponentTask
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentTask, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentTask to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace ComponentTask {
+
+                /** TypeEnum enum. */
+                enum TypeEnum {
+                    CUSTOM = 0,
+                    CREATE = 1,
+                    DELETE = 2
+                }
+
+                /** TaskStateEnum enum. */
+                enum TaskStateEnum {
+                    PENDING = 0,
+                    INITIALIZING = 1,
+                    PROCESSING = 2,
+                    SUCCEEDED = 3,
+                    CANCELED = 4,
+                    FAILED = 5
+                }
+            }
+
+            /** Properties of a ComponentTaskDefinition. */
+            interface IComponentTaskDefinition {
+
+                /** ComponentTaskDefinition taskId */
+                taskId?: (string|null);
+
+                /** ComponentTaskDefinition inputJson */
+                inputJson?: (string|null);
+            }
+
+            /** Represents a ComponentTaskDefinition. */
+            class ComponentTaskDefinition implements IComponentTaskDefinition {
+
+                /**
+                 * Constructs a new ComponentTaskDefinition.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentTaskDefinition);
+
+                /** ComponentTaskDefinition taskId. */
+                public taskId: string;
+
+                /** ComponentTaskDefinition inputJson. */
+                public inputJson?: (string|null);
+
+                /** ComponentTaskDefinition _inputJson. */
+                public _inputJson?: "inputJson";
+
+                /**
+                 * Verifies a ComponentTaskDefinition message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentTaskDefinition message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentTaskDefinition
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentTaskDefinition;
+
+                /**
+                 * Creates a plain object from a ComponentTaskDefinition message. Also converts values to other types if specified.
+                 * @param message ComponentTaskDefinition
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentTaskDefinition, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentTaskDefinition to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ComponentTaskListDataResult. */
+            interface IComponentTaskListDataResult {
+
+                /** ComponentTaskListDataResult code */
+                code?: (number|null);
+
+                /** ComponentTaskListDataResult status */
+                status?: (string|null);
+
+                /** ComponentTaskListDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IComponentTask[]|null);
+
+                /** ComponentTaskListDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ComponentTaskListDataResult. */
+            class ComponentTaskListDataResult implements IComponentTaskListDataResult {
+
+                /**
+                 * Constructs a new ComponentTaskListDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentTaskListDataResult);
+
+                /** ComponentTaskListDataResult code. */
+                public code: number;
+
+                /** ComponentTaskListDataResult status. */
+                public status?: (string|null);
+
+                /** ComponentTaskListDataResult data. */
+                public data: colbylwilliams.teamcloud.v1.IComponentTask[];
+
+                /** ComponentTaskListDataResult location. */
+                public location?: (string|null);
+
+                /** ComponentTaskListDataResult _status. */
+                public _status?: "status";
+
+                /** ComponentTaskListDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ComponentTaskListDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentTaskListDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentTaskListDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentTaskListDataResult;
+
+                /**
+                 * Creates a plain object from a ComponentTaskListDataResult message. Also converts values to other types if specified.
+                 * @param message ComponentTaskListDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentTaskListDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentTaskListDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ComponentTaskReference. */
+            interface IComponentTaskReference {
+
+                /** ComponentTaskReference componentId */
+                componentId?: (string|null);
+
+                /** ComponentTaskReference componentName */
+                componentName?: (string|null);
+
+                /** ComponentTaskReference componentTaskTemplateId */
+                componentTaskTemplateId?: (string|null);
+
+                /** ComponentTaskReference inputJson */
+                inputJson?: (string|null);
+            }
+
+            /** Represents a ComponentTaskReference. */
+            class ComponentTaskReference implements IComponentTaskReference {
+
+                /**
+                 * Constructs a new ComponentTaskReference.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentTaskReference);
+
+                /** ComponentTaskReference componentId. */
+                public componentId?: (string|null);
+
+                /** ComponentTaskReference componentName. */
+                public componentName?: (string|null);
+
+                /** ComponentTaskReference componentTaskTemplateId. */
+                public componentTaskTemplateId?: (string|null);
+
+                /** ComponentTaskReference inputJson. */
+                public inputJson?: (string|null);
+
+                /** ComponentTaskReference _componentId. */
+                public _componentId?: "componentId";
+
+                /** ComponentTaskReference _componentName. */
+                public _componentName?: "componentName";
+
+                /** ComponentTaskReference _componentTaskTemplateId. */
+                public _componentTaskTemplateId?: "componentTaskTemplateId";
+
+                /** ComponentTaskReference _inputJson. */
+                public _inputJson?: "inputJson";
+
+                /**
+                 * Verifies a ComponentTaskReference message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentTaskReference message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentTaskReference
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentTaskReference;
+
+                /**
+                 * Creates a plain object from a ComponentTaskReference message. Also converts values to other types if specified.
+                 * @param message ComponentTaskReference
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentTaskReference, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentTaskReference to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ComponentTaskRunner. */
+            interface IComponentTaskRunner {
+
+                /** ComponentTaskRunner id */
+                id?: (string|null);
+
+                /** ComponentTaskRunner webServer */
+                webServer?: (boolean|null);
+
+                /** ComponentTaskRunner with */
+                "with"?: ({ [k: string]: string }|null);
+            }
+
+            /** Represents a ComponentTaskRunner. */
+            class ComponentTaskRunner implements IComponentTaskRunner {
+
+                /**
+                 * Constructs a new ComponentTaskRunner.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentTaskRunner);
+
+                /** ComponentTaskRunner id. */
+                public id?: (string|null);
+
+                /** ComponentTaskRunner webServer. */
+                public webServer: boolean;
+
+                /** ComponentTaskRunner with. */
+                public with: { [k: string]: string };
+
+                /** ComponentTaskRunner _id. */
+                public _id?: "id";
+
+                /**
+                 * Verifies a ComponentTaskRunner message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentTaskRunner message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentTaskRunner
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentTaskRunner;
+
+                /**
+                 * Creates a plain object from a ComponentTaskRunner message. Also converts values to other types if specified.
+                 * @param message ComponentTaskRunner
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentTaskRunner, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentTaskRunner to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a ComponentTasksAPI */
+            class ComponentTasksAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new ComponentTasksAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls CancelComponentTask.
+                 * @param request CancelComponentTaskRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ComponentTaskDataResult
+                 */
+                public cancelComponentTask(request: colbylwilliams.teamcloud.v1.ICancelComponentTaskRequest, callback: colbylwilliams.teamcloud.v1.ComponentTasksAPI.CancelComponentTaskCallback): void;
+
+                /**
+                 * Calls CancelComponentTask.
+                 * @param request CancelComponentTaskRequest message or plain object
+                 * @returns Promise
+                 */
+                public cancelComponentTask(request: colbylwilliams.teamcloud.v1.ICancelComponentTaskRequest): Promise<colbylwilliams.teamcloud.v1.ComponentTaskDataResult>;
+
+                /**
+                 * Calls CreateComponentTask.
+                 * @param request CreateComponentTaskRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ComponentTaskDataResult
+                 */
+                public createComponentTask(request: colbylwilliams.teamcloud.v1.ICreateComponentTaskRequest, callback: colbylwilliams.teamcloud.v1.ComponentTasksAPI.CreateComponentTaskCallback): void;
+
+                /**
+                 * Calls CreateComponentTask.
+                 * @param request CreateComponentTaskRequest message or plain object
+                 * @returns Promise
+                 */
+                public createComponentTask(request: colbylwilliams.teamcloud.v1.ICreateComponentTaskRequest): Promise<colbylwilliams.teamcloud.v1.ComponentTaskDataResult>;
+
+                /**
+                 * Calls GetComponentTask.
+                 * @param request GetComponentTaskRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ComponentTaskDataResult
+                 */
+                public getComponentTask(request: colbylwilliams.teamcloud.v1.IGetComponentTaskRequest, callback: colbylwilliams.teamcloud.v1.ComponentTasksAPI.GetComponentTaskCallback): void;
+
+                /**
+                 * Calls GetComponentTask.
+                 * @param request GetComponentTaskRequest message or plain object
+                 * @returns Promise
+                 */
+                public getComponentTask(request: colbylwilliams.teamcloud.v1.IGetComponentTaskRequest): Promise<colbylwilliams.teamcloud.v1.ComponentTaskDataResult>;
+
+                /**
+                 * Calls GetComponentTasks.
+                 * @param request GetComponentTasksRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ComponentTaskListDataResult
+                 */
+                public getComponentTasks(request: colbylwilliams.teamcloud.v1.IGetComponentTasksRequest, callback: colbylwilliams.teamcloud.v1.ComponentTasksAPI.GetComponentTasksCallback): void;
+
+                /**
+                 * Calls GetComponentTasks.
+                 * @param request GetComponentTasksRequest message or plain object
+                 * @returns Promise
+                 */
+                public getComponentTasks(request: colbylwilliams.teamcloud.v1.IGetComponentTasksRequest): Promise<colbylwilliams.teamcloud.v1.ComponentTaskListDataResult>;
+
+                /**
+                 * Calls ReRunComponentTask.
+                 * @param request ReRunComponentTaskRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ComponentTaskDataResult
+                 */
+                public reRunComponentTask(request: colbylwilliams.teamcloud.v1.IReRunComponentTaskRequest, callback: colbylwilliams.teamcloud.v1.ComponentTasksAPI.ReRunComponentTaskCallback): void;
+
+                /**
+                 * Calls ReRunComponentTask.
+                 * @param request ReRunComponentTaskRequest message or plain object
+                 * @returns Promise
+                 */
+                public reRunComponentTask(request: colbylwilliams.teamcloud.v1.IReRunComponentTaskRequest): Promise<colbylwilliams.teamcloud.v1.ComponentTaskDataResult>;
+            }
+
+            namespace ComponentTasksAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ComponentTasksAPI#cancelComponentTask}.
+                 * @param error Error, if any
+                 * @param [response] ComponentTaskDataResult
+                 */
+                type CancelComponentTaskCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ComponentTaskDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ComponentTasksAPI#createComponentTask}.
+                 * @param error Error, if any
+                 * @param [response] ComponentTaskDataResult
+                 */
+                type CreateComponentTaskCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ComponentTaskDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ComponentTasksAPI#getComponentTask}.
+                 * @param error Error, if any
+                 * @param [response] ComponentTaskDataResult
+                 */
+                type GetComponentTaskCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ComponentTaskDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ComponentTasksAPI#getComponentTasks}.
+                 * @param error Error, if any
+                 * @param [response] ComponentTaskListDataResult
+                 */
+                type GetComponentTasksCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ComponentTaskListDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ComponentTasksAPI#reRunComponentTask}.
+                 * @param error Error, if any
+                 * @param [response] ComponentTaskDataResult
+                 */
+                type ReRunComponentTaskCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ComponentTaskDataResult) => void;
+            }
+
+            /** Properties of a CancelComponentTaskRequest. */
+            interface ICancelComponentTaskRequest {
+
+                /** CancelComponentTaskRequest organizationId */
+                organizationId?: (string|null);
+
+                /** CancelComponentTaskRequest projectId */
+                projectId?: (string|null);
+
+                /** CancelComponentTaskRequest componentId */
+                componentId?: (string|null);
+
+                /** CancelComponentTaskRequest taskId */
+                taskId?: (string|null);
+            }
+
+            /** Represents a CancelComponentTaskRequest. */
+            class CancelComponentTaskRequest implements ICancelComponentTaskRequest {
+
+                /**
+                 * Constructs a new CancelComponentTaskRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICancelComponentTaskRequest);
+
+                /** CancelComponentTaskRequest organizationId. */
+                public organizationId: string;
+
+                /** CancelComponentTaskRequest projectId. */
+                public projectId: string;
+
+                /** CancelComponentTaskRequest componentId. */
+                public componentId: string;
+
+                /** CancelComponentTaskRequest taskId. */
+                public taskId: string;
+
+                /**
+                 * Verifies a CancelComponentTaskRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CancelComponentTaskRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CancelComponentTaskRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CancelComponentTaskRequest;
+
+                /**
+                 * Creates a plain object from a CancelComponentTaskRequest message. Also converts values to other types if specified.
+                 * @param message CancelComponentTaskRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CancelComponentTaskRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CancelComponentTaskRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a CreateComponentTaskRequest. */
+            interface ICreateComponentTaskRequest {
+
+                /** CreateComponentTaskRequest organizationId */
+                organizationId?: (string|null);
+
+                /** CreateComponentTaskRequest projectId */
+                projectId?: (string|null);
+
+                /** CreateComponentTaskRequest componentId */
+                componentId?: (string|null);
+
+                /** CreateComponentTaskRequest componentTaskDefinition */
+                componentTaskDefinition?: (colbylwilliams.teamcloud.v1.IComponentTaskDefinition|null);
+            }
+
+            /** Represents a CreateComponentTaskRequest. */
+            class CreateComponentTaskRequest implements ICreateComponentTaskRequest {
+
+                /**
+                 * Constructs a new CreateComponentTaskRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICreateComponentTaskRequest);
+
+                /** CreateComponentTaskRequest organizationId. */
+                public organizationId: string;
+
+                /** CreateComponentTaskRequest projectId. */
+                public projectId: string;
+
+                /** CreateComponentTaskRequest componentId. */
+                public componentId: string;
+
+                /** CreateComponentTaskRequest componentTaskDefinition. */
+                public componentTaskDefinition?: (colbylwilliams.teamcloud.v1.IComponentTaskDefinition|null);
+
+                /**
+                 * Verifies a CreateComponentTaskRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CreateComponentTaskRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CreateComponentTaskRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CreateComponentTaskRequest;
+
+                /**
+                 * Creates a plain object from a CreateComponentTaskRequest message. Also converts values to other types if specified.
+                 * @param message CreateComponentTaskRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CreateComponentTaskRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CreateComponentTaskRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetComponentTaskRequest. */
+            interface IGetComponentTaskRequest {
+
+                /** GetComponentTaskRequest taskId */
+                taskId?: (string|null);
+
+                /** GetComponentTaskRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetComponentTaskRequest projectId */
+                projectId?: (string|null);
+
+                /** GetComponentTaskRequest componentId */
+                componentId?: (string|null);
+            }
+
+            /** Represents a GetComponentTaskRequest. */
+            class GetComponentTaskRequest implements IGetComponentTaskRequest {
+
+                /**
+                 * Constructs a new GetComponentTaskRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetComponentTaskRequest);
+
+                /** GetComponentTaskRequest taskId. */
+                public taskId: string;
+
+                /** GetComponentTaskRequest organizationId. */
+                public organizationId: string;
+
+                /** GetComponentTaskRequest projectId. */
+                public projectId: string;
+
+                /** GetComponentTaskRequest componentId. */
+                public componentId: string;
+
+                /**
+                 * Verifies a GetComponentTaskRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetComponentTaskRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetComponentTaskRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetComponentTaskRequest;
+
+                /**
+                 * Creates a plain object from a GetComponentTaskRequest message. Also converts values to other types if specified.
+                 * @param message GetComponentTaskRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetComponentTaskRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetComponentTaskRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetComponentTasksRequest. */
+            interface IGetComponentTasksRequest {
+
+                /** GetComponentTasksRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetComponentTasksRequest projectId */
+                projectId?: (string|null);
+
+                /** GetComponentTasksRequest componentId */
+                componentId?: (string|null);
+            }
+
+            /** Represents a GetComponentTasksRequest. */
+            class GetComponentTasksRequest implements IGetComponentTasksRequest {
+
+                /**
+                 * Constructs a new GetComponentTasksRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetComponentTasksRequest);
+
+                /** GetComponentTasksRequest organizationId. */
+                public organizationId: string;
+
+                /** GetComponentTasksRequest projectId. */
+                public projectId: string;
+
+                /** GetComponentTasksRequest componentId. */
+                public componentId: string;
+
+                /**
+                 * Verifies a GetComponentTasksRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetComponentTasksRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetComponentTasksRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetComponentTasksRequest;
+
+                /**
+                 * Creates a plain object from a GetComponentTasksRequest message. Also converts values to other types if specified.
+                 * @param message GetComponentTasksRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetComponentTasksRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetComponentTasksRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ReRunComponentTaskRequest. */
+            interface IReRunComponentTaskRequest {
+
+                /** ReRunComponentTaskRequest organizationId */
+                organizationId?: (string|null);
+
+                /** ReRunComponentTaskRequest projectId */
+                projectId?: (string|null);
+
+                /** ReRunComponentTaskRequest componentId */
+                componentId?: (string|null);
+
+                /** ReRunComponentTaskRequest taskId */
+                taskId?: (string|null);
+            }
+
+            /** Represents a ReRunComponentTaskRequest. */
+            class ReRunComponentTaskRequest implements IReRunComponentTaskRequest {
+
+                /**
+                 * Constructs a new ReRunComponentTaskRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IReRunComponentTaskRequest);
+
+                /** ReRunComponentTaskRequest organizationId. */
+                public organizationId: string;
+
+                /** ReRunComponentTaskRequest projectId. */
+                public projectId: string;
+
+                /** ReRunComponentTaskRequest componentId. */
+                public componentId: string;
+
+                /** ReRunComponentTaskRequest taskId. */
+                public taskId: string;
+
+                /**
+                 * Verifies a ReRunComponentTaskRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ReRunComponentTaskRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ReRunComponentTaskRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ReRunComponentTaskRequest;
+
+                /**
+                 * Creates a plain object from a ReRunComponentTaskRequest message. Also converts values to other types if specified.
+                 * @param message ReRunComponentTaskRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ReRunComponentTaskRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ReRunComponentTaskRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ComponentTaskTemplate. */
+            interface IComponentTaskTemplate {
+
+                /** ComponentTaskTemplate id */
+                id?: (string|null);
+
+                /** ComponentTaskTemplate displayName */
+                displayName?: (string|null);
+
+                /** ComponentTaskTemplate description */
+                description?: (string|null);
+
+                /** ComponentTaskTemplate inputJsonSchema */
+                inputJsonSchema?: (string|null);
+
+                /** ComponentTaskTemplate type */
+                type?: (colbylwilliams.teamcloud.v1.ComponentTaskTemplate.TypeEnum|null);
+
+                /** ComponentTaskTemplate typeName */
+                typeName?: (string|null);
+            }
+
+            /** Represents a ComponentTaskTemplate. */
+            class ComponentTaskTemplate implements IComponentTaskTemplate {
+
+                /**
+                 * Constructs a new ComponentTaskTemplate.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentTaskTemplate);
+
+                /** ComponentTaskTemplate id. */
+                public id?: (string|null);
+
+                /** ComponentTaskTemplate displayName. */
+                public displayName?: (string|null);
+
+                /** ComponentTaskTemplate description. */
+                public description?: (string|null);
+
+                /** ComponentTaskTemplate inputJsonSchema. */
+                public inputJsonSchema?: (string|null);
+
+                /** ComponentTaskTemplate type. */
+                public type: colbylwilliams.teamcloud.v1.ComponentTaskTemplate.TypeEnum;
+
+                /** ComponentTaskTemplate typeName. */
+                public typeName?: (string|null);
+
+                /** ComponentTaskTemplate _id. */
+                public _id?: "id";
+
+                /** ComponentTaskTemplate _displayName. */
+                public _displayName?: "displayName";
+
+                /** ComponentTaskTemplate _description. */
+                public _description?: "description";
+
+                /** ComponentTaskTemplate _inputJsonSchema. */
+                public _inputJsonSchema?: "inputJsonSchema";
+
+                /** ComponentTaskTemplate _typeName. */
+                public _typeName?: "typeName";
+
+                /**
+                 * Verifies a ComponentTaskTemplate message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentTaskTemplate message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentTaskTemplate
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentTaskTemplate;
+
+                /**
+                 * Creates a plain object from a ComponentTaskTemplate message. Also converts values to other types if specified.
+                 * @param message ComponentTaskTemplate
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentTaskTemplate, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentTaskTemplate to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace ComponentTaskTemplate {
+
+                /** TypeEnum enum. */
+                enum TypeEnum {
+                    CUSTOM = 0,
+                    CREATE = 1,
+                    DELETE = 2
+                }
+            }
+
+            /** Properties of a ComponentTemplateDataResult. */
+            interface IComponentTemplateDataResult {
+
+                /** ComponentTemplateDataResult code */
+                code?: (number|null);
+
+                /** ComponentTemplateDataResult status */
+                status?: (string|null);
+
+                /** ComponentTemplateDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IComponentTemplate|null);
+
+                /** ComponentTemplateDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ComponentTemplateDataResult. */
+            class ComponentTemplateDataResult implements IComponentTemplateDataResult {
+
+                /**
+                 * Constructs a new ComponentTemplateDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentTemplateDataResult);
+
+                /** ComponentTemplateDataResult code. */
+                public code: number;
+
+                /** ComponentTemplateDataResult status. */
+                public status?: (string|null);
+
+                /** ComponentTemplateDataResult data. */
+                public data?: (colbylwilliams.teamcloud.v1.IComponentTemplate|null);
+
+                /** ComponentTemplateDataResult location. */
+                public location?: (string|null);
+
+                /** ComponentTemplateDataResult _status. */
+                public _status?: "status";
+
+                /** ComponentTemplateDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ComponentTemplateDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentTemplateDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentTemplateDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentTemplateDataResult;
+
+                /**
+                 * Creates a plain object from a ComponentTemplateDataResult message. Also converts values to other types if specified.
+                 * @param message ComponentTemplateDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentTemplateDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentTemplateDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ComponentTemplate. */
+            interface IComponentTemplate {
+
+                /** ComponentTemplate organization */
+                organization?: (string|null);
+
+                /** ComponentTemplate organizationName */
+                organizationName?: (string|null);
+
+                /** ComponentTemplate parentId */
+                parentId?: (string|null);
+
+                /** ComponentTemplate displayName */
+                displayName?: (string|null);
+
+                /** ComponentTemplate description */
+                description?: (string|null);
+
+                /** ComponentTemplate repository */
+                repository?: (colbylwilliams.teamcloud.v1.IRepositoryReference|null);
+
+                /** ComponentTemplate permissions */
+                permissions?: (colbylwilliams.teamcloud.v1.IComponentTemplatePermissions|null);
+
+                /** ComponentTemplate inputJsonSchema */
+                inputJsonSchema?: (string|null);
+
+                /** ComponentTemplate tasks */
+                tasks?: (colbylwilliams.teamcloud.v1.IComponentTaskTemplate[]|null);
+
+                /** ComponentTemplate taskRunner */
+                taskRunner?: (colbylwilliams.teamcloud.v1.IComponentTaskRunner|null);
+
+                /** ComponentTemplate type */
+                type?: (colbylwilliams.teamcloud.v1.ComponentTemplate.TypeEnum|null);
+
+                /** ComponentTemplate folder */
+                folder?: (string|null);
+
+                /** ComponentTemplate configuration */
+                configuration?: (string|null);
+
+                /** ComponentTemplate id */
+                id?: (string|null);
+            }
+
+            /** Represents a ComponentTemplate. */
+            class ComponentTemplate implements IComponentTemplate {
+
+                /**
+                 * Constructs a new ComponentTemplate.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentTemplate);
+
+                /** ComponentTemplate organization. */
+                public organization: string;
+
+                /** ComponentTemplate organizationName. */
+                public organizationName: string;
+
+                /** ComponentTemplate parentId. */
+                public parentId: string;
+
+                /** ComponentTemplate displayName. */
+                public displayName?: (string|null);
+
+                /** ComponentTemplate description. */
+                public description?: (string|null);
+
+                /** ComponentTemplate repository. */
+                public repository?: (colbylwilliams.teamcloud.v1.IRepositoryReference|null);
+
+                /** ComponentTemplate permissions. */
+                public permissions?: (colbylwilliams.teamcloud.v1.IComponentTemplatePermissions|null);
+
+                /** ComponentTemplate inputJsonSchema. */
+                public inputJsonSchema?: (string|null);
+
+                /** ComponentTemplate tasks. */
+                public tasks: colbylwilliams.teamcloud.v1.IComponentTaskTemplate[];
+
+                /** ComponentTemplate taskRunner. */
+                public taskRunner?: (colbylwilliams.teamcloud.v1.IComponentTaskRunner|null);
+
+                /** ComponentTemplate type. */
+                public type: colbylwilliams.teamcloud.v1.ComponentTemplate.TypeEnum;
+
+                /** ComponentTemplate folder. */
+                public folder?: (string|null);
+
+                /** ComponentTemplate configuration. */
+                public configuration?: (string|null);
+
+                /** ComponentTemplate id. */
+                public id: string;
+
+                /** ComponentTemplate _displayName. */
+                public _displayName?: "displayName";
+
+                /** ComponentTemplate _description. */
+                public _description?: "description";
+
+                /** ComponentTemplate _inputJsonSchema. */
+                public _inputJsonSchema?: "inputJsonSchema";
+
+                /** ComponentTemplate _folder. */
+                public _folder?: "folder";
+
+                /** ComponentTemplate _configuration. */
+                public _configuration?: "configuration";
+
+                /**
+                 * Verifies a ComponentTemplate message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentTemplate message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentTemplate
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentTemplate;
+
+                /**
+                 * Creates a plain object from a ComponentTemplate message. Also converts values to other types if specified.
+                 * @param message ComponentTemplate
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentTemplate, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentTemplate to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace ComponentTemplate {
+
+                /** TypeEnum enum. */
+                enum TypeEnum {
+                    ENVIRONMENT = 0,
+                    REPOSITORY = 1,
+                    NAMESPACE = 2
+                }
+            }
+
+            /** Properties of a ComponentTemplatePermissions. */
+            interface IComponentTemplatePermissions {
+
+                /** ComponentTemplatePermissions None */
+                None?: (string[]|null);
+
+                /** ComponentTemplatePermissions Member */
+                Member?: (string[]|null);
+
+                /** ComponentTemplatePermissions Admin */
+                Admin?: (string[]|null);
+
+                /** ComponentTemplatePermissions Owner */
+                Owner?: (string[]|null);
+
+                /** ComponentTemplatePermissions Adapter */
+                Adapter?: (string[]|null);
+            }
+
+            /** Represents a ComponentTemplatePermissions. */
+            class ComponentTemplatePermissions implements IComponentTemplatePermissions {
+
+                /**
+                 * Constructs a new ComponentTemplatePermissions.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentTemplatePermissions);
+
+                /** ComponentTemplatePermissions None. */
+                public None: string[];
+
+                /** ComponentTemplatePermissions Member. */
+                public Member: string[];
+
+                /** ComponentTemplatePermissions Admin. */
+                public Admin: string[];
+
+                /** ComponentTemplatePermissions Owner. */
+                public Owner: string[];
+
+                /** ComponentTemplatePermissions Adapter. */
+                public Adapter: string[];
+
+                /**
+                 * Verifies a ComponentTemplatePermissions message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentTemplatePermissions message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentTemplatePermissions
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentTemplatePermissions;
+
+                /**
+                 * Creates a plain object from a ComponentTemplatePermissions message. Also converts values to other types if specified.
+                 * @param message ComponentTemplatePermissions
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentTemplatePermissions, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentTemplatePermissions to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a RepositoryReference. */
+            interface IRepositoryReference {
+
+                /** RepositoryReference url */
+                url?: (string|null);
+
+                /** RepositoryReference token */
+                token?: (string|null);
+
+                /** RepositoryReference version */
+                version?: (string|null);
+
+                /** RepositoryReference baselUrl */
+                baselUrl?: (string|null);
+
+                /** RepositoryReference mountUrl */
+                mountUrl?: (string|null);
+
+                /** RepositoryReference ref */
+                ref?: (string|null);
+
+                /** RepositoryReference provider */
+                provider?: (colbylwilliams.teamcloud.v1.RepositoryReference.ProviderEnum|null);
+
+                /** RepositoryReference type */
+                type?: (colbylwilliams.teamcloud.v1.RepositoryReference.TypeEnum|null);
+
+                /** RepositoryReference organization */
+                organization?: (string|null);
+
+                /** RepositoryReference repository */
+                repository?: (string|null);
+
+                /** RepositoryReference project */
+                project?: (string|null);
+            }
+
+            /** Represents a RepositoryReference. */
+            class RepositoryReference implements IRepositoryReference {
+
+                /**
+                 * Constructs a new RepositoryReference.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IRepositoryReference);
+
+                /** RepositoryReference url. */
+                public url: string;
+
+                /** RepositoryReference token. */
+                public token?: (string|null);
+
+                /** RepositoryReference version. */
+                public version?: (string|null);
+
+                /** RepositoryReference baselUrl. */
+                public baselUrl?: (string|null);
+
+                /** RepositoryReference mountUrl. */
+                public mountUrl?: (string|null);
+
+                /** RepositoryReference ref. */
+                public ref?: (string|null);
+
+                /** RepositoryReference provider. */
+                public provider: colbylwilliams.teamcloud.v1.RepositoryReference.ProviderEnum;
+
+                /** RepositoryReference type. */
+                public type: colbylwilliams.teamcloud.v1.RepositoryReference.TypeEnum;
+
+                /** RepositoryReference organization. */
+                public organization?: (string|null);
+
+                /** RepositoryReference repository. */
+                public repository?: (string|null);
+
+                /** RepositoryReference project. */
+                public project?: (string|null);
+
+                /** RepositoryReference _token. */
+                public _token?: "token";
+
+                /** RepositoryReference _version. */
+                public _version?: "version";
+
+                /** RepositoryReference _baselUrl. */
+                public _baselUrl?: "baselUrl";
+
+                /** RepositoryReference _mountUrl. */
+                public _mountUrl?: "mountUrl";
+
+                /** RepositoryReference _ref. */
+                public _ref?: "ref";
+
+                /** RepositoryReference _organization. */
+                public _organization?: "organization";
+
+                /** RepositoryReference _repository. */
+                public _repository?: "repository";
+
+                /** RepositoryReference _project. */
+                public _project?: "project";
+
+                /**
+                 * Verifies a RepositoryReference message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a RepositoryReference message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns RepositoryReference
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.RepositoryReference;
+
+                /**
+                 * Creates a plain object from a RepositoryReference message. Also converts values to other types if specified.
+                 * @param message RepositoryReference
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.RepositoryReference, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this RepositoryReference to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace RepositoryReference {
+
+                /** ProviderEnum enum. */
+                enum ProviderEnum {
+                    UNKNOWN = 0,
+                    GITHUB = 1,
+                    DEVOPS = 2
+                }
+
+                /** TypeEnum enum. */
+                enum TypeEnum {
+                    UNDEFINED = 0,
+                    TAG = 1,
+                    BRANCH = 2,
+                    HASH = 3
+                }
+            }
+
+            /** Properties of a ComponentTemplateListDataResult. */
+            interface IComponentTemplateListDataResult {
+
+                /** ComponentTemplateListDataResult code */
+                code?: (number|null);
+
+                /** ComponentTemplateListDataResult status */
+                status?: (string|null);
+
+                /** ComponentTemplateListDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IComponentTemplate[]|null);
+
+                /** ComponentTemplateListDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ComponentTemplateListDataResult. */
+            class ComponentTemplateListDataResult implements IComponentTemplateListDataResult {
+
+                /**
+                 * Constructs a new ComponentTemplateListDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IComponentTemplateListDataResult);
+
+                /** ComponentTemplateListDataResult code. */
+                public code: number;
+
+                /** ComponentTemplateListDataResult status. */
+                public status?: (string|null);
+
+                /** ComponentTemplateListDataResult data. */
+                public data: colbylwilliams.teamcloud.v1.IComponentTemplate[];
+
+                /** ComponentTemplateListDataResult location. */
+                public location?: (string|null);
+
+                /** ComponentTemplateListDataResult _status. */
+                public _status?: "status";
+
+                /** ComponentTemplateListDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ComponentTemplateListDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ComponentTemplateListDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ComponentTemplateListDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ComponentTemplateListDataResult;
+
+                /**
+                 * Creates a plain object from a ComponentTemplateListDataResult message. Also converts values to other types if specified.
+                 * @param message ComponentTemplateListDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ComponentTemplateListDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ComponentTemplateListDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a ComponentTemplatesAPI */
+            class ComponentTemplatesAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new ComponentTemplatesAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls GetComponentTemplate.
+                 * @param request GetComponentTemplateRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ComponentTemplateDataResult
+                 */
+                public getComponentTemplate(request: colbylwilliams.teamcloud.v1.IGetComponentTemplateRequest, callback: colbylwilliams.teamcloud.v1.ComponentTemplatesAPI.GetComponentTemplateCallback): void;
+
+                /**
+                 * Calls GetComponentTemplate.
+                 * @param request GetComponentTemplateRequest message or plain object
+                 * @returns Promise
+                 */
+                public getComponentTemplate(request: colbylwilliams.teamcloud.v1.IGetComponentTemplateRequest): Promise<colbylwilliams.teamcloud.v1.ComponentTemplateDataResult>;
+
+                /**
+                 * Calls GetComponentTemplates.
+                 * @param request GetComponentTemplatesRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ComponentTemplateListDataResult
+                 */
+                public getComponentTemplates(request: colbylwilliams.teamcloud.v1.IGetComponentTemplatesRequest, callback: colbylwilliams.teamcloud.v1.ComponentTemplatesAPI.GetComponentTemplatesCallback): void;
+
+                /**
+                 * Calls GetComponentTemplates.
+                 * @param request GetComponentTemplatesRequest message or plain object
+                 * @returns Promise
+                 */
+                public getComponentTemplates(request: colbylwilliams.teamcloud.v1.IGetComponentTemplatesRequest): Promise<colbylwilliams.teamcloud.v1.ComponentTemplateListDataResult>;
+            }
+
+            namespace ComponentTemplatesAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ComponentTemplatesAPI#getComponentTemplate}.
+                 * @param error Error, if any
+                 * @param [response] ComponentTemplateDataResult
+                 */
+                type GetComponentTemplateCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ComponentTemplateDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ComponentTemplatesAPI#getComponentTemplates}.
+                 * @param error Error, if any
+                 * @param [response] ComponentTemplateListDataResult
+                 */
+                type GetComponentTemplatesCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ComponentTemplateListDataResult) => void;
+            }
+
+            /** Properties of a GetComponentTemplateRequest. */
+            interface IGetComponentTemplateRequest {
+
+                /** GetComponentTemplateRequest id */
+                id?: (string|null);
+
+                /** GetComponentTemplateRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetComponentTemplateRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a GetComponentTemplateRequest. */
+            class GetComponentTemplateRequest implements IGetComponentTemplateRequest {
+
+                /**
+                 * Constructs a new GetComponentTemplateRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetComponentTemplateRequest);
+
+                /** GetComponentTemplateRequest id. */
+                public id: string;
+
+                /** GetComponentTemplateRequest organizationId. */
+                public organizationId: string;
+
+                /** GetComponentTemplateRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a GetComponentTemplateRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetComponentTemplateRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetComponentTemplateRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetComponentTemplateRequest;
+
+                /**
+                 * Creates a plain object from a GetComponentTemplateRequest message. Also converts values to other types if specified.
+                 * @param message GetComponentTemplateRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetComponentTemplateRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetComponentTemplateRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetComponentTemplatesRequest. */
+            interface IGetComponentTemplatesRequest {
+
+                /** GetComponentTemplatesRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetComponentTemplatesRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a GetComponentTemplatesRequest. */
+            class GetComponentTemplatesRequest implements IGetComponentTemplatesRequest {
+
+                /**
+                 * Constructs a new GetComponentTemplatesRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetComponentTemplatesRequest);
+
+                /** GetComponentTemplatesRequest organizationId. */
+                public organizationId: string;
+
+                /** GetComponentTemplatesRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a GetComponentTemplatesRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetComponentTemplatesRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetComponentTemplatesRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetComponentTemplatesRequest;
+
+                /**
+                 * Creates a plain object from a GetComponentTemplatesRequest message. Also converts values to other types if specified.
+                 * @param message GetComponentTemplatesRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetComponentTemplatesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetComponentTemplatesRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a DeploymentScopeDataResult. */
+            interface IDeploymentScopeDataResult {
+
+                /** DeploymentScopeDataResult code */
+                code?: (number|null);
+
+                /** DeploymentScopeDataResult status */
+                status?: (string|null);
+
+                /** DeploymentScopeDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IDeploymentScope|null);
+
+                /** DeploymentScopeDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a DeploymentScopeDataResult. */
+            class DeploymentScopeDataResult implements IDeploymentScopeDataResult {
+
+                /**
+                 * Constructs a new DeploymentScopeDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IDeploymentScopeDataResult);
+
+                /** DeploymentScopeDataResult code. */
+                public code: number;
+
+                /** DeploymentScopeDataResult status. */
+                public status?: (string|null);
+
+                /** DeploymentScopeDataResult data. */
+                public data?: (colbylwilliams.teamcloud.v1.IDeploymentScope|null);
+
+                /** DeploymentScopeDataResult location. */
+                public location?: (string|null);
+
+                /** DeploymentScopeDataResult _status. */
+                public _status?: "status";
+
+                /** DeploymentScopeDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a DeploymentScopeDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a DeploymentScopeDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns DeploymentScopeDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.DeploymentScopeDataResult;
+
+                /**
+                 * Creates a plain object from a DeploymentScopeDataResult message. Also converts values to other types if specified.
+                 * @param message DeploymentScopeDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.DeploymentScopeDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this DeploymentScopeDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a DeploymentScope. */
+            interface IDeploymentScope {
+
+                /** DeploymentScope organization */
+                organization?: (string|null);
+
+                /** DeploymentScope organizationName */
+                organizationName?: (string|null);
+
+                /** DeploymentScope displayName */
+                displayName?: (string|null);
+
+                /** DeploymentScope slug */
+                slug?: (string|null);
+
+                /** DeploymentScope isDefault */
+                isDefault?: (boolean|null);
+
+                /** DeploymentScope type */
+                type?: (colbylwilliams.teamcloud.v1.DeploymentScope.TypeEnum|null);
+
+                /** DeploymentScope inputDataSchema */
+                inputDataSchema?: (string|null);
+
+                /** DeploymentScope inputData */
+                inputData?: (string|null);
+
+                /** DeploymentScope managementGroupId */
+                managementGroupId?: (string|null);
+
+                /** DeploymentScope subscriptionIds */
+                subscriptionIds?: (string[]|null);
+
+                /** DeploymentScope authorizable */
+                authorizable?: (boolean|null);
+
+                /** DeploymentScope authorized */
+                authorized?: (boolean|null);
+
+                /** DeploymentScope authorizeUrl */
+                authorizeUrl?: (string|null);
+
+                /** DeploymentScope componentTypes */
+                componentTypes?: (colbylwilliams.teamcloud.v1.DeploymentScope.ComponentTypesEnum|null);
+
+                /** DeploymentScope id */
+                id?: (string|null);
+            }
+
+            /** Represents a DeploymentScope. */
+            class DeploymentScope implements IDeploymentScope {
+
+                /**
+                 * Constructs a new DeploymentScope.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IDeploymentScope);
+
+                /** DeploymentScope organization. */
+                public organization: string;
+
+                /** DeploymentScope organizationName. */
+                public organizationName: string;
+
+                /** DeploymentScope displayName. */
+                public displayName: string;
+
+                /** DeploymentScope slug. */
+                public slug: string;
+
+                /** DeploymentScope isDefault. */
+                public isDefault: boolean;
+
+                /** DeploymentScope type. */
+                public type: colbylwilliams.teamcloud.v1.DeploymentScope.TypeEnum;
+
+                /** DeploymentScope inputDataSchema. */
+                public inputDataSchema?: (string|null);
+
+                /** DeploymentScope inputData. */
+                public inputData?: (string|null);
+
+                /** DeploymentScope managementGroupId. */
+                public managementGroupId?: (string|null);
+
+                /** DeploymentScope subscriptionIds. */
+                public subscriptionIds: string[];
+
+                /** DeploymentScope authorizable. */
+                public authorizable: boolean;
+
+                /** DeploymentScope authorized. */
+                public authorized: boolean;
+
+                /** DeploymentScope authorizeUrl. */
+                public authorizeUrl?: (string|null);
+
+                /** DeploymentScope componentTypes. */
+                public componentTypes: colbylwilliams.teamcloud.v1.DeploymentScope.ComponentTypesEnum;
+
+                /** DeploymentScope id. */
+                public id: string;
+
+                /** DeploymentScope _inputDataSchema. */
+                public _inputDataSchema?: "inputDataSchema";
+
+                /** DeploymentScope _inputData. */
+                public _inputData?: "inputData";
+
+                /** DeploymentScope _managementGroupId. */
+                public _managementGroupId?: "managementGroupId";
+
+                /** DeploymentScope _authorizeUrl. */
+                public _authorizeUrl?: "authorizeUrl";
+
+                /**
+                 * Verifies a DeploymentScope message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a DeploymentScope message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns DeploymentScope
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.DeploymentScope;
+
+                /**
+                 * Creates a plain object from a DeploymentScope message. Also converts values to other types if specified.
+                 * @param message DeploymentScope
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.DeploymentScope, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this DeploymentScope to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace DeploymentScope {
+
+                /** TypeEnum enum. */
+                enum TypeEnum {
+                    AZURERESOURCEMANAGER = 0,
+                    AZUREDEVOPS = 1,
+                    GITHUB = 2,
+                    KUBERNETES = 3
+                }
+
+                /** ComponentTypesEnum enum. */
+                enum ComponentTypesEnum {
+                    ENVIRONMENT = 0,
+                    REPOSITORY = 1,
+                    NAMESPACE = 2
+                }
+            }
+
+            /** Properties of a DeploymentScopeDefinition. */
+            interface IDeploymentScopeDefinition {
+
+                /** DeploymentScopeDefinition displayName */
+                displayName?: (string|null);
+
+                /** DeploymentScopeDefinition type */
+                type?: (colbylwilliams.teamcloud.v1.DeploymentScopeDefinition.TypeEnum|null);
+
+                /** DeploymentScopeDefinition slug */
+                slug?: (string|null);
+
+                /** DeploymentScopeDefinition inputData */
+                inputData?: (string|null);
+
+                /** DeploymentScopeDefinition isDefault */
+                isDefault?: (boolean|null);
+            }
+
+            /** Represents a DeploymentScopeDefinition. */
+            class DeploymentScopeDefinition implements IDeploymentScopeDefinition {
+
+                /**
+                 * Constructs a new DeploymentScopeDefinition.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IDeploymentScopeDefinition);
+
+                /** DeploymentScopeDefinition displayName. */
+                public displayName: string;
+
+                /** DeploymentScopeDefinition type. */
+                public type: colbylwilliams.teamcloud.v1.DeploymentScopeDefinition.TypeEnum;
+
+                /** DeploymentScopeDefinition slug. */
+                public slug?: (string|null);
+
+                /** DeploymentScopeDefinition inputData. */
+                public inputData?: (string|null);
+
+                /** DeploymentScopeDefinition isDefault. */
+                public isDefault: boolean;
+
+                /** DeploymentScopeDefinition _slug. */
+                public _slug?: "slug";
+
+                /** DeploymentScopeDefinition _inputData. */
+                public _inputData?: "inputData";
+
+                /**
+                 * Verifies a DeploymentScopeDefinition message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a DeploymentScopeDefinition message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns DeploymentScopeDefinition
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.DeploymentScopeDefinition;
+
+                /**
+                 * Creates a plain object from a DeploymentScopeDefinition message. Also converts values to other types if specified.
+                 * @param message DeploymentScopeDefinition
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.DeploymentScopeDefinition, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this DeploymentScopeDefinition to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace DeploymentScopeDefinition {
+
+                /** TypeEnum enum. */
+                enum TypeEnum {
+                    AZURERESOURCEMANAGER = 0,
+                    AZUREDEVOPS = 1,
+                    GITHUB = 2,
+                    KUBERNETES = 3
+                }
+            }
+
+            /** Properties of a DeploymentScopeListDataResult. */
+            interface IDeploymentScopeListDataResult {
+
+                /** DeploymentScopeListDataResult code */
+                code?: (number|null);
+
+                /** DeploymentScopeListDataResult status */
+                status?: (string|null);
+
+                /** DeploymentScopeListDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IDeploymentScope[]|null);
+
+                /** DeploymentScopeListDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a DeploymentScopeListDataResult. */
+            class DeploymentScopeListDataResult implements IDeploymentScopeListDataResult {
+
+                /**
+                 * Constructs a new DeploymentScopeListDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IDeploymentScopeListDataResult);
+
+                /** DeploymentScopeListDataResult code. */
+                public code: number;
+
+                /** DeploymentScopeListDataResult status. */
+                public status?: (string|null);
+
+                /** DeploymentScopeListDataResult data. */
+                public data: colbylwilliams.teamcloud.v1.IDeploymentScope[];
+
+                /** DeploymentScopeListDataResult location. */
+                public location?: (string|null);
+
+                /** DeploymentScopeListDataResult _status. */
+                public _status?: "status";
+
+                /** DeploymentScopeListDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a DeploymentScopeListDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a DeploymentScopeListDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns DeploymentScopeListDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.DeploymentScopeListDataResult;
+
+                /**
+                 * Creates a plain object from a DeploymentScopeListDataResult message. Also converts values to other types if specified.
+                 * @param message DeploymentScopeListDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.DeploymentScopeListDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this DeploymentScopeListDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a DeploymentScopesAuthorizationAPI */
+            class DeploymentScopesAuthorizationAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new DeploymentScopesAuthorizationAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls InitializeAuthorization.
+                 * @param request InitializeAuthorizationRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and DeploymentScopeDataResult
+                 */
+                public initializeAuthorization(request: colbylwilliams.teamcloud.v1.IInitializeAuthorizationRequest, callback: colbylwilliams.teamcloud.v1.DeploymentScopesAuthorizationAPI.InitializeAuthorizationCallback): void;
+
+                /**
+                 * Calls InitializeAuthorization.
+                 * @param request InitializeAuthorizationRequest message or plain object
+                 * @returns Promise
+                 */
+                public initializeAuthorization(request: colbylwilliams.teamcloud.v1.IInitializeAuthorizationRequest): Promise<colbylwilliams.teamcloud.v1.DeploymentScopeDataResult>;
+            }
+
+            namespace DeploymentScopesAuthorizationAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.DeploymentScopesAuthorizationAPI#initializeAuthorization}.
+                 * @param error Error, if any
+                 * @param [response] DeploymentScopeDataResult
+                 */
+                type InitializeAuthorizationCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.DeploymentScopeDataResult) => void;
+            }
+
+            /** Properties of an InitializeAuthorizationRequest. */
+            interface IInitializeAuthorizationRequest {
+
+                /** InitializeAuthorizationRequest organizationId */
+                organizationId?: (string|null);
+
+                /** InitializeAuthorizationRequest deploymentScopeId */
+                deploymentScopeId?: (string|null);
+            }
+
+            /** Represents an InitializeAuthorizationRequest. */
+            class InitializeAuthorizationRequest implements IInitializeAuthorizationRequest {
+
+                /**
+                 * Constructs a new InitializeAuthorizationRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IInitializeAuthorizationRequest);
+
+                /** InitializeAuthorizationRequest organizationId. */
+                public organizationId: string;
+
+                /** InitializeAuthorizationRequest deploymentScopeId. */
+                public deploymentScopeId: string;
+
+                /**
+                 * Verifies an InitializeAuthorizationRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an InitializeAuthorizationRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns InitializeAuthorizationRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.InitializeAuthorizationRequest;
+
+                /**
+                 * Creates a plain object from an InitializeAuthorizationRequest message. Also converts values to other types if specified.
+                 * @param message InitializeAuthorizationRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.InitializeAuthorizationRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this InitializeAuthorizationRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a DeploymentScopesAPI */
+            class DeploymentScopesAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new DeploymentScopesAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls CreateDeploymentScope.
+                 * @param request CreateDeploymentScopeRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and DeploymentScopeDataResult
+                 */
+                public createDeploymentScope(request: colbylwilliams.teamcloud.v1.ICreateDeploymentScopeRequest, callback: colbylwilliams.teamcloud.v1.DeploymentScopesAPI.CreateDeploymentScopeCallback): void;
+
+                /**
+                 * Calls CreateDeploymentScope.
+                 * @param request CreateDeploymentScopeRequest message or plain object
+                 * @returns Promise
+                 */
+                public createDeploymentScope(request: colbylwilliams.teamcloud.v1.ICreateDeploymentScopeRequest): Promise<colbylwilliams.teamcloud.v1.DeploymentScopeDataResult>;
+
+                /**
+                 * Calls DeleteDeploymentScope.
+                 * @param request DeleteDeploymentScopeRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and DeploymentScopeDataResult
+                 */
+                public deleteDeploymentScope(request: colbylwilliams.teamcloud.v1.IDeleteDeploymentScopeRequest, callback: colbylwilliams.teamcloud.v1.DeploymentScopesAPI.DeleteDeploymentScopeCallback): void;
+
+                /**
+                 * Calls DeleteDeploymentScope.
+                 * @param request DeleteDeploymentScopeRequest message or plain object
+                 * @returns Promise
+                 */
+                public deleteDeploymentScope(request: colbylwilliams.teamcloud.v1.IDeleteDeploymentScopeRequest): Promise<colbylwilliams.teamcloud.v1.DeploymentScopeDataResult>;
+
+                /**
+                 * Calls GetDeploymentScope.
+                 * @param request GetDeploymentScopeRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and DeploymentScopeDataResult
+                 */
+                public getDeploymentScope(request: colbylwilliams.teamcloud.v1.IGetDeploymentScopeRequest, callback: colbylwilliams.teamcloud.v1.DeploymentScopesAPI.GetDeploymentScopeCallback): void;
+
+                /**
+                 * Calls GetDeploymentScope.
+                 * @param request GetDeploymentScopeRequest message or plain object
+                 * @returns Promise
+                 */
+                public getDeploymentScope(request: colbylwilliams.teamcloud.v1.IGetDeploymentScopeRequest): Promise<colbylwilliams.teamcloud.v1.DeploymentScopeDataResult>;
+
+                /**
+                 * Calls GetDeploymentScopes.
+                 * @param request GetDeploymentScopesRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and DeploymentScopeListDataResult
+                 */
+                public getDeploymentScopes(request: colbylwilliams.teamcloud.v1.IGetDeploymentScopesRequest, callback: colbylwilliams.teamcloud.v1.DeploymentScopesAPI.GetDeploymentScopesCallback): void;
+
+                /**
+                 * Calls GetDeploymentScopes.
+                 * @param request GetDeploymentScopesRequest message or plain object
+                 * @returns Promise
+                 */
+                public getDeploymentScopes(request: colbylwilliams.teamcloud.v1.IGetDeploymentScopesRequest): Promise<colbylwilliams.teamcloud.v1.DeploymentScopeListDataResult>;
+
+                /**
+                 * Calls UpdateDeploymentScope.
+                 * @param request UpdateDeploymentScopeRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and DeploymentScopeDataResult
+                 */
+                public updateDeploymentScope(request: colbylwilliams.teamcloud.v1.IUpdateDeploymentScopeRequest, callback: colbylwilliams.teamcloud.v1.DeploymentScopesAPI.UpdateDeploymentScopeCallback): void;
+
+                /**
+                 * Calls UpdateDeploymentScope.
+                 * @param request UpdateDeploymentScopeRequest message or plain object
+                 * @returns Promise
+                 */
+                public updateDeploymentScope(request: colbylwilliams.teamcloud.v1.IUpdateDeploymentScopeRequest): Promise<colbylwilliams.teamcloud.v1.DeploymentScopeDataResult>;
+            }
+
+            namespace DeploymentScopesAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.DeploymentScopesAPI#createDeploymentScope}.
+                 * @param error Error, if any
+                 * @param [response] DeploymentScopeDataResult
+                 */
+                type CreateDeploymentScopeCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.DeploymentScopeDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.DeploymentScopesAPI#deleteDeploymentScope}.
+                 * @param error Error, if any
+                 * @param [response] DeploymentScopeDataResult
+                 */
+                type DeleteDeploymentScopeCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.DeploymentScopeDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.DeploymentScopesAPI#getDeploymentScope}.
+                 * @param error Error, if any
+                 * @param [response] DeploymentScopeDataResult
+                 */
+                type GetDeploymentScopeCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.DeploymentScopeDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.DeploymentScopesAPI#getDeploymentScopes}.
+                 * @param error Error, if any
+                 * @param [response] DeploymentScopeListDataResult
+                 */
+                type GetDeploymentScopesCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.DeploymentScopeListDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.DeploymentScopesAPI#updateDeploymentScope}.
+                 * @param error Error, if any
+                 * @param [response] DeploymentScopeDataResult
+                 */
+                type UpdateDeploymentScopeCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.DeploymentScopeDataResult) => void;
+            }
+
+            /** Properties of a CreateDeploymentScopeRequest. */
+            interface ICreateDeploymentScopeRequest {
+
+                /** CreateDeploymentScopeRequest organizationId */
+                organizationId?: (string|null);
+
+                /** CreateDeploymentScopeRequest deploymentScopeDefinition */
+                deploymentScopeDefinition?: (colbylwilliams.teamcloud.v1.IDeploymentScopeDefinition|null);
+            }
+
+            /** Represents a CreateDeploymentScopeRequest. */
+            class CreateDeploymentScopeRequest implements ICreateDeploymentScopeRequest {
+
+                /**
+                 * Constructs a new CreateDeploymentScopeRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICreateDeploymentScopeRequest);
+
+                /** CreateDeploymentScopeRequest organizationId. */
+                public organizationId: string;
+
+                /** CreateDeploymentScopeRequest deploymentScopeDefinition. */
+                public deploymentScopeDefinition?: (colbylwilliams.teamcloud.v1.IDeploymentScopeDefinition|null);
+
+                /**
+                 * Verifies a CreateDeploymentScopeRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CreateDeploymentScopeRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CreateDeploymentScopeRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CreateDeploymentScopeRequest;
+
+                /**
+                 * Creates a plain object from a CreateDeploymentScopeRequest message. Also converts values to other types if specified.
+                 * @param message CreateDeploymentScopeRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CreateDeploymentScopeRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CreateDeploymentScopeRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a DeleteDeploymentScopeRequest. */
+            interface IDeleteDeploymentScopeRequest {
+
+                /** DeleteDeploymentScopeRequest organizationId */
+                organizationId?: (string|null);
+
+                /** DeleteDeploymentScopeRequest deploymentScopeId */
+                deploymentScopeId?: (string|null);
+            }
+
+            /** Represents a DeleteDeploymentScopeRequest. */
+            class DeleteDeploymentScopeRequest implements IDeleteDeploymentScopeRequest {
+
+                /**
+                 * Constructs a new DeleteDeploymentScopeRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IDeleteDeploymentScopeRequest);
+
+                /** DeleteDeploymentScopeRequest organizationId. */
+                public organizationId: string;
+
+                /** DeleteDeploymentScopeRequest deploymentScopeId. */
+                public deploymentScopeId: string;
+
+                /**
+                 * Verifies a DeleteDeploymentScopeRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a DeleteDeploymentScopeRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns DeleteDeploymentScopeRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.DeleteDeploymentScopeRequest;
+
+                /**
+                 * Creates a plain object from a DeleteDeploymentScopeRequest message. Also converts values to other types if specified.
+                 * @param message DeleteDeploymentScopeRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.DeleteDeploymentScopeRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this DeleteDeploymentScopeRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetDeploymentScopeRequest. */
+            interface IGetDeploymentScopeRequest {
+
+                /** GetDeploymentScopeRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetDeploymentScopeRequest deploymentScopeId */
+                deploymentScopeId?: (string|null);
+            }
+
+            /** Represents a GetDeploymentScopeRequest. */
+            class GetDeploymentScopeRequest implements IGetDeploymentScopeRequest {
+
+                /**
+                 * Constructs a new GetDeploymentScopeRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetDeploymentScopeRequest);
+
+                /** GetDeploymentScopeRequest organizationId. */
+                public organizationId: string;
+
+                /** GetDeploymentScopeRequest deploymentScopeId. */
+                public deploymentScopeId: string;
+
+                /**
+                 * Verifies a GetDeploymentScopeRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetDeploymentScopeRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetDeploymentScopeRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetDeploymentScopeRequest;
+
+                /**
+                 * Creates a plain object from a GetDeploymentScopeRequest message. Also converts values to other types if specified.
+                 * @param message GetDeploymentScopeRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetDeploymentScopeRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetDeploymentScopeRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetDeploymentScopesRequest. */
+            interface IGetDeploymentScopesRequest {
+
+                /** GetDeploymentScopesRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a GetDeploymentScopesRequest. */
+            class GetDeploymentScopesRequest implements IGetDeploymentScopesRequest {
+
+                /**
+                 * Constructs a new GetDeploymentScopesRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetDeploymentScopesRequest);
+
+                /** GetDeploymentScopesRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a GetDeploymentScopesRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetDeploymentScopesRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetDeploymentScopesRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetDeploymentScopesRequest;
+
+                /**
+                 * Creates a plain object from a GetDeploymentScopesRequest message. Also converts values to other types if specified.
+                 * @param message GetDeploymentScopesRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetDeploymentScopesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetDeploymentScopesRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an UpdateDeploymentScopeRequest. */
+            interface IUpdateDeploymentScopeRequest {
+
+                /** UpdateDeploymentScopeRequest organizationId */
+                organizationId?: (string|null);
+
+                /** UpdateDeploymentScopeRequest deploymentScopeId */
+                deploymentScopeId?: (string|null);
+
+                /** UpdateDeploymentScopeRequest deploymentScope */
+                deploymentScope?: (colbylwilliams.teamcloud.v1.IDeploymentScope|null);
+            }
+
+            /** Represents an UpdateDeploymentScopeRequest. */
+            class UpdateDeploymentScopeRequest implements IUpdateDeploymentScopeRequest {
+
+                /**
+                 * Constructs a new UpdateDeploymentScopeRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUpdateDeploymentScopeRequest);
+
+                /** UpdateDeploymentScopeRequest organizationId. */
+                public organizationId: string;
+
+                /** UpdateDeploymentScopeRequest deploymentScopeId. */
+                public deploymentScopeId: string;
+
+                /** UpdateDeploymentScopeRequest deploymentScope. */
+                public deploymentScope?: (colbylwilliams.teamcloud.v1.IDeploymentScope|null);
+
+                /**
+                 * Verifies an UpdateDeploymentScopeRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an UpdateDeploymentScopeRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns UpdateDeploymentScopeRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.UpdateDeploymentScopeRequest;
+
+                /**
+                 * Creates a plain object from an UpdateDeploymentScopeRequest message. Also converts values to other types if specified.
+                 * @param message UpdateDeploymentScopeRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.UpdateDeploymentScopeRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this UpdateDeploymentScopeRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a NegotiateAPI */
+            class NegotiateAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new NegotiateAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls NegotiateSignalR.
+                 * @param request NegotiateSignalRRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and Empty
+                 */
+                public negotiateSignalR(request: colbylwilliams.teamcloud.v1.INegotiateSignalRRequest, callback: colbylwilliams.teamcloud.v1.NegotiateAPI.NegotiateSignalRCallback): void;
+
+                /**
+                 * Calls NegotiateSignalR.
+                 * @param request NegotiateSignalRRequest message or plain object
+                 * @returns Promise
+                 */
+                public negotiateSignalR(request: colbylwilliams.teamcloud.v1.INegotiateSignalRRequest): Promise<google.protobuf.Empty>;
+            }
+
+            namespace NegotiateAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.NegotiateAPI#negotiateSignalR}.
+                 * @param error Error, if any
+                 * @param [response] Empty
+                 */
+                type NegotiateSignalRCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
+            }
+
+            /** Properties of a NegotiateSignalRRequest. */
+            interface INegotiateSignalRRequest {
+
+                /** NegotiateSignalRRequest organizationId */
+                organizationId?: (string|null);
+
+                /** NegotiateSignalRRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a NegotiateSignalRRequest. */
+            class NegotiateSignalRRequest implements INegotiateSignalRRequest {
+
+                /**
+                 * Constructs a new NegotiateSignalRRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.INegotiateSignalRRequest);
+
+                /** NegotiateSignalRRequest organizationId. */
+                public organizationId: string;
+
+                /** NegotiateSignalRRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a NegotiateSignalRRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a NegotiateSignalRRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns NegotiateSignalRRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.NegotiateSignalRRequest;
+
+                /**
+                 * Creates a plain object from a NegotiateSignalRRequest message. Also converts values to other types if specified.
+                 * @param message NegotiateSignalRRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.NegotiateSignalRRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this NegotiateSignalRRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents an OrganizationAuditAPI */
+            class OrganizationAuditAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new OrganizationAuditAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls GetAuditCommands.
+                 * @param request GetAuditCommandsRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StringListDataResult
+                 */
+                public getAuditCommands(request: colbylwilliams.teamcloud.v1.IGetAuditCommandsRequest, callback: colbylwilliams.teamcloud.v1.OrganizationAuditAPI.GetAuditCommandsCallback): void;
+
+                /**
+                 * Calls GetAuditCommands.
+                 * @param request GetAuditCommandsRequest message or plain object
+                 * @returns Promise
+                 */
+                public getAuditCommands(request: colbylwilliams.teamcloud.v1.IGetAuditCommandsRequest): Promise<colbylwilliams.teamcloud.v1.StringListDataResult>;
+
+                /**
+                 * Calls GetAuditEntries.
+                 * @param request GetAuditEntriesRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and CommandAuditEntityListDataResult
+                 */
+                public getAuditEntries(request: colbylwilliams.teamcloud.v1.IGetAuditEntriesRequest, callback: colbylwilliams.teamcloud.v1.OrganizationAuditAPI.GetAuditEntriesCallback): void;
+
+                /**
+                 * Calls GetAuditEntries.
+                 * @param request GetAuditEntriesRequest message or plain object
+                 * @returns Promise
+                 */
+                public getAuditEntries(request: colbylwilliams.teamcloud.v1.IGetAuditEntriesRequest): Promise<colbylwilliams.teamcloud.v1.CommandAuditEntityListDataResult>;
+
+                /**
+                 * Calls GetAuditEntry.
+                 * @param request GetAuditEntryRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and CommandAuditEntityDataResult
+                 */
+                public getAuditEntry(request: colbylwilliams.teamcloud.v1.IGetAuditEntryRequest, callback: colbylwilliams.teamcloud.v1.OrganizationAuditAPI.GetAuditEntryCallback): void;
+
+                /**
+                 * Calls GetAuditEntry.
+                 * @param request GetAuditEntryRequest message or plain object
+                 * @returns Promise
+                 */
+                public getAuditEntry(request: colbylwilliams.teamcloud.v1.IGetAuditEntryRequest): Promise<colbylwilliams.teamcloud.v1.CommandAuditEntityDataResult>;
+            }
+
+            namespace OrganizationAuditAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationAuditAPI#getAuditCommands}.
+                 * @param error Error, if any
+                 * @param [response] StringListDataResult
+                 */
+                type GetAuditCommandsCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StringListDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationAuditAPI#getAuditEntries}.
+                 * @param error Error, if any
+                 * @param [response] CommandAuditEntityListDataResult
+                 */
+                type GetAuditEntriesCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.CommandAuditEntityListDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationAuditAPI#getAuditEntry}.
+                 * @param error Error, if any
+                 * @param [response] CommandAuditEntityDataResult
+                 */
+                type GetAuditEntryCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.CommandAuditEntityDataResult) => void;
+            }
+
+            /** Properties of a GetAuditCommandsRequest. */
+            interface IGetAuditCommandsRequest {
+
+                /** GetAuditCommandsRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a GetAuditCommandsRequest. */
+            class GetAuditCommandsRequest implements IGetAuditCommandsRequest {
+
+                /**
+                 * Constructs a new GetAuditCommandsRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetAuditCommandsRequest);
+
+                /** GetAuditCommandsRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a GetAuditCommandsRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetAuditCommandsRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetAuditCommandsRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetAuditCommandsRequest;
+
+                /**
+                 * Creates a plain object from a GetAuditCommandsRequest message. Also converts values to other types if specified.
+                 * @param message GetAuditCommandsRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetAuditCommandsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetAuditCommandsRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetAuditEntriesRequest. */
+            interface IGetAuditEntriesRequest {
+
+                /** GetAuditEntriesRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetAuditEntriesRequest timeRange */
+                timeRange?: (string|null);
+
+                /** GetAuditEntriesRequest commands */
+                commands?: (string[]|null);
+            }
+
+            /** Represents a GetAuditEntriesRequest. */
+            class GetAuditEntriesRequest implements IGetAuditEntriesRequest {
+
+                /**
+                 * Constructs a new GetAuditEntriesRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetAuditEntriesRequest);
+
+                /** GetAuditEntriesRequest organizationId. */
+                public organizationId: string;
+
+                /** GetAuditEntriesRequest timeRange. */
+                public timeRange: string;
+
+                /** GetAuditEntriesRequest commands. */
+                public commands: string[];
+
+                /**
+                 * Verifies a GetAuditEntriesRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetAuditEntriesRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetAuditEntriesRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetAuditEntriesRequest;
+
+                /**
+                 * Creates a plain object from a GetAuditEntriesRequest message. Also converts values to other types if specified.
+                 * @param message GetAuditEntriesRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetAuditEntriesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetAuditEntriesRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetAuditEntryRequest. */
+            interface IGetAuditEntryRequest {
+
+                /** GetAuditEntryRequest commandId */
+                commandId?: (string|null);
+
+                /** GetAuditEntryRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetAuditEntryRequest expand */
+                expand?: (boolean|null);
+            }
+
+            /** Represents a GetAuditEntryRequest. */
+            class GetAuditEntryRequest implements IGetAuditEntryRequest {
+
+                /**
+                 * Constructs a new GetAuditEntryRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetAuditEntryRequest);
+
+                /** GetAuditEntryRequest commandId. */
+                public commandId: string;
+
+                /** GetAuditEntryRequest organizationId. */
+                public organizationId: string;
+
+                /** GetAuditEntryRequest expand. */
+                public expand: boolean;
+
+                /**
+                 * Verifies a GetAuditEntryRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetAuditEntryRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetAuditEntryRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetAuditEntryRequest;
+
+                /**
+                 * Creates a plain object from a GetAuditEntryRequest message. Also converts values to other types if specified.
+                 * @param message GetAuditEntryRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetAuditEntryRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetAuditEntryRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a StringListDataResult. */
+            interface IStringListDataResult {
+
+                /** StringListDataResult code */
+                code?: (number|null);
+
+                /** StringListDataResult status */
+                status?: (string|null);
+
+                /** StringListDataResult data */
+                data?: (string[]|null);
+
+                /** StringListDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a StringListDataResult. */
+            class StringListDataResult implements IStringListDataResult {
+
+                /**
+                 * Constructs a new StringListDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IStringListDataResult);
+
+                /** StringListDataResult code. */
+                public code: number;
+
+                /** StringListDataResult status. */
+                public status?: (string|null);
+
+                /** StringListDataResult data. */
+                public data: string[];
+
+                /** StringListDataResult location. */
+                public location?: (string|null);
+
+                /** StringListDataResult _status. */
+                public _status?: "status";
+
+                /** StringListDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a StringListDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a StringListDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns StringListDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.StringListDataResult;
+
+                /**
+                 * Creates a plain object from a StringListDataResult message. Also converts values to other types if specified.
+                 * @param message StringListDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.StringListDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this StringListDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an OrganizationDataResult. */
+            interface IOrganizationDataResult {
+
+                /** OrganizationDataResult code */
+                code?: (number|null);
+
+                /** OrganizationDataResult status */
+                status?: (string|null);
+
+                /** OrganizationDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IOrganization|null);
+
+                /** OrganizationDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents an OrganizationDataResult. */
+            class OrganizationDataResult implements IOrganizationDataResult {
+
+                /**
+                 * Constructs a new OrganizationDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IOrganizationDataResult);
+
+                /** OrganizationDataResult code. */
+                public code: number;
+
+                /** OrganizationDataResult status. */
+                public status?: (string|null);
+
+                /** OrganizationDataResult data. */
+                public data?: (colbylwilliams.teamcloud.v1.IOrganization|null);
+
+                /** OrganizationDataResult location. */
+                public location?: (string|null);
+
+                /** OrganizationDataResult _status. */
+                public _status?: "status";
+
+                /** OrganizationDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies an OrganizationDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an OrganizationDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns OrganizationDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.OrganizationDataResult;
+
+                /**
+                 * Creates a plain object from an OrganizationDataResult message. Also converts values to other types if specified.
+                 * @param message OrganizationDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.OrganizationDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this OrganizationDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an Organization. */
+            interface IOrganization {
+
+                /** Organization tenant */
+                tenant?: (string|null);
+
+                /** Organization slug */
+                slug?: (string|null);
+
+                /** Organization displayName */
+                displayName?: (string|null);
+
+                /** Organization subscriptionId */
+                subscriptionId?: (string|null);
+
+                /** Organization location */
+                location?: (string|null);
+
+                /** Organization tags */
+                tags?: ({ [k: string]: string }|null);
+
+                /** Organization resourceId */
+                resourceId?: (string|null);
+
+                /** Organization resourceState */
+                resourceState?: (colbylwilliams.teamcloud.v1.Organization.ResourceStateEnum|null);
+
+                /** Organization secretsVaultId */
+                secretsVaultId?: (string|null);
+
+                /** Organization galleryId */
+                galleryId?: (string|null);
+
+                /** Organization registryId */
+                registryId?: (string|null);
+
+                /** Organization storageId */
+                storageId?: (string|null);
+
+                /** Organization id */
+                id?: (string|null);
+            }
+
+            /** Represents an Organization. */
+            class Organization implements IOrganization {
+
+                /**
+                 * Constructs a new Organization.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IOrganization);
+
+                /** Organization tenant. */
+                public tenant: string;
+
+                /** Organization slug. */
+                public slug: string;
+
+                /** Organization displayName. */
+                public displayName: string;
+
+                /** Organization subscriptionId. */
+                public subscriptionId: string;
+
+                /** Organization location. */
+                public location: string;
+
+                /** Organization tags. */
+                public tags: { [k: string]: string };
+
+                /** Organization resourceId. */
+                public resourceId?: (string|null);
+
+                /** Organization resourceState. */
+                public resourceState: colbylwilliams.teamcloud.v1.Organization.ResourceStateEnum;
+
+                /** Organization secretsVaultId. */
+                public secretsVaultId?: (string|null);
+
+                /** Organization galleryId. */
+                public galleryId?: (string|null);
+
+                /** Organization registryId. */
+                public registryId?: (string|null);
+
+                /** Organization storageId. */
+                public storageId?: (string|null);
+
+                /** Organization id. */
+                public id: string;
+
+                /** Organization _resourceId. */
+                public _resourceId?: "resourceId";
+
+                /** Organization _secretsVaultId. */
+                public _secretsVaultId?: "secretsVaultId";
+
+                /** Organization _galleryId. */
+                public _galleryId?: "galleryId";
+
+                /** Organization _registryId. */
+                public _registryId?: "registryId";
+
+                /** Organization _storageId. */
+                public _storageId?: "storageId";
+
+                /**
+                 * Verifies an Organization message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an Organization message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns Organization
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.Organization;
+
+                /**
+                 * Creates a plain object from an Organization message. Also converts values to other types if specified.
+                 * @param message Organization
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.Organization, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this Organization to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace Organization {
+
+                /** ResourceStateEnum enum. */
+                enum ResourceStateEnum {
+                    PENDING = 0,
+                    INITIALIZING = 1,
+                    PROVISIONING = 2,
+                    PROVISIONED = 3,
+                    DEPROVISIONING = 4,
+                    DEPROVISIONED = 5,
+                    FAILED = 6
+                }
+            }
+
+            /** Properties of an OrganizationDefinition. */
+            interface IOrganizationDefinition {
+
+                /** OrganizationDefinition slug */
+                slug?: (string|null);
+
+                /** OrganizationDefinition displayName */
+                displayName?: (string|null);
+
+                /** OrganizationDefinition subscriptionId */
+                subscriptionId?: (string|null);
+
+                /** OrganizationDefinition location */
+                location?: (string|null);
+
+                /** OrganizationDefinition tags */
+                tags?: ({ [k: string]: string }|null);
+            }
+
+            /** Represents an OrganizationDefinition. */
+            class OrganizationDefinition implements IOrganizationDefinition {
+
+                /**
+                 * Constructs a new OrganizationDefinition.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IOrganizationDefinition);
+
+                /** OrganizationDefinition slug. */
+                public slug?: (string|null);
+
+                /** OrganizationDefinition displayName. */
+                public displayName: string;
+
+                /** OrganizationDefinition subscriptionId. */
+                public subscriptionId: string;
+
+                /** OrganizationDefinition location. */
+                public location: string;
+
+                /** OrganizationDefinition tags. */
+                public tags: { [k: string]: string };
+
+                /** OrganizationDefinition _slug. */
+                public _slug?: "slug";
+
+                /**
+                 * Verifies an OrganizationDefinition message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an OrganizationDefinition message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns OrganizationDefinition
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.OrganizationDefinition;
+
+                /**
+                 * Creates a plain object from an OrganizationDefinition message. Also converts values to other types if specified.
+                 * @param message OrganizationDefinition
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.OrganizationDefinition, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this OrganizationDefinition to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an OrganizationListDataResult. */
+            interface IOrganizationListDataResult {
+
+                /** OrganizationListDataResult code */
+                code?: (number|null);
+
+                /** OrganizationListDataResult status */
+                status?: (string|null);
+
+                /** OrganizationListDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IOrganization[]|null);
+
+                /** OrganizationListDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents an OrganizationListDataResult. */
+            class OrganizationListDataResult implements IOrganizationListDataResult {
+
+                /**
+                 * Constructs a new OrganizationListDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IOrganizationListDataResult);
+
+                /** OrganizationListDataResult code. */
+                public code: number;
+
+                /** OrganizationListDataResult status. */
+                public status?: (string|null);
+
+                /** OrganizationListDataResult data. */
+                public data: colbylwilliams.teamcloud.v1.IOrganization[];
+
+                /** OrganizationListDataResult location. */
+                public location?: (string|null);
+
+                /** OrganizationListDataResult _status. */
+                public _status?: "status";
+
+                /** OrganizationListDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies an OrganizationListDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an OrganizationListDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns OrganizationListDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.OrganizationListDataResult;
+
+                /**
+                 * Creates a plain object from an OrganizationListDataResult message. Also converts values to other types if specified.
+                 * @param message OrganizationListDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.OrganizationListDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this OrganizationListDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents an OrganizationsAPI */
+            class OrganizationsAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new OrganizationsAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls CreateOrganization.
+                 * @param request CreateOrganizationRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and OrganizationDataResult
+                 */
+                public createOrganization(request: colbylwilliams.teamcloud.v1.ICreateOrganizationRequest, callback: colbylwilliams.teamcloud.v1.OrganizationsAPI.CreateOrganizationCallback): void;
+
+                /**
+                 * Calls CreateOrganization.
+                 * @param request CreateOrganizationRequest message or plain object
+                 * @returns Promise
+                 */
+                public createOrganization(request: colbylwilliams.teamcloud.v1.ICreateOrganizationRequest): Promise<colbylwilliams.teamcloud.v1.OrganizationDataResult>;
+
+                /**
+                 * Calls DeleteOrganization.
+                 * @param request DeleteOrganizationRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StatusResult
+                 */
+                public deleteOrganization(request: colbylwilliams.teamcloud.v1.IDeleteOrganizationRequest, callback: colbylwilliams.teamcloud.v1.OrganizationsAPI.DeleteOrganizationCallback): void;
+
+                /**
+                 * Calls DeleteOrganization.
+                 * @param request DeleteOrganizationRequest message or plain object
+                 * @returns Promise
+                 */
+                public deleteOrganization(request: colbylwilliams.teamcloud.v1.IDeleteOrganizationRequest): Promise<colbylwilliams.teamcloud.v1.StatusResult>;
+
+                /**
+                 * Calls GetOrganization.
+                 * @param request GetOrganizationRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and OrganizationDataResult
+                 */
+                public getOrganization(request: colbylwilliams.teamcloud.v1.IGetOrganizationRequest, callback: colbylwilliams.teamcloud.v1.OrganizationsAPI.GetOrganizationCallback): void;
+
+                /**
+                 * Calls GetOrganization.
+                 * @param request GetOrganizationRequest message or plain object
+                 * @returns Promise
+                 */
+                public getOrganization(request: colbylwilliams.teamcloud.v1.IGetOrganizationRequest): Promise<colbylwilliams.teamcloud.v1.OrganizationDataResult>;
+
+                /**
+                 * Calls GetOrganizations.
+                 * @param request Empty message or plain object
+                 * @param callback Node-style callback called with the error, if any, and OrganizationListDataResult
+                 */
+                public getOrganizations(request: google.protobuf.IEmpty, callback: colbylwilliams.teamcloud.v1.OrganizationsAPI.GetOrganizationsCallback): void;
+
+                /**
+                 * Calls GetOrganizations.
+                 * @param request Empty message or plain object
+                 * @returns Promise
+                 */
+                public getOrganizations(request: google.protobuf.IEmpty): Promise<colbylwilliams.teamcloud.v1.OrganizationListDataResult>;
+            }
+
+            namespace OrganizationsAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationsAPI#createOrganization}.
+                 * @param error Error, if any
+                 * @param [response] OrganizationDataResult
+                 */
+                type CreateOrganizationCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.OrganizationDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationsAPI#deleteOrganization}.
+                 * @param error Error, if any
+                 * @param [response] StatusResult
+                 */
+                type DeleteOrganizationCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StatusResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationsAPI#getOrganization}.
+                 * @param error Error, if any
+                 * @param [response] OrganizationDataResult
+                 */
+                type GetOrganizationCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.OrganizationDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationsAPI#getOrganizations}.
+                 * @param error Error, if any
+                 * @param [response] OrganizationListDataResult
+                 */
+                type GetOrganizationsCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.OrganizationListDataResult) => void;
+            }
+
+            /** Properties of a CreateOrganizationRequest. */
+            interface ICreateOrganizationRequest {
+
+                /** CreateOrganizationRequest organizationDefinition */
+                organizationDefinition?: (colbylwilliams.teamcloud.v1.IOrganizationDefinition|null);
+            }
+
+            /** Represents a CreateOrganizationRequest. */
+            class CreateOrganizationRequest implements ICreateOrganizationRequest {
+
+                /**
+                 * Constructs a new CreateOrganizationRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICreateOrganizationRequest);
+
+                /** CreateOrganizationRequest organizationDefinition. */
+                public organizationDefinition?: (colbylwilliams.teamcloud.v1.IOrganizationDefinition|null);
+
+                /**
+                 * Verifies a CreateOrganizationRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CreateOrganizationRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CreateOrganizationRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CreateOrganizationRequest;
+
+                /**
+                 * Creates a plain object from a CreateOrganizationRequest message. Also converts values to other types if specified.
+                 * @param message CreateOrganizationRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CreateOrganizationRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CreateOrganizationRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a DeleteOrganizationRequest. */
+            interface IDeleteOrganizationRequest {
+
+                /** DeleteOrganizationRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a DeleteOrganizationRequest. */
+            class DeleteOrganizationRequest implements IDeleteOrganizationRequest {
+
+                /**
+                 * Constructs a new DeleteOrganizationRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IDeleteOrganizationRequest);
+
+                /** DeleteOrganizationRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a DeleteOrganizationRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a DeleteOrganizationRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns DeleteOrganizationRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.DeleteOrganizationRequest;
+
+                /**
+                 * Creates a plain object from a DeleteOrganizationRequest message. Also converts values to other types if specified.
+                 * @param message DeleteOrganizationRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.DeleteOrganizationRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this DeleteOrganizationRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetOrganizationRequest. */
+            interface IGetOrganizationRequest {
+
+                /** GetOrganizationRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a GetOrganizationRequest. */
+            class GetOrganizationRequest implements IGetOrganizationRequest {
+
+                /**
+                 * Constructs a new GetOrganizationRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetOrganizationRequest);
+
+                /** GetOrganizationRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a GetOrganizationRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetOrganizationRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetOrganizationRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetOrganizationRequest;
+
+                /**
+                 * Creates a plain object from a GetOrganizationRequest message. Also converts values to other types if specified.
+                 * @param message GetOrganizationRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetOrganizationRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetOrganizationRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents an OrganizationUsersAPI */
+            class OrganizationUsersAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new OrganizationUsersAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls CreateOrganizationUser.
+                 * @param request CreateOrganizationUserRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and UserDataResult
+                 */
+                public createOrganizationUser(request: colbylwilliams.teamcloud.v1.ICreateOrganizationUserRequest, callback: colbylwilliams.teamcloud.v1.OrganizationUsersAPI.CreateOrganizationUserCallback): void;
+
+                /**
+                 * Calls CreateOrganizationUser.
+                 * @param request CreateOrganizationUserRequest message or plain object
+                 * @returns Promise
+                 */
+                public createOrganizationUser(request: colbylwilliams.teamcloud.v1.ICreateOrganizationUserRequest): Promise<colbylwilliams.teamcloud.v1.UserDataResult>;
+
+                /**
+                 * Calls DeleteOrganizationUser.
+                 * @param request DeleteOrganizationUserRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StatusResult
+                 */
+                public deleteOrganizationUser(request: colbylwilliams.teamcloud.v1.IDeleteOrganizationUserRequest, callback: colbylwilliams.teamcloud.v1.OrganizationUsersAPI.DeleteOrganizationUserCallback): void;
+
+                /**
+                 * Calls DeleteOrganizationUser.
+                 * @param request DeleteOrganizationUserRequest message or plain object
+                 * @returns Promise
+                 */
+                public deleteOrganizationUser(request: colbylwilliams.teamcloud.v1.IDeleteOrganizationUserRequest): Promise<colbylwilliams.teamcloud.v1.StatusResult>;
+
+                /**
+                 * Calls GetOrganizationUser.
+                 * @param request GetOrganizationUserRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and UserDataResult
+                 */
+                public getOrganizationUser(request: colbylwilliams.teamcloud.v1.IGetOrganizationUserRequest, callback: colbylwilliams.teamcloud.v1.OrganizationUsersAPI.GetOrganizationUserCallback): void;
+
+                /**
+                 * Calls GetOrganizationUser.
+                 * @param request GetOrganizationUserRequest message or plain object
+                 * @returns Promise
+                 */
+                public getOrganizationUser(request: colbylwilliams.teamcloud.v1.IGetOrganizationUserRequest): Promise<colbylwilliams.teamcloud.v1.UserDataResult>;
+
+                /**
+                 * Calls GetOrganizationUserMe.
+                 * @param request GetOrganizationUserMeRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and UserDataResult
+                 */
+                public getOrganizationUserMe(request: colbylwilliams.teamcloud.v1.IGetOrganizationUserMeRequest, callback: colbylwilliams.teamcloud.v1.OrganizationUsersAPI.GetOrganizationUserMeCallback): void;
+
+                /**
+                 * Calls GetOrganizationUserMe.
+                 * @param request GetOrganizationUserMeRequest message or plain object
+                 * @returns Promise
+                 */
+                public getOrganizationUserMe(request: colbylwilliams.teamcloud.v1.IGetOrganizationUserMeRequest): Promise<colbylwilliams.teamcloud.v1.UserDataResult>;
+
+                /**
+                 * Calls GetOrganizationUsers.
+                 * @param request GetOrganizationUsersRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and UserListDataResult
+                 */
+                public getOrganizationUsers(request: colbylwilliams.teamcloud.v1.IGetOrganizationUsersRequest, callback: colbylwilliams.teamcloud.v1.OrganizationUsersAPI.GetOrganizationUsersCallback): void;
+
+                /**
+                 * Calls GetOrganizationUsers.
+                 * @param request GetOrganizationUsersRequest message or plain object
+                 * @returns Promise
+                 */
+                public getOrganizationUsers(request: colbylwilliams.teamcloud.v1.IGetOrganizationUsersRequest): Promise<colbylwilliams.teamcloud.v1.UserListDataResult>;
+
+                /**
+                 * Calls UpdateOrganizationUser.
+                 * @param request UpdateOrganizationUserRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and UserDataResult
+                 */
+                public updateOrganizationUser(request: colbylwilliams.teamcloud.v1.IUpdateOrganizationUserRequest, callback: colbylwilliams.teamcloud.v1.OrganizationUsersAPI.UpdateOrganizationUserCallback): void;
+
+                /**
+                 * Calls UpdateOrganizationUser.
+                 * @param request UpdateOrganizationUserRequest message or plain object
+                 * @returns Promise
+                 */
+                public updateOrganizationUser(request: colbylwilliams.teamcloud.v1.IUpdateOrganizationUserRequest): Promise<colbylwilliams.teamcloud.v1.UserDataResult>;
+
+                /**
+                 * Calls UpdateOrganizationUserMe.
+                 * @param request UpdateOrganizationUserMeRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and UserDataResult
+                 */
+                public updateOrganizationUserMe(request: colbylwilliams.teamcloud.v1.IUpdateOrganizationUserMeRequest, callback: colbylwilliams.teamcloud.v1.OrganizationUsersAPI.UpdateOrganizationUserMeCallback): void;
+
+                /**
+                 * Calls UpdateOrganizationUserMe.
+                 * @param request UpdateOrganizationUserMeRequest message or plain object
+                 * @returns Promise
+                 */
+                public updateOrganizationUserMe(request: colbylwilliams.teamcloud.v1.IUpdateOrganizationUserMeRequest): Promise<colbylwilliams.teamcloud.v1.UserDataResult>;
+            }
+
+            namespace OrganizationUsersAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationUsersAPI#createOrganizationUser}.
+                 * @param error Error, if any
+                 * @param [response] UserDataResult
+                 */
+                type CreateOrganizationUserCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.UserDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationUsersAPI#deleteOrganizationUser}.
+                 * @param error Error, if any
+                 * @param [response] StatusResult
+                 */
+                type DeleteOrganizationUserCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StatusResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationUsersAPI#getOrganizationUser}.
+                 * @param error Error, if any
+                 * @param [response] UserDataResult
+                 */
+                type GetOrganizationUserCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.UserDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationUsersAPI#getOrganizationUserMe}.
+                 * @param error Error, if any
+                 * @param [response] UserDataResult
+                 */
+                type GetOrganizationUserMeCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.UserDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationUsersAPI#getOrganizationUsers}.
+                 * @param error Error, if any
+                 * @param [response] UserListDataResult
+                 */
+                type GetOrganizationUsersCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.UserListDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationUsersAPI#updateOrganizationUser}.
+                 * @param error Error, if any
+                 * @param [response] UserDataResult
+                 */
+                type UpdateOrganizationUserCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.UserDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.OrganizationUsersAPI#updateOrganizationUserMe}.
+                 * @param error Error, if any
+                 * @param [response] UserDataResult
+                 */
+                type UpdateOrganizationUserMeCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.UserDataResult) => void;
+            }
+
+            /** Properties of a CreateOrganizationUserRequest. */
+            interface ICreateOrganizationUserRequest {
+
+                /** CreateOrganizationUserRequest organizationId */
+                organizationId?: (string|null);
+
+                /** CreateOrganizationUserRequest userDefinition */
+                userDefinition?: (colbylwilliams.teamcloud.v1.IUserDefinition|null);
+            }
+
+            /** Represents a CreateOrganizationUserRequest. */
+            class CreateOrganizationUserRequest implements ICreateOrganizationUserRequest {
+
+                /**
+                 * Constructs a new CreateOrganizationUserRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICreateOrganizationUserRequest);
+
+                /** CreateOrganizationUserRequest organizationId. */
+                public organizationId: string;
+
+                /** CreateOrganizationUserRequest userDefinition. */
+                public userDefinition?: (colbylwilliams.teamcloud.v1.IUserDefinition|null);
+
+                /**
+                 * Verifies a CreateOrganizationUserRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CreateOrganizationUserRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CreateOrganizationUserRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CreateOrganizationUserRequest;
+
+                /**
+                 * Creates a plain object from a CreateOrganizationUserRequest message. Also converts values to other types if specified.
+                 * @param message CreateOrganizationUserRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CreateOrganizationUserRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CreateOrganizationUserRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a DeleteOrganizationUserRequest. */
+            interface IDeleteOrganizationUserRequest {
+
+                /** DeleteOrganizationUserRequest userId */
+                userId?: (string|null);
+
+                /** DeleteOrganizationUserRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a DeleteOrganizationUserRequest. */
+            class DeleteOrganizationUserRequest implements IDeleteOrganizationUserRequest {
+
+                /**
+                 * Constructs a new DeleteOrganizationUserRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IDeleteOrganizationUserRequest);
+
+                /** DeleteOrganizationUserRequest userId. */
+                public userId: string;
+
+                /** DeleteOrganizationUserRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a DeleteOrganizationUserRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a DeleteOrganizationUserRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns DeleteOrganizationUserRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.DeleteOrganizationUserRequest;
+
+                /**
+                 * Creates a plain object from a DeleteOrganizationUserRequest message. Also converts values to other types if specified.
+                 * @param message DeleteOrganizationUserRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.DeleteOrganizationUserRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this DeleteOrganizationUserRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetOrganizationUserRequest. */
+            interface IGetOrganizationUserRequest {
+
+                /** GetOrganizationUserRequest userId */
+                userId?: (string|null);
+
+                /** GetOrganizationUserRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a GetOrganizationUserRequest. */
+            class GetOrganizationUserRequest implements IGetOrganizationUserRequest {
+
+                /**
+                 * Constructs a new GetOrganizationUserRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetOrganizationUserRequest);
+
+                /** GetOrganizationUserRequest userId. */
+                public userId: string;
+
+                /** GetOrganizationUserRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a GetOrganizationUserRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetOrganizationUserRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetOrganizationUserRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetOrganizationUserRequest;
+
+                /**
+                 * Creates a plain object from a GetOrganizationUserRequest message. Also converts values to other types if specified.
+                 * @param message GetOrganizationUserRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetOrganizationUserRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetOrganizationUserRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetOrganizationUserMeRequest. */
+            interface IGetOrganizationUserMeRequest {
+
+                /** GetOrganizationUserMeRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a GetOrganizationUserMeRequest. */
+            class GetOrganizationUserMeRequest implements IGetOrganizationUserMeRequest {
+
+                /**
+                 * Constructs a new GetOrganizationUserMeRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetOrganizationUserMeRequest);
+
+                /** GetOrganizationUserMeRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a GetOrganizationUserMeRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetOrganizationUserMeRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetOrganizationUserMeRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetOrganizationUserMeRequest;
+
+                /**
+                 * Creates a plain object from a GetOrganizationUserMeRequest message. Also converts values to other types if specified.
+                 * @param message GetOrganizationUserMeRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetOrganizationUserMeRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetOrganizationUserMeRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetOrganizationUsersRequest. */
+            interface IGetOrganizationUsersRequest {
+
+                /** GetOrganizationUsersRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a GetOrganizationUsersRequest. */
+            class GetOrganizationUsersRequest implements IGetOrganizationUsersRequest {
+
+                /**
+                 * Constructs a new GetOrganizationUsersRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetOrganizationUsersRequest);
+
+                /** GetOrganizationUsersRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a GetOrganizationUsersRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetOrganizationUsersRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetOrganizationUsersRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetOrganizationUsersRequest;
+
+                /**
+                 * Creates a plain object from a GetOrganizationUsersRequest message. Also converts values to other types if specified.
+                 * @param message GetOrganizationUsersRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetOrganizationUsersRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetOrganizationUsersRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an UpdateOrganizationUserRequest. */
+            interface IUpdateOrganizationUserRequest {
+
+                /** UpdateOrganizationUserRequest userId */
+                userId?: (string|null);
+
+                /** UpdateOrganizationUserRequest organizationId */
+                organizationId?: (string|null);
+
+                /** UpdateOrganizationUserRequest user */
+                user?: (colbylwilliams.teamcloud.v1.IUser|null);
+            }
+
+            /** Represents an UpdateOrganizationUserRequest. */
+            class UpdateOrganizationUserRequest implements IUpdateOrganizationUserRequest {
+
+                /**
+                 * Constructs a new UpdateOrganizationUserRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUpdateOrganizationUserRequest);
+
+                /** UpdateOrganizationUserRequest userId. */
+                public userId: string;
+
+                /** UpdateOrganizationUserRequest organizationId. */
+                public organizationId: string;
+
+                /** UpdateOrganizationUserRequest user. */
+                public user?: (colbylwilliams.teamcloud.v1.IUser|null);
+
+                /**
+                 * Verifies an UpdateOrganizationUserRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an UpdateOrganizationUserRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns UpdateOrganizationUserRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.UpdateOrganizationUserRequest;
+
+                /**
+                 * Creates a plain object from an UpdateOrganizationUserRequest message. Also converts values to other types if specified.
+                 * @param message UpdateOrganizationUserRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.UpdateOrganizationUserRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this UpdateOrganizationUserRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an UpdateOrganizationUserMeRequest. */
+            interface IUpdateOrganizationUserMeRequest {
+
+                /** UpdateOrganizationUserMeRequest organizationId */
+                organizationId?: (string|null);
+
+                /** UpdateOrganizationUserMeRequest user */
+                user?: (colbylwilliams.teamcloud.v1.IUser|null);
+            }
+
+            /** Represents an UpdateOrganizationUserMeRequest. */
+            class UpdateOrganizationUserMeRequest implements IUpdateOrganizationUserMeRequest {
+
+                /**
+                 * Constructs a new UpdateOrganizationUserMeRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUpdateOrganizationUserMeRequest);
+
+                /** UpdateOrganizationUserMeRequest organizationId. */
+                public organizationId: string;
+
+                /** UpdateOrganizationUserMeRequest user. */
+                public user?: (colbylwilliams.teamcloud.v1.IUser|null);
+
+                /**
+                 * Verifies an UpdateOrganizationUserMeRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an UpdateOrganizationUserMeRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns UpdateOrganizationUserMeRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.UpdateOrganizationUserMeRequest;
+
+                /**
+                 * Creates a plain object from an UpdateOrganizationUserMeRequest message. Also converts values to other types if specified.
+                 * @param message UpdateOrganizationUserMeRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.UpdateOrganizationUserMeRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this UpdateOrganizationUserMeRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a User. */
+            interface IUser {
+
+                /** User organization */
+                organization?: (string|null);
+
+                /** User organizationName */
+                organizationName?: (string|null);
+
+                /** User displayName */
+                displayName?: (string|null);
+
+                /** User loginName */
+                loginName?: (string|null);
+
+                /** User mailAddress */
+                mailAddress?: (string|null);
+
+                /** User userType */
+                userType?: (colbylwilliams.teamcloud.v1.User.UserTypeEnum|null);
+
+                /** User role */
+                role?: (colbylwilliams.teamcloud.v1.User.RoleEnum|null);
+
+                /** User projectMemberships */
+                projectMemberships?: (colbylwilliams.teamcloud.v1.IProjectMembership[]|null);
+
+                /** User alternateIdentities */
+                alternateIdentities?: (colbylwilliams.teamcloud.v1.IUserAlternateIdentities|null);
+
+                /** User properties */
+                properties?: ({ [k: string]: string }|null);
+
+                /** User id */
+                id?: (string|null);
+            }
+
+            /** Represents a User. */
+            class User implements IUser {
+
+                /**
+                 * Constructs a new User.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUser);
+
+                /** User organization. */
+                public organization: string;
+
+                /** User organizationName. */
+                public organizationName: string;
+
+                /** User displayName. */
+                public displayName?: (string|null);
+
+                /** User loginName. */
+                public loginName?: (string|null);
+
+                /** User mailAddress. */
+                public mailAddress?: (string|null);
+
+                /** User userType. */
+                public userType: colbylwilliams.teamcloud.v1.User.UserTypeEnum;
+
+                /** User role. */
+                public role: colbylwilliams.teamcloud.v1.User.RoleEnum;
+
+                /** User projectMemberships. */
+                public projectMemberships: colbylwilliams.teamcloud.v1.IProjectMembership[];
+
+                /** User alternateIdentities. */
+                public alternateIdentities?: (colbylwilliams.teamcloud.v1.IUserAlternateIdentities|null);
+
+                /** User properties. */
+                public properties: { [k: string]: string };
+
+                /** User id. */
+                public id: string;
+
+                /** User _displayName. */
+                public _displayName?: "displayName";
+
+                /** User _loginName. */
+                public _loginName?: "loginName";
+
+                /** User _mailAddress. */
+                public _mailAddress?: "mailAddress";
+
+                /**
+                 * Verifies a User message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a User message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns User
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.User;
+
+                /**
+                 * Creates a plain object from a User message. Also converts values to other types if specified.
+                 * @param message User
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.User, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this User to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace User {
+
+                /** UserTypeEnum enum. */
+                enum UserTypeEnum {
+                    USER = 0,
+                    GROUP = 1,
+                    SYSTEM = 2,
+                    SERVICE = 3
+                }
+
+                /** RoleEnum enum. */
+                enum RoleEnum {
+                    NONE = 0,
+                    MEMBER = 1,
+                    ADMIN = 2,
+                    OWNER = 3,
+                    ADAPTER = 4
+                }
+            }
+
+            /** Properties of a ProjectMembership. */
+            interface IProjectMembership {
+
+                /** ProjectMembership projectId */
+                projectId?: (string|null);
+
+                /** ProjectMembership role */
+                role?: (colbylwilliams.teamcloud.v1.ProjectMembership.RoleEnum|null);
+
+                /** ProjectMembership properties */
+                properties?: ({ [k: string]: string }|null);
+            }
+
+            /** Represents a ProjectMembership. */
+            class ProjectMembership implements IProjectMembership {
+
+                /**
+                 * Constructs a new ProjectMembership.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IProjectMembership);
+
+                /** ProjectMembership projectId. */
+                public projectId: string;
+
+                /** ProjectMembership role. */
+                public role: colbylwilliams.teamcloud.v1.ProjectMembership.RoleEnum;
+
+                /** ProjectMembership properties. */
+                public properties: { [k: string]: string };
+
+                /**
+                 * Verifies a ProjectMembership message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ProjectMembership message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ProjectMembership
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ProjectMembership;
+
+                /**
+                 * Creates a plain object from a ProjectMembership message. Also converts values to other types if specified.
+                 * @param message ProjectMembership
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ProjectMembership, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ProjectMembership to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace ProjectMembership {
+
+                /** RoleEnum enum. */
+                enum RoleEnum {
+                    NONE = 0,
+                    MEMBER = 1,
+                    ADMIN = 2,
+                    OWNER = 3,
+                    ADAPTER = 4
+                }
+            }
+
+            /** Properties of a UserAlternateIdentities. */
+            interface IUserAlternateIdentities {
+
+                /** UserAlternateIdentities AzureResourceManager */
+                AzureResourceManager?: (colbylwilliams.teamcloud.v1.IAlternateIdentity|null);
+
+                /** UserAlternateIdentities AzureDevOps */
+                AzureDevOps?: (colbylwilliams.teamcloud.v1.IAlternateIdentity|null);
+
+                /** UserAlternateIdentities GitHub */
+                GitHub?: (colbylwilliams.teamcloud.v1.IAlternateIdentity|null);
+
+                /** UserAlternateIdentities Kubernetes */
+                Kubernetes?: (colbylwilliams.teamcloud.v1.IAlternateIdentity|null);
+            }
+
+            /** Represents a UserAlternateIdentities. */
+            class UserAlternateIdentities implements IUserAlternateIdentities {
+
+                /**
+                 * Constructs a new UserAlternateIdentities.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUserAlternateIdentities);
+
+                /** UserAlternateIdentities AzureResourceManager. */
+                public AzureResourceManager?: (colbylwilliams.teamcloud.v1.IAlternateIdentity|null);
+
+                /** UserAlternateIdentities AzureDevOps. */
+                public AzureDevOps?: (colbylwilliams.teamcloud.v1.IAlternateIdentity|null);
+
+                /** UserAlternateIdentities GitHub. */
+                public GitHub?: (colbylwilliams.teamcloud.v1.IAlternateIdentity|null);
+
+                /** UserAlternateIdentities Kubernetes. */
+                public Kubernetes?: (colbylwilliams.teamcloud.v1.IAlternateIdentity|null);
+
+                /**
+                 * Verifies a UserAlternateIdentities message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a UserAlternateIdentities message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns UserAlternateIdentities
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.UserAlternateIdentities;
+
+                /**
+                 * Creates a plain object from a UserAlternateIdentities message. Also converts values to other types if specified.
+                 * @param message UserAlternateIdentities
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.UserAlternateIdentities, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this UserAlternateIdentities to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a UserDataResult. */
+            interface IUserDataResult {
+
+                /** UserDataResult code */
+                code?: (number|null);
+
+                /** UserDataResult status */
+                status?: (string|null);
+
+                /** UserDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IUser|null);
+
+                /** UserDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a UserDataResult. */
+            class UserDataResult implements IUserDataResult {
+
+                /**
+                 * Constructs a new UserDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUserDataResult);
+
+                /** UserDataResult code. */
+                public code: number;
+
+                /** UserDataResult status. */
+                public status?: (string|null);
+
+                /** UserDataResult data. */
+                public data?: (colbylwilliams.teamcloud.v1.IUser|null);
+
+                /** UserDataResult location. */
+                public location?: (string|null);
+
+                /** UserDataResult _status. */
+                public _status?: "status";
+
+                /** UserDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a UserDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a UserDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns UserDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.UserDataResult;
+
+                /**
+                 * Creates a plain object from a UserDataResult message. Also converts values to other types if specified.
+                 * @param message UserDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.UserDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this UserDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a UserDefinition. */
+            interface IUserDefinition {
+
+                /** UserDefinition identifier */
+                identifier?: (string|null);
+
+                /** UserDefinition role */
+                role?: (string|null);
+
+                /** UserDefinition properties */
+                properties?: ({ [k: string]: string }|null);
+            }
+
+            /** Represents a UserDefinition. */
+            class UserDefinition implements IUserDefinition {
+
+                /**
+                 * Constructs a new UserDefinition.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUserDefinition);
+
+                /** UserDefinition identifier. */
+                public identifier: string;
+
+                /** UserDefinition role. */
+                public role: string;
+
+                /** UserDefinition properties. */
+                public properties: { [k: string]: string };
+
+                /**
+                 * Verifies a UserDefinition message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a UserDefinition message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns UserDefinition
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.UserDefinition;
+
+                /**
+                 * Creates a plain object from a UserDefinition message. Also converts values to other types if specified.
+                 * @param message UserDefinition
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.UserDefinition, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this UserDefinition to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a UserListDataResult. */
+            interface IUserListDataResult {
+
+                /** UserListDataResult code */
+                code?: (number|null);
+
+                /** UserListDataResult status */
+                status?: (string|null);
+
+                /** UserListDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IUser[]|null);
+
+                /** UserListDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a UserListDataResult. */
+            class UserListDataResult implements IUserListDataResult {
+
+                /**
+                 * Constructs a new UserListDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUserListDataResult);
+
+                /** UserListDataResult code. */
+                public code: number;
+
+                /** UserListDataResult status. */
+                public status?: (string|null);
+
+                /** UserListDataResult data. */
+                public data: colbylwilliams.teamcloud.v1.IUser[];
+
+                /** UserListDataResult location. */
+                public location?: (string|null);
+
+                /** UserListDataResult _status. */
+                public _status?: "status";
+
+                /** UserListDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a UserListDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a UserListDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns UserListDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.UserListDataResult;
+
+                /**
+                 * Creates a plain object from a UserListDataResult message. Also converts values to other types if specified.
+                 * @param message UserListDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.UserListDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this UserListDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ProjectDataResult. */
+            interface IProjectDataResult {
+
+                /** ProjectDataResult code */
+                code?: (number|null);
+
+                /** ProjectDataResult status */
+                status?: (string|null);
+
+                /** ProjectDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IProject|null);
+
+                /** ProjectDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ProjectDataResult. */
+            class ProjectDataResult implements IProjectDataResult {
+
+                /**
+                 * Constructs a new ProjectDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IProjectDataResult);
+
+                /** ProjectDataResult code. */
+                public code: number;
+
+                /** ProjectDataResult status. */
+                public status?: (string|null);
+
+                /** ProjectDataResult data. */
+                public data?: (colbylwilliams.teamcloud.v1.IProject|null);
+
+                /** ProjectDataResult location. */
+                public location?: (string|null);
+
+                /** ProjectDataResult _status. */
+                public _status?: "status";
+
+                /** ProjectDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ProjectDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ProjectDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ProjectDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ProjectDataResult;
+
+                /**
+                 * Creates a plain object from a ProjectDataResult message. Also converts values to other types if specified.
+                 * @param message ProjectDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ProjectDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ProjectDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a Project. */
+            interface IProject {
+
+                /** Project organization */
+                organization?: (string|null);
+
+                /** Project organizationName */
+                organizationName?: (string|null);
+
+                /** Project slug */
+                slug?: (string|null);
+
+                /** Project displayName */
+                displayName?: (string|null);
+
+                /** Project template */
+                template?: (string|null);
+
+                /** Project templateInput */
+                templateInput?: (string|null);
+
+                /** Project users */
+                users?: (colbylwilliams.teamcloud.v1.IUser[]|null);
+
+                /** Project tags */
+                tags?: ({ [k: string]: string }|null);
+
+                /** Project resourceId */
+                resourceId?: (string|null);
+
+                /** Project resourceState */
+                resourceState?: (colbylwilliams.teamcloud.v1.Project.ResourceStateEnum|null);
+
+                /** Project vaultId */
+                vaultId?: (string|null);
+
+                /** Project sharedVaultId */
+                sharedVaultId?: (string|null);
+
+                /** Project secretsVaultId */
+                secretsVaultId?: (string|null);
+
+                /** Project storageId */
+                storageId?: (string|null);
+
+                /** Project deleted */
+                deleted?: (string|null);
+
+                /** Project ttl */
+                ttl?: (number|null);
+
+                /** Project id */
+                id?: (string|null);
+            }
+
+            /** Represents a Project. */
+            class Project implements IProject {
+
+                /**
+                 * Constructs a new Project.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IProject);
+
+                /** Project organization. */
+                public organization: string;
+
+                /** Project organizationName. */
+                public organizationName: string;
+
+                /** Project slug. */
+                public slug: string;
+
+                /** Project displayName. */
+                public displayName: string;
+
+                /** Project template. */
+                public template: string;
+
+                /** Project templateInput. */
+                public templateInput?: (string|null);
+
+                /** Project users. */
+                public users: colbylwilliams.teamcloud.v1.IUser[];
+
+                /** Project tags. */
+                public tags: { [k: string]: string };
+
+                /** Project resourceId. */
+                public resourceId?: (string|null);
+
+                /** Project resourceState. */
+                public resourceState: colbylwilliams.teamcloud.v1.Project.ResourceStateEnum;
+
+                /** Project vaultId. */
+                public vaultId?: (string|null);
+
+                /** Project sharedVaultId. */
+                public sharedVaultId?: (string|null);
+
+                /** Project secretsVaultId. */
+                public secretsVaultId?: (string|null);
+
+                /** Project storageId. */
+                public storageId?: (string|null);
+
+                /** Project deleted. */
+                public deleted?: (string|null);
+
+                /** Project ttl. */
+                public ttl?: (number|null);
+
+                /** Project id. */
+                public id: string;
+
+                /** Project _templateInput. */
+                public _templateInput?: "templateInput";
+
+                /** Project _resourceId. */
+                public _resourceId?: "resourceId";
+
+                /** Project _vaultId. */
+                public _vaultId?: "vaultId";
+
+                /** Project _sharedVaultId. */
+                public _sharedVaultId?: "sharedVaultId";
+
+                /** Project _secretsVaultId. */
+                public _secretsVaultId?: "secretsVaultId";
+
+                /** Project _storageId. */
+                public _storageId?: "storageId";
+
+                /** Project _deleted. */
+                public _deleted?: "deleted";
+
+                /** Project _ttl. */
+                public _ttl?: "ttl";
+
+                /**
+                 * Verifies a Project message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a Project message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns Project
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.Project;
+
+                /**
+                 * Creates a plain object from a Project message. Also converts values to other types if specified.
+                 * @param message Project
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.Project, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this Project to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace Project {
+
+                /** ResourceStateEnum enum. */
+                enum ResourceStateEnum {
+                    PENDING = 0,
+                    INITIALIZING = 1,
+                    PROVISIONING = 2,
+                    PROVISIONED = 3,
+                    DEPROVISIONING = 4,
+                    DEPROVISIONED = 5,
+                    FAILED = 6
+                }
+            }
+
+            /** Properties of a ProjectDefinition. */
+            interface IProjectDefinition {
+
+                /** ProjectDefinition slug */
+                slug?: (string|null);
+
+                /** ProjectDefinition displayName */
+                displayName?: (string|null);
+
+                /** ProjectDefinition template */
+                template?: (string|null);
+
+                /** ProjectDefinition templateInput */
+                templateInput?: (string|null);
+
+                /** ProjectDefinition users */
+                users?: (colbylwilliams.teamcloud.v1.IUserDefinition[]|null);
+            }
+
+            /** Represents a ProjectDefinition. */
+            class ProjectDefinition implements IProjectDefinition {
+
+                /**
+                 * Constructs a new ProjectDefinition.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IProjectDefinition);
+
+                /** ProjectDefinition slug. */
+                public slug?: (string|null);
+
+                /** ProjectDefinition displayName. */
+                public displayName: string;
+
+                /** ProjectDefinition template. */
+                public template: string;
+
+                /** ProjectDefinition templateInput. */
+                public templateInput: string;
+
+                /** ProjectDefinition users. */
+                public users: colbylwilliams.teamcloud.v1.IUserDefinition[];
+
+                /** ProjectDefinition _slug. */
+                public _slug?: "slug";
+
+                /**
+                 * Verifies a ProjectDefinition message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ProjectDefinition message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ProjectDefinition
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ProjectDefinition;
+
+                /**
+                 * Creates a plain object from a ProjectDefinition message. Also converts values to other types if specified.
+                 * @param message ProjectDefinition
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ProjectDefinition, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ProjectDefinition to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a ProjectIdentitiesAPI */
+            class ProjectIdentitiesAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new ProjectIdentitiesAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls CreateProjectIdentity.
+                 * @param request CreateProjectIdentityRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectIdentityDataResult
+                 */
+                public createProjectIdentity(request: colbylwilliams.teamcloud.v1.ICreateProjectIdentityRequest, callback: colbylwilliams.teamcloud.v1.ProjectIdentitiesAPI.CreateProjectIdentityCallback): void;
+
+                /**
+                 * Calls CreateProjectIdentity.
+                 * @param request CreateProjectIdentityRequest message or plain object
+                 * @returns Promise
+                 */
+                public createProjectIdentity(request: colbylwilliams.teamcloud.v1.ICreateProjectIdentityRequest): Promise<colbylwilliams.teamcloud.v1.ProjectIdentityDataResult>;
+
+                /**
+                 * Calls DeleteProjectIdentity.
+                 * @param request DeleteProjectIdentityRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectIdentityDataResult
+                 */
+                public deleteProjectIdentity(request: colbylwilliams.teamcloud.v1.IDeleteProjectIdentityRequest, callback: colbylwilliams.teamcloud.v1.ProjectIdentitiesAPI.DeleteProjectIdentityCallback): void;
+
+                /**
+                 * Calls DeleteProjectIdentity.
+                 * @param request DeleteProjectIdentityRequest message or plain object
+                 * @returns Promise
+                 */
+                public deleteProjectIdentity(request: colbylwilliams.teamcloud.v1.IDeleteProjectIdentityRequest): Promise<colbylwilliams.teamcloud.v1.ProjectIdentityDataResult>;
+
+                /**
+                 * Calls GetProjectIdentities.
+                 * @param request GetProjectIdentitiesRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectIdentityListDataResult
+                 */
+                public getProjectIdentities(request: colbylwilliams.teamcloud.v1.IGetProjectIdentitiesRequest, callback: colbylwilliams.teamcloud.v1.ProjectIdentitiesAPI.GetProjectIdentitiesCallback): void;
+
+                /**
+                 * Calls GetProjectIdentities.
+                 * @param request GetProjectIdentitiesRequest message or plain object
+                 * @returns Promise
+                 */
+                public getProjectIdentities(request: colbylwilliams.teamcloud.v1.IGetProjectIdentitiesRequest): Promise<colbylwilliams.teamcloud.v1.ProjectIdentityListDataResult>;
+
+                /**
+                 * Calls GetProjectIdentity.
+                 * @param request GetProjectIdentityRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectIdentityDataResult
+                 */
+                public getProjectIdentity(request: colbylwilliams.teamcloud.v1.IGetProjectIdentityRequest, callback: colbylwilliams.teamcloud.v1.ProjectIdentitiesAPI.GetProjectIdentityCallback): void;
+
+                /**
+                 * Calls GetProjectIdentity.
+                 * @param request GetProjectIdentityRequest message or plain object
+                 * @returns Promise
+                 */
+                public getProjectIdentity(request: colbylwilliams.teamcloud.v1.IGetProjectIdentityRequest): Promise<colbylwilliams.teamcloud.v1.ProjectIdentityDataResult>;
+
+                /**
+                 * Calls UpdateProjectIdentity.
+                 * @param request UpdateProjectIdentityRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StatusResult
+                 */
+                public updateProjectIdentity(request: colbylwilliams.teamcloud.v1.IUpdateProjectIdentityRequest, callback: colbylwilliams.teamcloud.v1.ProjectIdentitiesAPI.UpdateProjectIdentityCallback): void;
+
+                /**
+                 * Calls UpdateProjectIdentity.
+                 * @param request UpdateProjectIdentityRequest message or plain object
+                 * @returns Promise
+                 */
+                public updateProjectIdentity(request: colbylwilliams.teamcloud.v1.IUpdateProjectIdentityRequest): Promise<colbylwilliams.teamcloud.v1.StatusResult>;
+            }
+
+            namespace ProjectIdentitiesAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectIdentitiesAPI#createProjectIdentity}.
+                 * @param error Error, if any
+                 * @param [response] ProjectIdentityDataResult
+                 */
+                type CreateProjectIdentityCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectIdentityDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectIdentitiesAPI#deleteProjectIdentity}.
+                 * @param error Error, if any
+                 * @param [response] ProjectIdentityDataResult
+                 */
+                type DeleteProjectIdentityCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectIdentityDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectIdentitiesAPI#getProjectIdentities}.
+                 * @param error Error, if any
+                 * @param [response] ProjectIdentityListDataResult
+                 */
+                type GetProjectIdentitiesCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectIdentityListDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectIdentitiesAPI#getProjectIdentity}.
+                 * @param error Error, if any
+                 * @param [response] ProjectIdentityDataResult
+                 */
+                type GetProjectIdentityCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectIdentityDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectIdentitiesAPI#updateProjectIdentity}.
+                 * @param error Error, if any
+                 * @param [response] StatusResult
+                 */
+                type UpdateProjectIdentityCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StatusResult) => void;
+            }
+
+            /** Properties of a CreateProjectIdentityRequest. */
+            interface ICreateProjectIdentityRequest {
+
+                /** CreateProjectIdentityRequest organizationId */
+                organizationId?: (string|null);
+
+                /** CreateProjectIdentityRequest projectId */
+                projectId?: (string|null);
+
+                /** CreateProjectIdentityRequest projectIdentityDefinition */
+                projectIdentityDefinition?: (colbylwilliams.teamcloud.v1.IProjectIdentityDefinition|null);
+            }
+
+            /** Represents a CreateProjectIdentityRequest. */
+            class CreateProjectIdentityRequest implements ICreateProjectIdentityRequest {
+
+                /**
+                 * Constructs a new CreateProjectIdentityRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICreateProjectIdentityRequest);
+
+                /** CreateProjectIdentityRequest organizationId. */
+                public organizationId: string;
+
+                /** CreateProjectIdentityRequest projectId. */
+                public projectId: string;
+
+                /** CreateProjectIdentityRequest projectIdentityDefinition. */
+                public projectIdentityDefinition?: (colbylwilliams.teamcloud.v1.IProjectIdentityDefinition|null);
+
+                /**
+                 * Verifies a CreateProjectIdentityRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CreateProjectIdentityRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CreateProjectIdentityRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CreateProjectIdentityRequest;
+
+                /**
+                 * Creates a plain object from a CreateProjectIdentityRequest message. Also converts values to other types if specified.
+                 * @param message CreateProjectIdentityRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CreateProjectIdentityRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CreateProjectIdentityRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a DeleteProjectIdentityRequest. */
+            interface IDeleteProjectIdentityRequest {
+
+                /** DeleteProjectIdentityRequest projectIdentityId */
+                projectIdentityId?: (string|null);
+
+                /** DeleteProjectIdentityRequest organizationId */
+                organizationId?: (string|null);
+
+                /** DeleteProjectIdentityRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a DeleteProjectIdentityRequest. */
+            class DeleteProjectIdentityRequest implements IDeleteProjectIdentityRequest {
+
+                /**
+                 * Constructs a new DeleteProjectIdentityRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IDeleteProjectIdentityRequest);
+
+                /** DeleteProjectIdentityRequest projectIdentityId. */
+                public projectIdentityId: string;
+
+                /** DeleteProjectIdentityRequest organizationId. */
+                public organizationId: string;
+
+                /** DeleteProjectIdentityRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a DeleteProjectIdentityRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a DeleteProjectIdentityRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns DeleteProjectIdentityRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.DeleteProjectIdentityRequest;
+
+                /**
+                 * Creates a plain object from a DeleteProjectIdentityRequest message. Also converts values to other types if specified.
+                 * @param message DeleteProjectIdentityRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.DeleteProjectIdentityRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this DeleteProjectIdentityRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetProjectIdentitiesRequest. */
+            interface IGetProjectIdentitiesRequest {
+
+                /** GetProjectIdentitiesRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetProjectIdentitiesRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a GetProjectIdentitiesRequest. */
+            class GetProjectIdentitiesRequest implements IGetProjectIdentitiesRequest {
+
+                /**
+                 * Constructs a new GetProjectIdentitiesRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetProjectIdentitiesRequest);
+
+                /** GetProjectIdentitiesRequest organizationId. */
+                public organizationId: string;
+
+                /** GetProjectIdentitiesRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a GetProjectIdentitiesRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetProjectIdentitiesRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetProjectIdentitiesRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetProjectIdentitiesRequest;
+
+                /**
+                 * Creates a plain object from a GetProjectIdentitiesRequest message. Also converts values to other types if specified.
+                 * @param message GetProjectIdentitiesRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetProjectIdentitiesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetProjectIdentitiesRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetProjectIdentityRequest. */
+            interface IGetProjectIdentityRequest {
+
+                /** GetProjectIdentityRequest projectIdentityId */
+                projectIdentityId?: (string|null);
+
+                /** GetProjectIdentityRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetProjectIdentityRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a GetProjectIdentityRequest. */
+            class GetProjectIdentityRequest implements IGetProjectIdentityRequest {
+
+                /**
+                 * Constructs a new GetProjectIdentityRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetProjectIdentityRequest);
+
+                /** GetProjectIdentityRequest projectIdentityId. */
+                public projectIdentityId: string;
+
+                /** GetProjectIdentityRequest organizationId. */
+                public organizationId: string;
+
+                /** GetProjectIdentityRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a GetProjectIdentityRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetProjectIdentityRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetProjectIdentityRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetProjectIdentityRequest;
+
+                /**
+                 * Creates a plain object from a GetProjectIdentityRequest message. Also converts values to other types if specified.
+                 * @param message GetProjectIdentityRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetProjectIdentityRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetProjectIdentityRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an UpdateProjectIdentityRequest. */
+            interface IUpdateProjectIdentityRequest {
+
+                /** UpdateProjectIdentityRequest projectIdentityId */
+                projectIdentityId?: (string|null);
+
+                /** UpdateProjectIdentityRequest organizationId */
+                organizationId?: (string|null);
+
+                /** UpdateProjectIdentityRequest projectId */
+                projectId?: (string|null);
+
+                /** UpdateProjectIdentityRequest projectIdentity */
+                projectIdentity?: (colbylwilliams.teamcloud.v1.IProjectIdentity|null);
+            }
+
+            /** Represents an UpdateProjectIdentityRequest. */
+            class UpdateProjectIdentityRequest implements IUpdateProjectIdentityRequest {
+
+                /**
+                 * Constructs a new UpdateProjectIdentityRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUpdateProjectIdentityRequest);
+
+                /** UpdateProjectIdentityRequest projectIdentityId. */
+                public projectIdentityId: string;
+
+                /** UpdateProjectIdentityRequest organizationId. */
+                public organizationId: string;
+
+                /** UpdateProjectIdentityRequest projectId. */
+                public projectId: string;
+
+                /** UpdateProjectIdentityRequest projectIdentity. */
+                public projectIdentity?: (colbylwilliams.teamcloud.v1.IProjectIdentity|null);
+
+                /**
+                 * Verifies an UpdateProjectIdentityRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an UpdateProjectIdentityRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns UpdateProjectIdentityRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.UpdateProjectIdentityRequest;
+
+                /**
+                 * Creates a plain object from an UpdateProjectIdentityRequest message. Also converts values to other types if specified.
+                 * @param message UpdateProjectIdentityRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.UpdateProjectIdentityRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this UpdateProjectIdentityRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ProjectIdentity. */
+            interface IProjectIdentity {
+
+                /** ProjectIdentity projectId */
+                projectId?: (string|null);
+
+                /** ProjectIdentity projectName */
+                projectName?: (string|null);
+
+                /** ProjectIdentity organization */
+                organization?: (string|null);
+
+                /** ProjectIdentity organizationName */
+                organizationName?: (string|null);
+
+                /** ProjectIdentity displayName */
+                displayName?: (string|null);
+
+                /** ProjectIdentity deploymentScopeId */
+                deploymentScopeId?: (string|null);
+
+                /** ProjectIdentity tenantId */
+                tenantId?: (string|null);
+
+                /** ProjectIdentity clientId */
+                clientId?: (string|null);
+
+                /** ProjectIdentity clientSecret */
+                clientSecret?: (string|null);
+
+                /** ProjectIdentity redirectUrls */
+                redirectUrls?: (string[]|null);
+
+                /** ProjectIdentity objectId */
+                objectId?: (string|null);
+
+                /** ProjectIdentity id */
+                id?: (string|null);
+            }
+
+            /** Represents a ProjectIdentity. */
+            class ProjectIdentity implements IProjectIdentity {
+
+                /**
+                 * Constructs a new ProjectIdentity.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IProjectIdentity);
+
+                /** ProjectIdentity projectId. */
+                public projectId: string;
+
+                /** ProjectIdentity projectName. */
+                public projectName: string;
+
+                /** ProjectIdentity organization. */
+                public organization: string;
+
+                /** ProjectIdentity organizationName. */
+                public organizationName: string;
+
+                /** ProjectIdentity displayName. */
+                public displayName: string;
+
+                /** ProjectIdentity deploymentScopeId. */
+                public deploymentScopeId: string;
+
+                /** ProjectIdentity tenantId. */
+                public tenantId: string;
+
+                /** ProjectIdentity clientId. */
+                public clientId: string;
+
+                /** ProjectIdentity clientSecret. */
+                public clientSecret?: (string|null);
+
+                /** ProjectIdentity redirectUrls. */
+                public redirectUrls: string[];
+
+                /** ProjectIdentity objectId. */
+                public objectId: string;
+
+                /** ProjectIdentity id. */
+                public id: string;
+
+                /** ProjectIdentity _clientSecret. */
+                public _clientSecret?: "clientSecret";
+
+                /**
+                 * Verifies a ProjectIdentity message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ProjectIdentity message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ProjectIdentity
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ProjectIdentity;
+
+                /**
+                 * Creates a plain object from a ProjectIdentity message. Also converts values to other types if specified.
+                 * @param message ProjectIdentity
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ProjectIdentity, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ProjectIdentity to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ProjectIdentityDataResult. */
+            interface IProjectIdentityDataResult {
+
+                /** ProjectIdentityDataResult code */
+                code?: (number|null);
+
+                /** ProjectIdentityDataResult status */
+                status?: (string|null);
+
+                /** ProjectIdentityDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IProjectIdentity|null);
+
+                /** ProjectIdentityDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ProjectIdentityDataResult. */
+            class ProjectIdentityDataResult implements IProjectIdentityDataResult {
+
+                /**
+                 * Constructs a new ProjectIdentityDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IProjectIdentityDataResult);
+
+                /** ProjectIdentityDataResult code. */
+                public code: number;
+
+                /** ProjectIdentityDataResult status. */
+                public status?: (string|null);
+
+                /** ProjectIdentityDataResult data. */
+                public data?: (colbylwilliams.teamcloud.v1.IProjectIdentity|null);
+
+                /** ProjectIdentityDataResult location. */
+                public location?: (string|null);
+
+                /** ProjectIdentityDataResult _status. */
+                public _status?: "status";
+
+                /** ProjectIdentityDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ProjectIdentityDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ProjectIdentityDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ProjectIdentityDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ProjectIdentityDataResult;
+
+                /**
+                 * Creates a plain object from a ProjectIdentityDataResult message. Also converts values to other types if specified.
+                 * @param message ProjectIdentityDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ProjectIdentityDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ProjectIdentityDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ProjectIdentityDefinition. */
+            interface IProjectIdentityDefinition {
+
+                /** ProjectIdentityDefinition displayName */
+                displayName?: (string|null);
+
+                /** ProjectIdentityDefinition deploymentScopeId */
+                deploymentScopeId?: (string|null);
+            }
+
+            /** Represents a ProjectIdentityDefinition. */
+            class ProjectIdentityDefinition implements IProjectIdentityDefinition {
+
+                /**
+                 * Constructs a new ProjectIdentityDefinition.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IProjectIdentityDefinition);
+
+                /** ProjectIdentityDefinition displayName. */
+                public displayName: string;
+
+                /** ProjectIdentityDefinition deploymentScopeId. */
+                public deploymentScopeId: string;
+
+                /**
+                 * Verifies a ProjectIdentityDefinition message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ProjectIdentityDefinition message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ProjectIdentityDefinition
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ProjectIdentityDefinition;
+
+                /**
+                 * Creates a plain object from a ProjectIdentityDefinition message. Also converts values to other types if specified.
+                 * @param message ProjectIdentityDefinition
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ProjectIdentityDefinition, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ProjectIdentityDefinition to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ProjectIdentityListDataResult. */
+            interface IProjectIdentityListDataResult {
+
+                /** ProjectIdentityListDataResult code */
+                code?: (number|null);
+
+                /** ProjectIdentityListDataResult status */
+                status?: (string|null);
+
+                /** ProjectIdentityListDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IProjectIdentity[]|null);
+
+                /** ProjectIdentityListDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ProjectIdentityListDataResult. */
+            class ProjectIdentityListDataResult implements IProjectIdentityListDataResult {
+
+                /**
+                 * Constructs a new ProjectIdentityListDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IProjectIdentityListDataResult);
+
+                /** ProjectIdentityListDataResult code. */
+                public code: number;
+
+                /** ProjectIdentityListDataResult status. */
+                public status?: (string|null);
+
+                /** ProjectIdentityListDataResult data. */
+                public data: colbylwilliams.teamcloud.v1.IProjectIdentity[];
+
+                /** ProjectIdentityListDataResult location. */
+                public location?: (string|null);
+
+                /** ProjectIdentityListDataResult _status. */
+                public _status?: "status";
+
+                /** ProjectIdentityListDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ProjectIdentityListDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ProjectIdentityListDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ProjectIdentityListDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ProjectIdentityListDataResult;
+
+                /**
+                 * Creates a plain object from a ProjectIdentityListDataResult message. Also converts values to other types if specified.
+                 * @param message ProjectIdentityListDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ProjectIdentityListDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ProjectIdentityListDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ProjectListDataResult. */
+            interface IProjectListDataResult {
+
+                /** ProjectListDataResult code */
+                code?: (number|null);
+
+                /** ProjectListDataResult status */
+                status?: (string|null);
+
+                /** ProjectListDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IProject[]|null);
+
+                /** ProjectListDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ProjectListDataResult. */
+            class ProjectListDataResult implements IProjectListDataResult {
+
+                /**
+                 * Constructs a new ProjectListDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IProjectListDataResult);
+
+                /** ProjectListDataResult code. */
+                public code: number;
+
+                /** ProjectListDataResult status. */
+                public status?: (string|null);
+
+                /** ProjectListDataResult data. */
+                public data: colbylwilliams.teamcloud.v1.IProject[];
+
+                /** ProjectListDataResult location. */
+                public location?: (string|null);
+
+                /** ProjectListDataResult _status. */
+                public _status?: "status";
+
+                /** ProjectListDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ProjectListDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ProjectListDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ProjectListDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ProjectListDataResult;
+
+                /**
+                 * Creates a plain object from a ProjectListDataResult message. Also converts values to other types if specified.
+                 * @param message ProjectListDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ProjectListDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ProjectListDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a ProjectAPI */
+            class ProjectAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new ProjectAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls CreateProject.
+                 * @param request CreateProjectRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectDataResult
+                 */
+                public createProject(request: colbylwilliams.teamcloud.v1.ICreateProjectRequest, callback: colbylwilliams.teamcloud.v1.ProjectAPI.CreateProjectCallback): void;
+
+                /**
+                 * Calls CreateProject.
+                 * @param request CreateProjectRequest message or plain object
+                 * @returns Promise
+                 */
+                public createProject(request: colbylwilliams.teamcloud.v1.ICreateProjectRequest): Promise<colbylwilliams.teamcloud.v1.ProjectDataResult>;
+
+                /**
+                 * Calls DeleteProject.
+                 * @param request DeleteProjectRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StatusResult
+                 */
+                public deleteProject(request: colbylwilliams.teamcloud.v1.IDeleteProjectRequest, callback: colbylwilliams.teamcloud.v1.ProjectAPI.DeleteProjectCallback): void;
+
+                /**
+                 * Calls DeleteProject.
+                 * @param request DeleteProjectRequest message or plain object
+                 * @returns Promise
+                 */
+                public deleteProject(request: colbylwilliams.teamcloud.v1.IDeleteProjectRequest): Promise<colbylwilliams.teamcloud.v1.StatusResult>;
+
+                /**
+                 * Calls GetProject.
+                 * @param request GetProjectRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectDataResult
+                 */
+                public getProject(request: colbylwilliams.teamcloud.v1.IGetProjectRequest, callback: colbylwilliams.teamcloud.v1.ProjectAPI.GetProjectCallback): void;
+
+                /**
+                 * Calls GetProject.
+                 * @param request GetProjectRequest message or plain object
+                 * @returns Promise
+                 */
+                public getProject(request: colbylwilliams.teamcloud.v1.IGetProjectRequest): Promise<colbylwilliams.teamcloud.v1.ProjectDataResult>;
+
+                /**
+                 * Calls GetProjects.
+                 * @param request GetProjectsRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectListDataResult
+                 */
+                public getProjects(request: colbylwilliams.teamcloud.v1.IGetProjectsRequest, callback: colbylwilliams.teamcloud.v1.ProjectAPI.GetProjectsCallback): void;
+
+                /**
+                 * Calls GetProjects.
+                 * @param request GetProjectsRequest message or plain object
+                 * @returns Promise
+                 */
+                public getProjects(request: colbylwilliams.teamcloud.v1.IGetProjectsRequest): Promise<colbylwilliams.teamcloud.v1.ProjectListDataResult>;
+            }
+
+            namespace ProjectAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectAPI#createProject}.
+                 * @param error Error, if any
+                 * @param [response] ProjectDataResult
+                 */
+                type CreateProjectCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectAPI#deleteProject}.
+                 * @param error Error, if any
+                 * @param [response] StatusResult
+                 */
+                type DeleteProjectCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StatusResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectAPI#getProject}.
+                 * @param error Error, if any
+                 * @param [response] ProjectDataResult
+                 */
+                type GetProjectCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectAPI#getProjects}.
+                 * @param error Error, if any
+                 * @param [response] ProjectListDataResult
+                 */
+                type GetProjectsCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectListDataResult) => void;
+            }
+
+            /** Properties of a CreateProjectRequest. */
+            interface ICreateProjectRequest {
+
+                /** CreateProjectRequest organizationId */
+                organizationId?: (string|null);
+
+                /** CreateProjectRequest projectDefinition */
+                projectDefinition?: (colbylwilliams.teamcloud.v1.IProjectDefinition|null);
+            }
+
+            /** Represents a CreateProjectRequest. */
+            class CreateProjectRequest implements ICreateProjectRequest {
+
+                /**
+                 * Constructs a new CreateProjectRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICreateProjectRequest);
+
+                /** CreateProjectRequest organizationId. */
+                public organizationId: string;
+
+                /** CreateProjectRequest projectDefinition. */
+                public projectDefinition?: (colbylwilliams.teamcloud.v1.IProjectDefinition|null);
+
+                /**
+                 * Verifies a CreateProjectRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CreateProjectRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CreateProjectRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CreateProjectRequest;
+
+                /**
+                 * Creates a plain object from a CreateProjectRequest message. Also converts values to other types if specified.
+                 * @param message CreateProjectRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CreateProjectRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CreateProjectRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a DeleteProjectRequest. */
+            interface IDeleteProjectRequest {
+
+                /** DeleteProjectRequest projectId */
+                projectId?: (string|null);
+
+                /** DeleteProjectRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a DeleteProjectRequest. */
+            class DeleteProjectRequest implements IDeleteProjectRequest {
+
+                /**
+                 * Constructs a new DeleteProjectRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IDeleteProjectRequest);
+
+                /** DeleteProjectRequest projectId. */
+                public projectId: string;
+
+                /** DeleteProjectRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a DeleteProjectRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a DeleteProjectRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns DeleteProjectRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.DeleteProjectRequest;
+
+                /**
+                 * Creates a plain object from a DeleteProjectRequest message. Also converts values to other types if specified.
+                 * @param message DeleteProjectRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.DeleteProjectRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this DeleteProjectRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetProjectRequest. */
+            interface IGetProjectRequest {
+
+                /** GetProjectRequest projectId */
+                projectId?: (string|null);
+
+                /** GetProjectRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a GetProjectRequest. */
+            class GetProjectRequest implements IGetProjectRequest {
+
+                /**
+                 * Constructs a new GetProjectRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetProjectRequest);
+
+                /** GetProjectRequest projectId. */
+                public projectId: string;
+
+                /** GetProjectRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a GetProjectRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetProjectRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetProjectRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetProjectRequest;
+
+                /**
+                 * Creates a plain object from a GetProjectRequest message. Also converts values to other types if specified.
+                 * @param message GetProjectRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetProjectRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetProjectRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetProjectsRequest. */
+            interface IGetProjectsRequest {
+
+                /** GetProjectsRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a GetProjectsRequest. */
+            class GetProjectsRequest implements IGetProjectsRequest {
+
+                /**
+                 * Constructs a new GetProjectsRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetProjectsRequest);
+
+                /** GetProjectsRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a GetProjectsRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetProjectsRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetProjectsRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetProjectsRequest;
+
+                /**
+                 * Creates a plain object from a GetProjectsRequest message. Also converts values to other types if specified.
+                 * @param message GetProjectsRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetProjectsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetProjectsRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a ProjectTagsAPI */
+            class ProjectTagsAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new ProjectTagsAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls CreateProjectTag.
+                 * @param request CreateProjectTagRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StatusResult
+                 */
+                public createProjectTag(request: colbylwilliams.teamcloud.v1.ICreateProjectTagRequest, callback: colbylwilliams.teamcloud.v1.ProjectTagsAPI.CreateProjectTagCallback): void;
+
+                /**
+                 * Calls CreateProjectTag.
+                 * @param request CreateProjectTagRequest message or plain object
+                 * @returns Promise
+                 */
+                public createProjectTag(request: colbylwilliams.teamcloud.v1.ICreateProjectTagRequest): Promise<colbylwilliams.teamcloud.v1.StatusResult>;
+
+                /**
+                 * Calls DeleteProjectTag.
+                 * @param request DeleteProjectTagRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StatusResult
+                 */
+                public deleteProjectTag(request: colbylwilliams.teamcloud.v1.IDeleteProjectTagRequest, callback: colbylwilliams.teamcloud.v1.ProjectTagsAPI.DeleteProjectTagCallback): void;
+
+                /**
+                 * Calls DeleteProjectTag.
+                 * @param request DeleteProjectTagRequest message or plain object
+                 * @returns Promise
+                 */
+                public deleteProjectTag(request: colbylwilliams.teamcloud.v1.IDeleteProjectTagRequest): Promise<colbylwilliams.teamcloud.v1.StatusResult>;
+
+                /**
+                 * Calls GetProjectTagByKey.
+                 * @param request GetProjectTagByKeyRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StringStringDictionaryDataResult
+                 */
+                public getProjectTagByKey(request: colbylwilliams.teamcloud.v1.IGetProjectTagByKeyRequest, callback: colbylwilliams.teamcloud.v1.ProjectTagsAPI.GetProjectTagByKeyCallback): void;
+
+                /**
+                 * Calls GetProjectTagByKey.
+                 * @param request GetProjectTagByKeyRequest message or plain object
+                 * @returns Promise
+                 */
+                public getProjectTagByKey(request: colbylwilliams.teamcloud.v1.IGetProjectTagByKeyRequest): Promise<colbylwilliams.teamcloud.v1.StringStringDictionaryDataResult>;
+
+                /**
+                 * Calls GetProjectTags.
+                 * @param request GetProjectTagsRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StringStringDictionaryDataResult
+                 */
+                public getProjectTags(request: colbylwilliams.teamcloud.v1.IGetProjectTagsRequest, callback: colbylwilliams.teamcloud.v1.ProjectTagsAPI.GetProjectTagsCallback): void;
+
+                /**
+                 * Calls GetProjectTags.
+                 * @param request GetProjectTagsRequest message or plain object
+                 * @returns Promise
+                 */
+                public getProjectTags(request: colbylwilliams.teamcloud.v1.IGetProjectTagsRequest): Promise<colbylwilliams.teamcloud.v1.StringStringDictionaryDataResult>;
+
+                /**
+                 * Calls UpdateProjectTag.
+                 * @param request UpdateProjectTagRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StatusResult
+                 */
+                public updateProjectTag(request: colbylwilliams.teamcloud.v1.IUpdateProjectTagRequest, callback: colbylwilliams.teamcloud.v1.ProjectTagsAPI.UpdateProjectTagCallback): void;
+
+                /**
+                 * Calls UpdateProjectTag.
+                 * @param request UpdateProjectTagRequest message or plain object
+                 * @returns Promise
+                 */
+                public updateProjectTag(request: colbylwilliams.teamcloud.v1.IUpdateProjectTagRequest): Promise<colbylwilliams.teamcloud.v1.StatusResult>;
+            }
+
+            namespace ProjectTagsAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectTagsAPI#createProjectTag}.
+                 * @param error Error, if any
+                 * @param [response] StatusResult
+                 */
+                type CreateProjectTagCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StatusResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectTagsAPI#deleteProjectTag}.
+                 * @param error Error, if any
+                 * @param [response] StatusResult
+                 */
+                type DeleteProjectTagCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StatusResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectTagsAPI#getProjectTagByKey}.
+                 * @param error Error, if any
+                 * @param [response] StringStringDictionaryDataResult
+                 */
+                type GetProjectTagByKeyCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StringStringDictionaryDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectTagsAPI#getProjectTags}.
+                 * @param error Error, if any
+                 * @param [response] StringStringDictionaryDataResult
+                 */
+                type GetProjectTagsCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StringStringDictionaryDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectTagsAPI#updateProjectTag}.
+                 * @param error Error, if any
+                 * @param [response] StatusResult
+                 */
+                type UpdateProjectTagCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StatusResult) => void;
+            }
+
+            /** Properties of a CreateProjectTagRequest. */
+            interface ICreateProjectTagRequest {
+
+                /** CreateProjectTagRequest organizationId */
+                organizationId?: (string|null);
+
+                /** CreateProjectTagRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a CreateProjectTagRequest. */
+            class CreateProjectTagRequest implements ICreateProjectTagRequest {
+
+                /**
+                 * Constructs a new CreateProjectTagRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICreateProjectTagRequest);
+
+                /** CreateProjectTagRequest organizationId. */
+                public organizationId: string;
+
+                /** CreateProjectTagRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a CreateProjectTagRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CreateProjectTagRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CreateProjectTagRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CreateProjectTagRequest;
+
+                /**
+                 * Creates a plain object from a CreateProjectTagRequest message. Also converts values to other types if specified.
+                 * @param message CreateProjectTagRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CreateProjectTagRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CreateProjectTagRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a DeleteProjectTagRequest. */
+            interface IDeleteProjectTagRequest {
+
+                /** DeleteProjectTagRequest tagKey */
+                tagKey?: (string|null);
+
+                /** DeleteProjectTagRequest organizationId */
+                organizationId?: (string|null);
+
+                /** DeleteProjectTagRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a DeleteProjectTagRequest. */
+            class DeleteProjectTagRequest implements IDeleteProjectTagRequest {
+
+                /**
+                 * Constructs a new DeleteProjectTagRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IDeleteProjectTagRequest);
+
+                /** DeleteProjectTagRequest tagKey. */
+                public tagKey: string;
+
+                /** DeleteProjectTagRequest organizationId. */
+                public organizationId: string;
+
+                /** DeleteProjectTagRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a DeleteProjectTagRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a DeleteProjectTagRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns DeleteProjectTagRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.DeleteProjectTagRequest;
+
+                /**
+                 * Creates a plain object from a DeleteProjectTagRequest message. Also converts values to other types if specified.
+                 * @param message DeleteProjectTagRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.DeleteProjectTagRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this DeleteProjectTagRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetProjectTagByKeyRequest. */
+            interface IGetProjectTagByKeyRequest {
+
+                /** GetProjectTagByKeyRequest tagKey */
+                tagKey?: (string|null);
+
+                /** GetProjectTagByKeyRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetProjectTagByKeyRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a GetProjectTagByKeyRequest. */
+            class GetProjectTagByKeyRequest implements IGetProjectTagByKeyRequest {
+
+                /**
+                 * Constructs a new GetProjectTagByKeyRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetProjectTagByKeyRequest);
+
+                /** GetProjectTagByKeyRequest tagKey. */
+                public tagKey: string;
+
+                /** GetProjectTagByKeyRequest organizationId. */
+                public organizationId: string;
+
+                /** GetProjectTagByKeyRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a GetProjectTagByKeyRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetProjectTagByKeyRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetProjectTagByKeyRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetProjectTagByKeyRequest;
+
+                /**
+                 * Creates a plain object from a GetProjectTagByKeyRequest message. Also converts values to other types if specified.
+                 * @param message GetProjectTagByKeyRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetProjectTagByKeyRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetProjectTagByKeyRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetProjectTagsRequest. */
+            interface IGetProjectTagsRequest {
+
+                /** GetProjectTagsRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetProjectTagsRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a GetProjectTagsRequest. */
+            class GetProjectTagsRequest implements IGetProjectTagsRequest {
+
+                /**
+                 * Constructs a new GetProjectTagsRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetProjectTagsRequest);
+
+                /** GetProjectTagsRequest organizationId. */
+                public organizationId: string;
+
+                /** GetProjectTagsRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a GetProjectTagsRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetProjectTagsRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetProjectTagsRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetProjectTagsRequest;
+
+                /**
+                 * Creates a plain object from a GetProjectTagsRequest message. Also converts values to other types if specified.
+                 * @param message GetProjectTagsRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetProjectTagsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetProjectTagsRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an UpdateProjectTagRequest. */
+            interface IUpdateProjectTagRequest {
+
+                /** UpdateProjectTagRequest organizationId */
+                organizationId?: (string|null);
+
+                /** UpdateProjectTagRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents an UpdateProjectTagRequest. */
+            class UpdateProjectTagRequest implements IUpdateProjectTagRequest {
+
+                /**
+                 * Constructs a new UpdateProjectTagRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUpdateProjectTagRequest);
+
+                /** UpdateProjectTagRequest organizationId. */
+                public organizationId: string;
+
+                /** UpdateProjectTagRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies an UpdateProjectTagRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an UpdateProjectTagRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns UpdateProjectTagRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.UpdateProjectTagRequest;
+
+                /**
+                 * Creates a plain object from an UpdateProjectTagRequest message. Also converts values to other types if specified.
+                 * @param message UpdateProjectTagRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.UpdateProjectTagRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this UpdateProjectTagRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a StringStringDictionaryDataResult. */
+            interface IStringStringDictionaryDataResult {
+
+                /** StringStringDictionaryDataResult code */
+                code?: (number|null);
+
+                /** StringStringDictionaryDataResult status */
+                status?: (string|null);
+
+                /** StringStringDictionaryDataResult data */
+                data?: ({ [k: string]: string }|null);
+
+                /** StringStringDictionaryDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a StringStringDictionaryDataResult. */
+            class StringStringDictionaryDataResult implements IStringStringDictionaryDataResult {
+
+                /**
+                 * Constructs a new StringStringDictionaryDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IStringStringDictionaryDataResult);
+
+                /** StringStringDictionaryDataResult code. */
+                public code: number;
+
+                /** StringStringDictionaryDataResult status. */
+                public status?: (string|null);
+
+                /** StringStringDictionaryDataResult data. */
+                public data: { [k: string]: string };
+
+                /** StringStringDictionaryDataResult location. */
+                public location?: (string|null);
+
+                /** StringStringDictionaryDataResult _status. */
+                public _status?: "status";
+
+                /** StringStringDictionaryDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a StringStringDictionaryDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a StringStringDictionaryDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns StringStringDictionaryDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.StringStringDictionaryDataResult;
+
+                /**
+                 * Creates a plain object from a StringStringDictionaryDataResult message. Also converts values to other types if specified.
+                 * @param message StringStringDictionaryDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.StringStringDictionaryDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this StringStringDictionaryDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ProjectTemplateDataResult. */
+            interface IProjectTemplateDataResult {
+
+                /** ProjectTemplateDataResult code */
+                code?: (number|null);
+
+                /** ProjectTemplateDataResult status */
+                status?: (string|null);
+
+                /** ProjectTemplateDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IProjectTemplate|null);
+
+                /** ProjectTemplateDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ProjectTemplateDataResult. */
+            class ProjectTemplateDataResult implements IProjectTemplateDataResult {
+
+                /**
+                 * Constructs a new ProjectTemplateDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IProjectTemplateDataResult);
+
+                /** ProjectTemplateDataResult code. */
+                public code: number;
+
+                /** ProjectTemplateDataResult status. */
+                public status?: (string|null);
+
+                /** ProjectTemplateDataResult data. */
+                public data?: (colbylwilliams.teamcloud.v1.IProjectTemplate|null);
+
+                /** ProjectTemplateDataResult location. */
+                public location?: (string|null);
+
+                /** ProjectTemplateDataResult _status. */
+                public _status?: "status";
+
+                /** ProjectTemplateDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ProjectTemplateDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ProjectTemplateDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ProjectTemplateDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ProjectTemplateDataResult;
+
+                /**
+                 * Creates a plain object from a ProjectTemplateDataResult message. Also converts values to other types if specified.
+                 * @param message ProjectTemplateDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ProjectTemplateDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ProjectTemplateDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ProjectTemplate. */
+            interface IProjectTemplate {
+
+                /** ProjectTemplate organization */
+                organization?: (string|null);
+
+                /** ProjectTemplate organizationName */
+                organizationName?: (string|null);
+
+                /** ProjectTemplate slug */
+                slug?: (string|null);
+
+                /** ProjectTemplate name */
+                name?: (string|null);
+
+                /** ProjectTemplate displayName */
+                displayName?: (string|null);
+
+                /** ProjectTemplate components */
+                components?: (string[]|null);
+
+                /** ProjectTemplate repository */
+                repository?: (colbylwilliams.teamcloud.v1.IRepositoryReference|null);
+
+                /** ProjectTemplate description */
+                description?: (string|null);
+
+                /** ProjectTemplate isDefault */
+                isDefault?: (boolean|null);
+
+                /** ProjectTemplate inputJsonSchema */
+                inputJsonSchema?: (string|null);
+
+                /** ProjectTemplate id */
+                id?: (string|null);
+            }
+
+            /** Represents a ProjectTemplate. */
+            class ProjectTemplate implements IProjectTemplate {
+
+                /**
+                 * Constructs a new ProjectTemplate.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IProjectTemplate);
+
+                /** ProjectTemplate organization. */
+                public organization: string;
+
+                /** ProjectTemplate organizationName. */
+                public organizationName: string;
+
+                /** ProjectTemplate slug. */
+                public slug: string;
+
+                /** ProjectTemplate name. */
+                public name?: (string|null);
+
+                /** ProjectTemplate displayName. */
+                public displayName: string;
+
+                /** ProjectTemplate components. */
+                public components: string[];
+
+                /** ProjectTemplate repository. */
+                public repository?: (colbylwilliams.teamcloud.v1.IRepositoryReference|null);
+
+                /** ProjectTemplate description. */
+                public description?: (string|null);
+
+                /** ProjectTemplate isDefault. */
+                public isDefault: boolean;
+
+                /** ProjectTemplate inputJsonSchema. */
+                public inputJsonSchema?: (string|null);
+
+                /** ProjectTemplate id. */
+                public id: string;
+
+                /** ProjectTemplate _name. */
+                public _name?: "name";
+
+                /** ProjectTemplate _description. */
+                public _description?: "description";
+
+                /** ProjectTemplate _inputJsonSchema. */
+                public _inputJsonSchema?: "inputJsonSchema";
+
+                /**
+                 * Verifies a ProjectTemplate message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ProjectTemplate message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ProjectTemplate
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ProjectTemplate;
+
+                /**
+                 * Creates a plain object from a ProjectTemplate message. Also converts values to other types if specified.
+                 * @param message ProjectTemplate
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ProjectTemplate, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ProjectTemplate to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ProjectTemplateDefinition. */
+            interface IProjectTemplateDefinition {
+
+                /** ProjectTemplateDefinition displayName */
+                displayName?: (string|null);
+
+                /** ProjectTemplateDefinition repository */
+                repository?: (colbylwilliams.teamcloud.v1.IRepositoryDefinition|null);
+            }
+
+            /** Represents a ProjectTemplateDefinition. */
+            class ProjectTemplateDefinition implements IProjectTemplateDefinition {
+
+                /**
+                 * Constructs a new ProjectTemplateDefinition.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IProjectTemplateDefinition);
+
+                /** ProjectTemplateDefinition displayName. */
+                public displayName: string;
+
+                /** ProjectTemplateDefinition repository. */
+                public repository?: (colbylwilliams.teamcloud.v1.IRepositoryDefinition|null);
+
+                /**
+                 * Verifies a ProjectTemplateDefinition message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ProjectTemplateDefinition message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ProjectTemplateDefinition
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ProjectTemplateDefinition;
+
+                /**
+                 * Creates a plain object from a ProjectTemplateDefinition message. Also converts values to other types if specified.
+                 * @param message ProjectTemplateDefinition
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ProjectTemplateDefinition, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ProjectTemplateDefinition to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a RepositoryDefinition. */
+            interface IRepositoryDefinition {
+
+                /** RepositoryDefinition url */
+                url?: (string|null);
+
+                /** RepositoryDefinition token */
+                token?: (string|null);
+
+                /** RepositoryDefinition version */
+                version?: (string|null);
+            }
+
+            /** Represents a RepositoryDefinition. */
+            class RepositoryDefinition implements IRepositoryDefinition {
+
+                /**
+                 * Constructs a new RepositoryDefinition.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IRepositoryDefinition);
+
+                /** RepositoryDefinition url. */
+                public url: string;
+
+                /** RepositoryDefinition token. */
+                public token?: (string|null);
+
+                /** RepositoryDefinition version. */
+                public version?: (string|null);
+
+                /** RepositoryDefinition _token. */
+                public _token?: "token";
+
+                /** RepositoryDefinition _version. */
+                public _version?: "version";
+
+                /**
+                 * Verifies a RepositoryDefinition message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a RepositoryDefinition message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns RepositoryDefinition
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.RepositoryDefinition;
+
+                /**
+                 * Creates a plain object from a RepositoryDefinition message. Also converts values to other types if specified.
+                 * @param message RepositoryDefinition
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.RepositoryDefinition, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this RepositoryDefinition to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ProjectTemplateListDataResult. */
+            interface IProjectTemplateListDataResult {
+
+                /** ProjectTemplateListDataResult code */
+                code?: (number|null);
+
+                /** ProjectTemplateListDataResult status */
+                status?: (string|null);
+
+                /** ProjectTemplateListDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.IProjectTemplate[]|null);
+
+                /** ProjectTemplateListDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ProjectTemplateListDataResult. */
+            class ProjectTemplateListDataResult implements IProjectTemplateListDataResult {
+
+                /**
+                 * Constructs a new ProjectTemplateListDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IProjectTemplateListDataResult);
+
+                /** ProjectTemplateListDataResult code. */
+                public code: number;
+
+                /** ProjectTemplateListDataResult status. */
+                public status?: (string|null);
+
+                /** ProjectTemplateListDataResult data. */
+                public data: colbylwilliams.teamcloud.v1.IProjectTemplate[];
+
+                /** ProjectTemplateListDataResult location. */
+                public location?: (string|null);
+
+                /** ProjectTemplateListDataResult _status. */
+                public _status?: "status";
+
+                /** ProjectTemplateListDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ProjectTemplateListDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ProjectTemplateListDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ProjectTemplateListDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ProjectTemplateListDataResult;
+
+                /**
+                 * Creates a plain object from a ProjectTemplateListDataResult message. Also converts values to other types if specified.
+                 * @param message ProjectTemplateListDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ProjectTemplateListDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ProjectTemplateListDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a ProjectTemplatesAPI */
+            class ProjectTemplatesAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new ProjectTemplatesAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls CreateProjectTemplate.
+                 * @param request CreateProjectTemplateRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectTemplateDataResult
+                 */
+                public createProjectTemplate(request: colbylwilliams.teamcloud.v1.ICreateProjectTemplateRequest, callback: colbylwilliams.teamcloud.v1.ProjectTemplatesAPI.CreateProjectTemplateCallback): void;
+
+                /**
+                 * Calls CreateProjectTemplate.
+                 * @param request CreateProjectTemplateRequest message or plain object
+                 * @returns Promise
+                 */
+                public createProjectTemplate(request: colbylwilliams.teamcloud.v1.ICreateProjectTemplateRequest): Promise<colbylwilliams.teamcloud.v1.ProjectTemplateDataResult>;
+
+                /**
+                 * Calls DeleteProjectTemplate.
+                 * @param request DeleteProjectTemplateRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectTemplateDataResult
+                 */
+                public deleteProjectTemplate(request: colbylwilliams.teamcloud.v1.IDeleteProjectTemplateRequest, callback: colbylwilliams.teamcloud.v1.ProjectTemplatesAPI.DeleteProjectTemplateCallback): void;
+
+                /**
+                 * Calls DeleteProjectTemplate.
+                 * @param request DeleteProjectTemplateRequest message or plain object
+                 * @returns Promise
+                 */
+                public deleteProjectTemplate(request: colbylwilliams.teamcloud.v1.IDeleteProjectTemplateRequest): Promise<colbylwilliams.teamcloud.v1.ProjectTemplateDataResult>;
+
+                /**
+                 * Calls GetProjectTemplate.
+                 * @param request GetProjectTemplateRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectTemplateDataResult
+                 */
+                public getProjectTemplate(request: colbylwilliams.teamcloud.v1.IGetProjectTemplateRequest, callback: colbylwilliams.teamcloud.v1.ProjectTemplatesAPI.GetProjectTemplateCallback): void;
+
+                /**
+                 * Calls GetProjectTemplate.
+                 * @param request GetProjectTemplateRequest message or plain object
+                 * @returns Promise
+                 */
+                public getProjectTemplate(request: colbylwilliams.teamcloud.v1.IGetProjectTemplateRequest): Promise<colbylwilliams.teamcloud.v1.ProjectTemplateDataResult>;
+
+                /**
+                 * Calls GetProjectTemplates.
+                 * @param request GetProjectTemplatesRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectTemplateListDataResult
+                 */
+                public getProjectTemplates(request: colbylwilliams.teamcloud.v1.IGetProjectTemplatesRequest, callback: colbylwilliams.teamcloud.v1.ProjectTemplatesAPI.GetProjectTemplatesCallback): void;
+
+                /**
+                 * Calls GetProjectTemplates.
+                 * @param request GetProjectTemplatesRequest message or plain object
+                 * @returns Promise
+                 */
+                public getProjectTemplates(request: colbylwilliams.teamcloud.v1.IGetProjectTemplatesRequest): Promise<colbylwilliams.teamcloud.v1.ProjectTemplateListDataResult>;
+
+                /**
+                 * Calls UpdateProjectTemplate.
+                 * @param request UpdateProjectTemplateRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectTemplateDataResult
+                 */
+                public updateProjectTemplate(request: colbylwilliams.teamcloud.v1.IUpdateProjectTemplateRequest, callback: colbylwilliams.teamcloud.v1.ProjectTemplatesAPI.UpdateProjectTemplateCallback): void;
+
+                /**
+                 * Calls UpdateProjectTemplate.
+                 * @param request UpdateProjectTemplateRequest message or plain object
+                 * @returns Promise
+                 */
+                public updateProjectTemplate(request: colbylwilliams.teamcloud.v1.IUpdateProjectTemplateRequest): Promise<colbylwilliams.teamcloud.v1.ProjectTemplateDataResult>;
+            }
+
+            namespace ProjectTemplatesAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectTemplatesAPI#createProjectTemplate}.
+                 * @param error Error, if any
+                 * @param [response] ProjectTemplateDataResult
+                 */
+                type CreateProjectTemplateCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectTemplateDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectTemplatesAPI#deleteProjectTemplate}.
+                 * @param error Error, if any
+                 * @param [response] ProjectTemplateDataResult
+                 */
+                type DeleteProjectTemplateCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectTemplateDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectTemplatesAPI#getProjectTemplate}.
+                 * @param error Error, if any
+                 * @param [response] ProjectTemplateDataResult
+                 */
+                type GetProjectTemplateCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectTemplateDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectTemplatesAPI#getProjectTemplates}.
+                 * @param error Error, if any
+                 * @param [response] ProjectTemplateListDataResult
+                 */
+                type GetProjectTemplatesCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectTemplateListDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectTemplatesAPI#updateProjectTemplate}.
+                 * @param error Error, if any
+                 * @param [response] ProjectTemplateDataResult
+                 */
+                type UpdateProjectTemplateCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectTemplateDataResult) => void;
+            }
+
+            /** Properties of a CreateProjectTemplateRequest. */
+            interface ICreateProjectTemplateRequest {
+
+                /** CreateProjectTemplateRequest organizationId */
+                organizationId?: (string|null);
+
+                /** CreateProjectTemplateRequest projectTemplateDefinition */
+                projectTemplateDefinition?: (colbylwilliams.teamcloud.v1.IProjectTemplateDefinition|null);
+            }
+
+            /** Represents a CreateProjectTemplateRequest. */
+            class CreateProjectTemplateRequest implements ICreateProjectTemplateRequest {
+
+                /**
+                 * Constructs a new CreateProjectTemplateRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICreateProjectTemplateRequest);
+
+                /** CreateProjectTemplateRequest organizationId. */
+                public organizationId: string;
+
+                /** CreateProjectTemplateRequest projectTemplateDefinition. */
+                public projectTemplateDefinition?: (colbylwilliams.teamcloud.v1.IProjectTemplateDefinition|null);
+
+                /**
+                 * Verifies a CreateProjectTemplateRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CreateProjectTemplateRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CreateProjectTemplateRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CreateProjectTemplateRequest;
+
+                /**
+                 * Creates a plain object from a CreateProjectTemplateRequest message. Also converts values to other types if specified.
+                 * @param message CreateProjectTemplateRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CreateProjectTemplateRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CreateProjectTemplateRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a DeleteProjectTemplateRequest. */
+            interface IDeleteProjectTemplateRequest {
+
+                /** DeleteProjectTemplateRequest projectTemplateId */
+                projectTemplateId?: (string|null);
+
+                /** DeleteProjectTemplateRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a DeleteProjectTemplateRequest. */
+            class DeleteProjectTemplateRequest implements IDeleteProjectTemplateRequest {
+
+                /**
+                 * Constructs a new DeleteProjectTemplateRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IDeleteProjectTemplateRequest);
+
+                /** DeleteProjectTemplateRequest projectTemplateId. */
+                public projectTemplateId: string;
+
+                /** DeleteProjectTemplateRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a DeleteProjectTemplateRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a DeleteProjectTemplateRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns DeleteProjectTemplateRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.DeleteProjectTemplateRequest;
+
+                /**
+                 * Creates a plain object from a DeleteProjectTemplateRequest message. Also converts values to other types if specified.
+                 * @param message DeleteProjectTemplateRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.DeleteProjectTemplateRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this DeleteProjectTemplateRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetProjectTemplateRequest. */
+            interface IGetProjectTemplateRequest {
+
+                /** GetProjectTemplateRequest projectTemplateId */
+                projectTemplateId?: (string|null);
+
+                /** GetProjectTemplateRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a GetProjectTemplateRequest. */
+            class GetProjectTemplateRequest implements IGetProjectTemplateRequest {
+
+                /**
+                 * Constructs a new GetProjectTemplateRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetProjectTemplateRequest);
+
+                /** GetProjectTemplateRequest projectTemplateId. */
+                public projectTemplateId: string;
+
+                /** GetProjectTemplateRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a GetProjectTemplateRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetProjectTemplateRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetProjectTemplateRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetProjectTemplateRequest;
+
+                /**
+                 * Creates a plain object from a GetProjectTemplateRequest message. Also converts values to other types if specified.
+                 * @param message GetProjectTemplateRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetProjectTemplateRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetProjectTemplateRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetProjectTemplatesRequest. */
+            interface IGetProjectTemplatesRequest {
+
+                /** GetProjectTemplatesRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a GetProjectTemplatesRequest. */
+            class GetProjectTemplatesRequest implements IGetProjectTemplatesRequest {
+
+                /**
+                 * Constructs a new GetProjectTemplatesRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetProjectTemplatesRequest);
+
+                /** GetProjectTemplatesRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a GetProjectTemplatesRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetProjectTemplatesRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetProjectTemplatesRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetProjectTemplatesRequest;
+
+                /**
+                 * Creates a plain object from a GetProjectTemplatesRequest message. Also converts values to other types if specified.
+                 * @param message GetProjectTemplatesRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetProjectTemplatesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetProjectTemplatesRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an UpdateProjectTemplateRequest. */
+            interface IUpdateProjectTemplateRequest {
+
+                /** UpdateProjectTemplateRequest projectTemplateId */
+                projectTemplateId?: (string|null);
+
+                /** UpdateProjectTemplateRequest organizationId */
+                organizationId?: (string|null);
+
+                /** UpdateProjectTemplateRequest projectTemplate */
+                projectTemplate?: (colbylwilliams.teamcloud.v1.IProjectTemplate|null);
+            }
+
+            /** Represents an UpdateProjectTemplateRequest. */
+            class UpdateProjectTemplateRequest implements IUpdateProjectTemplateRequest {
+
+                /**
+                 * Constructs a new UpdateProjectTemplateRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUpdateProjectTemplateRequest);
+
+                /** UpdateProjectTemplateRequest projectTemplateId. */
+                public projectTemplateId: string;
+
+                /** UpdateProjectTemplateRequest organizationId. */
+                public organizationId: string;
+
+                /** UpdateProjectTemplateRequest projectTemplate. */
+                public projectTemplate?: (colbylwilliams.teamcloud.v1.IProjectTemplate|null);
+
+                /**
+                 * Verifies an UpdateProjectTemplateRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an UpdateProjectTemplateRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns UpdateProjectTemplateRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.UpdateProjectTemplateRequest;
+
+                /**
+                 * Creates a plain object from an UpdateProjectTemplateRequest message. Also converts values to other types if specified.
+                 * @param message UpdateProjectTemplateRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.UpdateProjectTemplateRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this UpdateProjectTemplateRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a ProjectUsersAPI */
+            class ProjectUsersAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new ProjectUsersAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls CreateProjectUser.
+                 * @param request CreateProjectUserRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and UserDataResult
+                 */
+                public createProjectUser(request: colbylwilliams.teamcloud.v1.ICreateProjectUserRequest, callback: colbylwilliams.teamcloud.v1.ProjectUsersAPI.CreateProjectUserCallback): void;
+
+                /**
+                 * Calls CreateProjectUser.
+                 * @param request CreateProjectUserRequest message or plain object
+                 * @returns Promise
+                 */
+                public createProjectUser(request: colbylwilliams.teamcloud.v1.ICreateProjectUserRequest): Promise<colbylwilliams.teamcloud.v1.UserDataResult>;
+
+                /**
+                 * Calls DeleteProjectUser.
+                 * @param request DeleteProjectUserRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StatusResult
+                 */
+                public deleteProjectUser(request: colbylwilliams.teamcloud.v1.IDeleteProjectUserRequest, callback: colbylwilliams.teamcloud.v1.ProjectUsersAPI.DeleteProjectUserCallback): void;
+
+                /**
+                 * Calls DeleteProjectUser.
+                 * @param request DeleteProjectUserRequest message or plain object
+                 * @returns Promise
+                 */
+                public deleteProjectUser(request: colbylwilliams.teamcloud.v1.IDeleteProjectUserRequest): Promise<colbylwilliams.teamcloud.v1.StatusResult>;
+
+                /**
+                 * Calls GetProjectUser.
+                 * @param request GetProjectUserRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and UserDataResult
+                 */
+                public getProjectUser(request: colbylwilliams.teamcloud.v1.IGetProjectUserRequest, callback: colbylwilliams.teamcloud.v1.ProjectUsersAPI.GetProjectUserCallback): void;
+
+                /**
+                 * Calls GetProjectUser.
+                 * @param request GetProjectUserRequest message or plain object
+                 * @returns Promise
+                 */
+                public getProjectUser(request: colbylwilliams.teamcloud.v1.IGetProjectUserRequest): Promise<colbylwilliams.teamcloud.v1.UserDataResult>;
+
+                /**
+                 * Calls GetProjectUserMe.
+                 * @param request GetProjectUserMeRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and UserDataResult
+                 */
+                public getProjectUserMe(request: colbylwilliams.teamcloud.v1.IGetProjectUserMeRequest, callback: colbylwilliams.teamcloud.v1.ProjectUsersAPI.GetProjectUserMeCallback): void;
+
+                /**
+                 * Calls GetProjectUserMe.
+                 * @param request GetProjectUserMeRequest message or plain object
+                 * @returns Promise
+                 */
+                public getProjectUserMe(request: colbylwilliams.teamcloud.v1.IGetProjectUserMeRequest): Promise<colbylwilliams.teamcloud.v1.UserDataResult>;
+
+                /**
+                 * Calls GetProjectUsers.
+                 * @param request GetProjectUsersRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and UserListDataResult
+                 */
+                public getProjectUsers(request: colbylwilliams.teamcloud.v1.IGetProjectUsersRequest, callback: colbylwilliams.teamcloud.v1.ProjectUsersAPI.GetProjectUsersCallback): void;
+
+                /**
+                 * Calls GetProjectUsers.
+                 * @param request GetProjectUsersRequest message or plain object
+                 * @returns Promise
+                 */
+                public getProjectUsers(request: colbylwilliams.teamcloud.v1.IGetProjectUsersRequest): Promise<colbylwilliams.teamcloud.v1.UserListDataResult>;
+
+                /**
+                 * Calls UpdateProjectUser.
+                 * @param request UpdateProjectUserRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and UserDataResult
+                 */
+                public updateProjectUser(request: colbylwilliams.teamcloud.v1.IUpdateProjectUserRequest, callback: colbylwilliams.teamcloud.v1.ProjectUsersAPI.UpdateProjectUserCallback): void;
+
+                /**
+                 * Calls UpdateProjectUser.
+                 * @param request UpdateProjectUserRequest message or plain object
+                 * @returns Promise
+                 */
+                public updateProjectUser(request: colbylwilliams.teamcloud.v1.IUpdateProjectUserRequest): Promise<colbylwilliams.teamcloud.v1.UserDataResult>;
+
+                /**
+                 * Calls UpdateProjectUserMe.
+                 * @param request UpdateProjectUserMeRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and UserDataResult
+                 */
+                public updateProjectUserMe(request: colbylwilliams.teamcloud.v1.IUpdateProjectUserMeRequest, callback: colbylwilliams.teamcloud.v1.ProjectUsersAPI.UpdateProjectUserMeCallback): void;
+
+                /**
+                 * Calls UpdateProjectUserMe.
+                 * @param request UpdateProjectUserMeRequest message or plain object
+                 * @returns Promise
+                 */
+                public updateProjectUserMe(request: colbylwilliams.teamcloud.v1.IUpdateProjectUserMeRequest): Promise<colbylwilliams.teamcloud.v1.UserDataResult>;
+            }
+
+            namespace ProjectUsersAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectUsersAPI#createProjectUser}.
+                 * @param error Error, if any
+                 * @param [response] UserDataResult
+                 */
+                type CreateProjectUserCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.UserDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectUsersAPI#deleteProjectUser}.
+                 * @param error Error, if any
+                 * @param [response] StatusResult
+                 */
+                type DeleteProjectUserCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StatusResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectUsersAPI#getProjectUser}.
+                 * @param error Error, if any
+                 * @param [response] UserDataResult
+                 */
+                type GetProjectUserCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.UserDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectUsersAPI#getProjectUserMe}.
+                 * @param error Error, if any
+                 * @param [response] UserDataResult
+                 */
+                type GetProjectUserMeCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.UserDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectUsersAPI#getProjectUsers}.
+                 * @param error Error, if any
+                 * @param [response] UserListDataResult
+                 */
+                type GetProjectUsersCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.UserListDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectUsersAPI#updateProjectUser}.
+                 * @param error Error, if any
+                 * @param [response] UserDataResult
+                 */
+                type UpdateProjectUserCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.UserDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ProjectUsersAPI#updateProjectUserMe}.
+                 * @param error Error, if any
+                 * @param [response] UserDataResult
+                 */
+                type UpdateProjectUserMeCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.UserDataResult) => void;
+            }
+
+            /** Properties of a CreateProjectUserRequest. */
+            interface ICreateProjectUserRequest {
+
+                /** CreateProjectUserRequest organizationId */
+                organizationId?: (string|null);
+
+                /** CreateProjectUserRequest projectId */
+                projectId?: (string|null);
+
+                /** CreateProjectUserRequest userDefinition */
+                userDefinition?: (colbylwilliams.teamcloud.v1.IUserDefinition|null);
+            }
+
+            /** Represents a CreateProjectUserRequest. */
+            class CreateProjectUserRequest implements ICreateProjectUserRequest {
+
+                /**
+                 * Constructs a new CreateProjectUserRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICreateProjectUserRequest);
+
+                /** CreateProjectUserRequest organizationId. */
+                public organizationId: string;
+
+                /** CreateProjectUserRequest projectId. */
+                public projectId: string;
+
+                /** CreateProjectUserRequest userDefinition. */
+                public userDefinition?: (colbylwilliams.teamcloud.v1.IUserDefinition|null);
+
+                /**
+                 * Verifies a CreateProjectUserRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CreateProjectUserRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CreateProjectUserRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CreateProjectUserRequest;
+
+                /**
+                 * Creates a plain object from a CreateProjectUserRequest message. Also converts values to other types if specified.
+                 * @param message CreateProjectUserRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CreateProjectUserRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CreateProjectUserRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a DeleteProjectUserRequest. */
+            interface IDeleteProjectUserRequest {
+
+                /** DeleteProjectUserRequest userId */
+                userId?: (string|null);
+
+                /** DeleteProjectUserRequest organizationId */
+                organizationId?: (string|null);
+
+                /** DeleteProjectUserRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a DeleteProjectUserRequest. */
+            class DeleteProjectUserRequest implements IDeleteProjectUserRequest {
+
+                /**
+                 * Constructs a new DeleteProjectUserRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IDeleteProjectUserRequest);
+
+                /** DeleteProjectUserRequest userId. */
+                public userId: string;
+
+                /** DeleteProjectUserRequest organizationId. */
+                public organizationId: string;
+
+                /** DeleteProjectUserRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a DeleteProjectUserRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a DeleteProjectUserRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns DeleteProjectUserRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.DeleteProjectUserRequest;
+
+                /**
+                 * Creates a plain object from a DeleteProjectUserRequest message. Also converts values to other types if specified.
+                 * @param message DeleteProjectUserRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.DeleteProjectUserRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this DeleteProjectUserRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetProjectUserRequest. */
+            interface IGetProjectUserRequest {
+
+                /** GetProjectUserRequest userId */
+                userId?: (string|null);
+
+                /** GetProjectUserRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetProjectUserRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a GetProjectUserRequest. */
+            class GetProjectUserRequest implements IGetProjectUserRequest {
+
+                /**
+                 * Constructs a new GetProjectUserRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetProjectUserRequest);
+
+                /** GetProjectUserRequest userId. */
+                public userId: string;
+
+                /** GetProjectUserRequest organizationId. */
+                public organizationId: string;
+
+                /** GetProjectUserRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a GetProjectUserRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetProjectUserRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetProjectUserRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetProjectUserRequest;
+
+                /**
+                 * Creates a plain object from a GetProjectUserRequest message. Also converts values to other types if specified.
+                 * @param message GetProjectUserRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetProjectUserRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetProjectUserRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetProjectUserMeRequest. */
+            interface IGetProjectUserMeRequest {
+
+                /** GetProjectUserMeRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetProjectUserMeRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a GetProjectUserMeRequest. */
+            class GetProjectUserMeRequest implements IGetProjectUserMeRequest {
+
+                /**
+                 * Constructs a new GetProjectUserMeRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetProjectUserMeRequest);
+
+                /** GetProjectUserMeRequest organizationId. */
+                public organizationId: string;
+
+                /** GetProjectUserMeRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a GetProjectUserMeRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetProjectUserMeRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetProjectUserMeRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetProjectUserMeRequest;
+
+                /**
+                 * Creates a plain object from a GetProjectUserMeRequest message. Also converts values to other types if specified.
+                 * @param message GetProjectUserMeRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetProjectUserMeRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetProjectUserMeRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetProjectUsersRequest. */
+            interface IGetProjectUsersRequest {
+
+                /** GetProjectUsersRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetProjectUsersRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a GetProjectUsersRequest. */
+            class GetProjectUsersRequest implements IGetProjectUsersRequest {
+
+                /**
+                 * Constructs a new GetProjectUsersRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetProjectUsersRequest);
+
+                /** GetProjectUsersRequest organizationId. */
+                public organizationId: string;
+
+                /** GetProjectUsersRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a GetProjectUsersRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetProjectUsersRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetProjectUsersRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetProjectUsersRequest;
+
+                /**
+                 * Creates a plain object from a GetProjectUsersRequest message. Also converts values to other types if specified.
+                 * @param message GetProjectUsersRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetProjectUsersRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetProjectUsersRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an UpdateProjectUserRequest. */
+            interface IUpdateProjectUserRequest {
+
+                /** UpdateProjectUserRequest userId */
+                userId?: (string|null);
+
+                /** UpdateProjectUserRequest organizationId */
+                organizationId?: (string|null);
+
+                /** UpdateProjectUserRequest projectId */
+                projectId?: (string|null);
+
+                /** UpdateProjectUserRequest user */
+                user?: (colbylwilliams.teamcloud.v1.IUser|null);
+            }
+
+            /** Represents an UpdateProjectUserRequest. */
+            class UpdateProjectUserRequest implements IUpdateProjectUserRequest {
+
+                /**
+                 * Constructs a new UpdateProjectUserRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUpdateProjectUserRequest);
+
+                /** UpdateProjectUserRequest userId. */
+                public userId: string;
+
+                /** UpdateProjectUserRequest organizationId. */
+                public organizationId: string;
+
+                /** UpdateProjectUserRequest projectId. */
+                public projectId: string;
+
+                /** UpdateProjectUserRequest user. */
+                public user?: (colbylwilliams.teamcloud.v1.IUser|null);
+
+                /**
+                 * Verifies an UpdateProjectUserRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an UpdateProjectUserRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns UpdateProjectUserRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.UpdateProjectUserRequest;
+
+                /**
+                 * Creates a plain object from an UpdateProjectUserRequest message. Also converts values to other types if specified.
+                 * @param message UpdateProjectUserRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.UpdateProjectUserRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this UpdateProjectUserRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an UpdateProjectUserMeRequest. */
+            interface IUpdateProjectUserMeRequest {
+
+                /** UpdateProjectUserMeRequest organizationId */
+                organizationId?: (string|null);
+
+                /** UpdateProjectUserMeRequest projectId */
+                projectId?: (string|null);
+
+                /** UpdateProjectUserMeRequest user */
+                user?: (colbylwilliams.teamcloud.v1.IUser|null);
+            }
+
+            /** Represents an UpdateProjectUserMeRequest. */
+            class UpdateProjectUserMeRequest implements IUpdateProjectUserMeRequest {
+
+                /**
+                 * Constructs a new UpdateProjectUserMeRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUpdateProjectUserMeRequest);
+
+                /** UpdateProjectUserMeRequest organizationId. */
+                public organizationId: string;
+
+                /** UpdateProjectUserMeRequest projectId. */
+                public projectId: string;
+
+                /** UpdateProjectUserMeRequest user. */
+                public user?: (colbylwilliams.teamcloud.v1.IUser|null);
+
+                /**
+                 * Verifies an UpdateProjectUserMeRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an UpdateProjectUserMeRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns UpdateProjectUserMeRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.UpdateProjectUserMeRequest;
+
+                /**
+                 * Creates a plain object from an UpdateProjectUserMeRequest message. Also converts values to other types if specified.
+                 * @param message UpdateProjectUserMeRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.UpdateProjectUserMeRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this UpdateProjectUserMeRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a RootAPI */
+            class RootAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new RootAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls GetInfo.
+                 * @param request Empty message or plain object
+                 * @param callback Node-style callback called with the error, if any, and TeamCloudInformationDataResult
+                 */
+                public getInfo(request: google.protobuf.IEmpty, callback: colbylwilliams.teamcloud.v1.RootAPI.GetInfoCallback): void;
+
+                /**
+                 * Calls GetInfo.
+                 * @param request Empty message or plain object
+                 * @returns Promise
+                 */
+                public getInfo(request: google.protobuf.IEmpty): Promise<colbylwilliams.teamcloud.v1.TeamCloudInformationDataResult>;
+            }
+
+            namespace RootAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.RootAPI#getInfo}.
+                 * @param error Error, if any
+                 * @param [response] TeamCloudInformationDataResult
+                 */
+                type GetInfoCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.TeamCloudInformationDataResult) => void;
+            }
+
+            /** Properties of a TeamCloudInformationDataResult. */
+            interface ITeamCloudInformationDataResult {
+
+                /** TeamCloudInformationDataResult code */
+                code?: (number|null);
+
+                /** TeamCloudInformationDataResult status */
+                status?: (string|null);
+
+                /** TeamCloudInformationDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.ITeamCloudInformation|null);
+
+                /** TeamCloudInformationDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a TeamCloudInformationDataResult. */
+            class TeamCloudInformationDataResult implements ITeamCloudInformationDataResult {
+
+                /**
+                 * Constructs a new TeamCloudInformationDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ITeamCloudInformationDataResult);
+
+                /** TeamCloudInformationDataResult code. */
+                public code: number;
+
+                /** TeamCloudInformationDataResult status. */
+                public status?: (string|null);
+
+                /** TeamCloudInformationDataResult data. */
+                public data?: (colbylwilliams.teamcloud.v1.ITeamCloudInformation|null);
+
+                /** TeamCloudInformationDataResult location. */
+                public location?: (string|null);
+
+                /** TeamCloudInformationDataResult _status. */
+                public _status?: "status";
+
+                /** TeamCloudInformationDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a TeamCloudInformationDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a TeamCloudInformationDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns TeamCloudInformationDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.TeamCloudInformationDataResult;
+
+                /**
+                 * Creates a plain object from a TeamCloudInformationDataResult message. Also converts values to other types if specified.
+                 * @param message TeamCloudInformationDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.TeamCloudInformationDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this TeamCloudInformationDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a TeamCloudInformation. */
+            interface ITeamCloudInformation {
+
+                /** TeamCloudInformation imageVersion */
+                imageVersion?: (string|null);
+
+                /** TeamCloudInformation templateVersion */
+                templateVersion?: (string|null);
+            }
+
+            /** Represents a TeamCloudInformation. */
+            class TeamCloudInformation implements ITeamCloudInformation {
+
+                /**
+                 * Constructs a new TeamCloudInformation.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ITeamCloudInformation);
+
+                /** TeamCloudInformation imageVersion. */
+                public imageVersion?: (string|null);
+
+                /** TeamCloudInformation templateVersion. */
+                public templateVersion?: (string|null);
+
+                /** TeamCloudInformation _imageVersion. */
+                public _imageVersion?: "imageVersion";
+
+                /** TeamCloudInformation _templateVersion. */
+                public _templateVersion?: "templateVersion";
+
+                /**
+                 * Verifies a TeamCloudInformation message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a TeamCloudInformation message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns TeamCloudInformation
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.TeamCloudInformation;
+
+                /**
+                 * Creates a plain object from a TeamCloudInformation message. Also converts values to other types if specified.
+                 * @param message TeamCloudInformation
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.TeamCloudInformation, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this TeamCloudInformation to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a ScheduleDataResult. */
+            interface IScheduleDataResult {
+
+                /** ScheduleDataResult code */
+                code?: (number|null);
+
+                /** ScheduleDataResult status */
+                status?: (string|null);
+
+                /** ScheduleDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.ISchedule|null);
+
+                /** ScheduleDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ScheduleDataResult. */
+            class ScheduleDataResult implements IScheduleDataResult {
+
+                /**
+                 * Constructs a new ScheduleDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IScheduleDataResult);
+
+                /** ScheduleDataResult code. */
+                public code: number;
+
+                /** ScheduleDataResult status. */
+                public status?: (string|null);
+
+                /** ScheduleDataResult data. */
+                public data?: (colbylwilliams.teamcloud.v1.ISchedule|null);
+
+                /** ScheduleDataResult location. */
+                public location?: (string|null);
+
+                /** ScheduleDataResult _status. */
+                public _status?: "status";
+
+                /** ScheduleDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ScheduleDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ScheduleDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ScheduleDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ScheduleDataResult;
+
+                /**
+                 * Creates a plain object from a ScheduleDataResult message. Also converts values to other types if specified.
+                 * @param message ScheduleDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ScheduleDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ScheduleDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a Schedule. */
+            interface ISchedule {
+
+                /** Schedule organization */
+                organization?: (string|null);
+
+                /** Schedule organizationName */
+                organizationName?: (string|null);
+
+                /** Schedule projectId */
+                projectId?: (string|null);
+
+                /** Schedule projectName */
+                projectName?: (string|null);
+
+                /** Schedule enabled */
+                enabled?: (boolean|null);
+
+                /** Schedule recurring */
+                recurring?: (boolean|null);
+
+                /** Schedule daysOfWeek */
+                daysOfWeek?: (colbylwilliams.teamcloud.v1.Schedule.DaysOfWeekEnum|null);
+
+                /** Schedule utcHour */
+                utcHour?: (number|null);
+
+                /** Schedule utcMinute */
+                utcMinute?: (number|null);
+
+                /** Schedule creator */
+                creator?: (string|null);
+
+                /** Schedule created */
+                created?: (string|null);
+
+                /** Schedule lastUpdatedBy */
+                lastUpdatedBy?: (string|null);
+
+                /** Schedule lastUpdated */
+                lastUpdated?: (string|null);
+
+                /** Schedule lastRun */
+                lastRun?: (string|null);
+
+                /** Schedule componentTasks */
+                componentTasks?: (colbylwilliams.teamcloud.v1.IComponentTaskReference[]|null);
+
+                /** Schedule id */
+                id?: (string|null);
+            }
+
+            /** Represents a Schedule. */
+            class Schedule implements ISchedule {
+
+                /**
+                 * Constructs a new Schedule.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ISchedule);
+
+                /** Schedule organization. */
+                public organization: string;
+
+                /** Schedule organizationName. */
+                public organizationName: string;
+
+                /** Schedule projectId. */
+                public projectId: string;
+
+                /** Schedule projectName. */
+                public projectName: string;
+
+                /** Schedule enabled. */
+                public enabled: boolean;
+
+                /** Schedule recurring. */
+                public recurring: boolean;
+
+                /** Schedule daysOfWeek. */
+                public daysOfWeek: colbylwilliams.teamcloud.v1.Schedule.DaysOfWeekEnum;
+
+                /** Schedule utcHour. */
+                public utcHour: number;
+
+                /** Schedule utcMinute. */
+                public utcMinute: number;
+
+                /** Schedule creator. */
+                public creator?: (string|null);
+
+                /** Schedule created. */
+                public created: string;
+
+                /** Schedule lastUpdatedBy. */
+                public lastUpdatedBy?: (string|null);
+
+                /** Schedule lastUpdated. */
+                public lastUpdated: string;
+
+                /** Schedule lastRun. */
+                public lastRun?: (string|null);
+
+                /** Schedule componentTasks. */
+                public componentTasks: colbylwilliams.teamcloud.v1.IComponentTaskReference[];
+
+                /** Schedule id. */
+                public id: string;
+
+                /** Schedule _creator. */
+                public _creator?: "creator";
+
+                /** Schedule _lastUpdatedBy. */
+                public _lastUpdatedBy?: "lastUpdatedBy";
+
+                /** Schedule _lastRun. */
+                public _lastRun?: "lastRun";
+
+                /**
+                 * Verifies a Schedule message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a Schedule message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns Schedule
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.Schedule;
+
+                /**
+                 * Creates a plain object from a Schedule message. Also converts values to other types if specified.
+                 * @param message Schedule
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.Schedule, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this Schedule to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace Schedule {
+
+                /** DaysOfWeekEnum enum. */
+                enum DaysOfWeekEnum {
+                    SUNDAY = 0,
+                    MONDAY = 1,
+                    TUESDAY = 2,
+                    WEDNESDAY = 3,
+                    THURSDAY = 4,
+                    FRIDAY = 5,
+                    SATURDAY = 6
+                }
+            }
+
+            /** Properties of a ScheduleDefinition. */
+            interface IScheduleDefinition {
+
+                /** ScheduleDefinition enabled */
+                enabled?: (boolean|null);
+
+                /** ScheduleDefinition recurring */
+                recurring?: (boolean|null);
+
+                /** ScheduleDefinition daysOfWeek */
+                daysOfWeek?: (colbylwilliams.teamcloud.v1.ScheduleDefinition.DaysOfWeekEnum|null);
+
+                /** ScheduleDefinition utcHour */
+                utcHour?: (number|null);
+
+                /** ScheduleDefinition utcMinute */
+                utcMinute?: (number|null);
+
+                /** ScheduleDefinition componentTasks */
+                componentTasks?: (colbylwilliams.teamcloud.v1.IComponentTaskReference[]|null);
+            }
+
+            /** Represents a ScheduleDefinition. */
+            class ScheduleDefinition implements IScheduleDefinition {
+
+                /**
+                 * Constructs a new ScheduleDefinition.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IScheduleDefinition);
+
+                /** ScheduleDefinition enabled. */
+                public enabled: boolean;
+
+                /** ScheduleDefinition recurring. */
+                public recurring: boolean;
+
+                /** ScheduleDefinition daysOfWeek. */
+                public daysOfWeek: colbylwilliams.teamcloud.v1.ScheduleDefinition.DaysOfWeekEnum;
+
+                /** ScheduleDefinition utcHour. */
+                public utcHour: number;
+
+                /** ScheduleDefinition utcMinute. */
+                public utcMinute: number;
+
+                /** ScheduleDefinition componentTasks. */
+                public componentTasks: colbylwilliams.teamcloud.v1.IComponentTaskReference[];
+
+                /**
+                 * Verifies a ScheduleDefinition message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ScheduleDefinition message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ScheduleDefinition
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ScheduleDefinition;
+
+                /**
+                 * Creates a plain object from a ScheduleDefinition message. Also converts values to other types if specified.
+                 * @param message ScheduleDefinition
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ScheduleDefinition, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ScheduleDefinition to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace ScheduleDefinition {
+
+                /** DaysOfWeekEnum enum. */
+                enum DaysOfWeekEnum {
+                    SUNDAY = 0,
+                    MONDAY = 1,
+                    TUESDAY = 2,
+                    WEDNESDAY = 3,
+                    THURSDAY = 4,
+                    FRIDAY = 5,
+                    SATURDAY = 6
+                }
+            }
+
+            /** Properties of a ScheduleListDataResult. */
+            interface IScheduleListDataResult {
+
+                /** ScheduleListDataResult code */
+                code?: (number|null);
+
+                /** ScheduleListDataResult status */
+                status?: (string|null);
+
+                /** ScheduleListDataResult data */
+                data?: (colbylwilliams.teamcloud.v1.ISchedule[]|null);
+
+                /** ScheduleListDataResult location */
+                location?: (string|null);
+            }
+
+            /** Represents a ScheduleListDataResult. */
+            class ScheduleListDataResult implements IScheduleListDataResult {
+
+                /**
+                 * Constructs a new ScheduleListDataResult.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IScheduleListDataResult);
+
+                /** ScheduleListDataResult code. */
+                public code: number;
+
+                /** ScheduleListDataResult status. */
+                public status?: (string|null);
+
+                /** ScheduleListDataResult data. */
+                public data: colbylwilliams.teamcloud.v1.ISchedule[];
+
+                /** ScheduleListDataResult location. */
+                public location?: (string|null);
+
+                /** ScheduleListDataResult _status. */
+                public _status?: "status";
+
+                /** ScheduleListDataResult _location. */
+                public _location?: "location";
+
+                /**
+                 * Verifies a ScheduleListDataResult message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a ScheduleListDataResult message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ScheduleListDataResult
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.ScheduleListDataResult;
+
+                /**
+                 * Creates a plain object from a ScheduleListDataResult message. Also converts values to other types if specified.
+                 * @param message ScheduleListDataResult
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.ScheduleListDataResult, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ScheduleListDataResult to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a ScheduleAPI */
+            class ScheduleAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new ScheduleAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls CreateSchedule.
+                 * @param request CreateScheduleRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ScheduleDataResult
+                 */
+                public createSchedule(request: colbylwilliams.teamcloud.v1.ICreateScheduleRequest, callback: colbylwilliams.teamcloud.v1.ScheduleAPI.CreateScheduleCallback): void;
+
+                /**
+                 * Calls CreateSchedule.
+                 * @param request CreateScheduleRequest message or plain object
+                 * @returns Promise
+                 */
+                public createSchedule(request: colbylwilliams.teamcloud.v1.ICreateScheduleRequest): Promise<colbylwilliams.teamcloud.v1.ScheduleDataResult>;
+
+                /**
+                 * Calls GetSchedule.
+                 * @param request GetScheduleRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ScheduleDataResult
+                 */
+                public getSchedule(request: colbylwilliams.teamcloud.v1.IGetScheduleRequest, callback: colbylwilliams.teamcloud.v1.ScheduleAPI.GetScheduleCallback): void;
+
+                /**
+                 * Calls GetSchedule.
+                 * @param request GetScheduleRequest message or plain object
+                 * @returns Promise
+                 */
+                public getSchedule(request: colbylwilliams.teamcloud.v1.IGetScheduleRequest): Promise<colbylwilliams.teamcloud.v1.ScheduleDataResult>;
+
+                /**
+                 * Calls GetSchedules.
+                 * @param request GetSchedulesRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ScheduleListDataResult
+                 */
+                public getSchedules(request: colbylwilliams.teamcloud.v1.IGetSchedulesRequest, callback: colbylwilliams.teamcloud.v1.ScheduleAPI.GetSchedulesCallback): void;
+
+                /**
+                 * Calls GetSchedules.
+                 * @param request GetSchedulesRequest message or plain object
+                 * @returns Promise
+                 */
+                public getSchedules(request: colbylwilliams.teamcloud.v1.IGetSchedulesRequest): Promise<colbylwilliams.teamcloud.v1.ScheduleListDataResult>;
+
+                /**
+                 * Calls RunSchedule.
+                 * @param request RunScheduleRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ScheduleDataResult
+                 */
+                public runSchedule(request: colbylwilliams.teamcloud.v1.IRunScheduleRequest, callback: colbylwilliams.teamcloud.v1.ScheduleAPI.RunScheduleCallback): void;
+
+                /**
+                 * Calls RunSchedule.
+                 * @param request RunScheduleRequest message or plain object
+                 * @returns Promise
+                 */
+                public runSchedule(request: colbylwilliams.teamcloud.v1.IRunScheduleRequest): Promise<colbylwilliams.teamcloud.v1.ScheduleDataResult>;
+
+                /**
+                 * Calls UpdateSchedule.
+                 * @param request UpdateScheduleRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ScheduleDataResult
+                 */
+                public updateSchedule(request: colbylwilliams.teamcloud.v1.IUpdateScheduleRequest, callback: colbylwilliams.teamcloud.v1.ScheduleAPI.UpdateScheduleCallback): void;
+
+                /**
+                 * Calls UpdateSchedule.
+                 * @param request UpdateScheduleRequest message or plain object
+                 * @returns Promise
+                 */
+                public updateSchedule(request: colbylwilliams.teamcloud.v1.IUpdateScheduleRequest): Promise<colbylwilliams.teamcloud.v1.ScheduleDataResult>;
+            }
+
+            namespace ScheduleAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ScheduleAPI#createSchedule}.
+                 * @param error Error, if any
+                 * @param [response] ScheduleDataResult
+                 */
+                type CreateScheduleCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ScheduleDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ScheduleAPI#getSchedule}.
+                 * @param error Error, if any
+                 * @param [response] ScheduleDataResult
+                 */
+                type GetScheduleCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ScheduleDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ScheduleAPI#getSchedules}.
+                 * @param error Error, if any
+                 * @param [response] ScheduleListDataResult
+                 */
+                type GetSchedulesCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ScheduleListDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ScheduleAPI#runSchedule}.
+                 * @param error Error, if any
+                 * @param [response] ScheduleDataResult
+                 */
+                type RunScheduleCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ScheduleDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.ScheduleAPI#updateSchedule}.
+                 * @param error Error, if any
+                 * @param [response] ScheduleDataResult
+                 */
+                type UpdateScheduleCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ScheduleDataResult) => void;
+            }
+
+            /** Properties of a CreateScheduleRequest. */
+            interface ICreateScheduleRequest {
+
+                /** CreateScheduleRequest organizationId */
+                organizationId?: (string|null);
+
+                /** CreateScheduleRequest projectId */
+                projectId?: (string|null);
+
+                /** CreateScheduleRequest scheduleDefinition */
+                scheduleDefinition?: (colbylwilliams.teamcloud.v1.IScheduleDefinition|null);
+            }
+
+            /** Represents a CreateScheduleRequest. */
+            class CreateScheduleRequest implements ICreateScheduleRequest {
+
+                /**
+                 * Constructs a new CreateScheduleRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ICreateScheduleRequest);
+
+                /** CreateScheduleRequest organizationId. */
+                public organizationId: string;
+
+                /** CreateScheduleRequest projectId. */
+                public projectId: string;
+
+                /** CreateScheduleRequest scheduleDefinition. */
+                public scheduleDefinition?: (colbylwilliams.teamcloud.v1.IScheduleDefinition|null);
+
+                /**
+                 * Verifies a CreateScheduleRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CreateScheduleRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CreateScheduleRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.CreateScheduleRequest;
+
+                /**
+                 * Creates a plain object from a CreateScheduleRequest message. Also converts values to other types if specified.
+                 * @param message CreateScheduleRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.CreateScheduleRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CreateScheduleRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetScheduleRequest. */
+            interface IGetScheduleRequest {
+
+                /** GetScheduleRequest scheduleId */
+                scheduleId?: (string|null);
+
+                /** GetScheduleRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetScheduleRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a GetScheduleRequest. */
+            class GetScheduleRequest implements IGetScheduleRequest {
+
+                /**
+                 * Constructs a new GetScheduleRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetScheduleRequest);
+
+                /** GetScheduleRequest scheduleId. */
+                public scheduleId: string;
+
+                /** GetScheduleRequest organizationId. */
+                public organizationId: string;
+
+                /** GetScheduleRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a GetScheduleRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetScheduleRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetScheduleRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetScheduleRequest;
+
+                /**
+                 * Creates a plain object from a GetScheduleRequest message. Also converts values to other types if specified.
+                 * @param message GetScheduleRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetScheduleRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetScheduleRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetSchedulesRequest. */
+            interface IGetSchedulesRequest {
+
+                /** GetSchedulesRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetSchedulesRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a GetSchedulesRequest. */
+            class GetSchedulesRequest implements IGetSchedulesRequest {
+
+                /**
+                 * Constructs a new GetSchedulesRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetSchedulesRequest);
+
+                /** GetSchedulesRequest organizationId. */
+                public organizationId: string;
+
+                /** GetSchedulesRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a GetSchedulesRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetSchedulesRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetSchedulesRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetSchedulesRequest;
+
+                /**
+                 * Creates a plain object from a GetSchedulesRequest message. Also converts values to other types if specified.
+                 * @param message GetSchedulesRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetSchedulesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetSchedulesRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a RunScheduleRequest. */
+            interface IRunScheduleRequest {
+
+                /** RunScheduleRequest scheduleId */
+                scheduleId?: (string|null);
+
+                /** RunScheduleRequest organizationId */
+                organizationId?: (string|null);
+
+                /** RunScheduleRequest projectId */
+                projectId?: (string|null);
+            }
+
+            /** Represents a RunScheduleRequest. */
+            class RunScheduleRequest implements IRunScheduleRequest {
+
+                /**
+                 * Constructs a new RunScheduleRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IRunScheduleRequest);
+
+                /** RunScheduleRequest scheduleId. */
+                public scheduleId: string;
+
+                /** RunScheduleRequest organizationId. */
+                public organizationId: string;
+
+                /** RunScheduleRequest projectId. */
+                public projectId: string;
+
+                /**
+                 * Verifies a RunScheduleRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a RunScheduleRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns RunScheduleRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.RunScheduleRequest;
+
+                /**
+                 * Creates a plain object from a RunScheduleRequest message. Also converts values to other types if specified.
+                 * @param message RunScheduleRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.RunScheduleRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this RunScheduleRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an UpdateScheduleRequest. */
+            interface IUpdateScheduleRequest {
+
+                /** UpdateScheduleRequest scheduleId */
+                scheduleId?: (string|null);
+
+                /** UpdateScheduleRequest organizationId */
+                organizationId?: (string|null);
+
+                /** UpdateScheduleRequest projectId */
+                projectId?: (string|null);
+
+                /** UpdateScheduleRequest schedule */
+                schedule?: (colbylwilliams.teamcloud.v1.ISchedule|null);
+            }
+
+            /** Represents an UpdateScheduleRequest. */
+            class UpdateScheduleRequest implements IUpdateScheduleRequest {
+
+                /**
+                 * Constructs a new UpdateScheduleRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IUpdateScheduleRequest);
+
+                /** UpdateScheduleRequest scheduleId. */
+                public scheduleId: string;
+
+                /** UpdateScheduleRequest organizationId. */
+                public organizationId: string;
+
+                /** UpdateScheduleRequest projectId. */
+                public projectId: string;
+
+                /** UpdateScheduleRequest schedule. */
+                public schedule?: (colbylwilliams.teamcloud.v1.ISchedule|null);
+
+                /**
+                 * Verifies an UpdateScheduleRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an UpdateScheduleRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns UpdateScheduleRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.UpdateScheduleRequest;
+
+                /**
+                 * Creates a plain object from an UpdateScheduleRequest message. Also converts values to other types if specified.
+                 * @param message UpdateScheduleRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.UpdateScheduleRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this UpdateScheduleRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a StatusAPI */
+            class StatusAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new StatusAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls GetProjectStatus.
+                 * @param request GetProjectStatusRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StatusResult
+                 */
+                public getProjectStatus(request: colbylwilliams.teamcloud.v1.IGetProjectStatusRequest, callback: colbylwilliams.teamcloud.v1.StatusAPI.GetProjectStatusCallback): void;
+
+                /**
+                 * Calls GetProjectStatus.
+                 * @param request GetProjectStatusRequest message or plain object
+                 * @returns Promise
+                 */
+                public getProjectStatus(request: colbylwilliams.teamcloud.v1.IGetProjectStatusRequest): Promise<colbylwilliams.teamcloud.v1.StatusResult>;
+
+                /**
+                 * Calls GetStatus.
+                 * @param request GetStatusRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and StatusResult
+                 */
+                public getStatus(request: colbylwilliams.teamcloud.v1.IGetStatusRequest, callback: colbylwilliams.teamcloud.v1.StatusAPI.GetStatusCallback): void;
+
+                /**
+                 * Calls GetStatus.
+                 * @param request GetStatusRequest message or plain object
+                 * @returns Promise
+                 */
+                public getStatus(request: colbylwilliams.teamcloud.v1.IGetStatusRequest): Promise<colbylwilliams.teamcloud.v1.StatusResult>;
+            }
+
+            namespace StatusAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.StatusAPI#getProjectStatus}.
+                 * @param error Error, if any
+                 * @param [response] StatusResult
+                 */
+                type GetProjectStatusCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StatusResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.StatusAPI#getStatus}.
+                 * @param error Error, if any
+                 * @param [response] StatusResult
+                 */
+                type GetStatusCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.StatusResult) => void;
+            }
+
+            /** Properties of a GetProjectStatusRequest. */
+            interface IGetProjectStatusRequest {
+
+                /** GetProjectStatusRequest projectId */
+                projectId?: (string|null);
+
+                /** GetProjectStatusRequest trackingId */
+                trackingId?: (string|null);
+
+                /** GetProjectStatusRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a GetProjectStatusRequest. */
+            class GetProjectStatusRequest implements IGetProjectStatusRequest {
+
+                /**
+                 * Constructs a new GetProjectStatusRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetProjectStatusRequest);
+
+                /** GetProjectStatusRequest projectId. */
+                public projectId: string;
+
+                /** GetProjectStatusRequest trackingId. */
+                public trackingId: string;
+
+                /** GetProjectStatusRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a GetProjectStatusRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetProjectStatusRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetProjectStatusRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetProjectStatusRequest;
+
+                /**
+                 * Creates a plain object from a GetProjectStatusRequest message. Also converts values to other types if specified.
+                 * @param message GetProjectStatusRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetProjectStatusRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetProjectStatusRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetStatusRequest. */
+            interface IGetStatusRequest {
+
+                /** GetStatusRequest trackingId */
+                trackingId?: (string|null);
+
+                /** GetStatusRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a GetStatusRequest. */
+            class GetStatusRequest implements IGetStatusRequest {
+
+                /**
+                 * Constructs a new GetStatusRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetStatusRequest);
+
+                /** GetStatusRequest trackingId. */
+                public trackingId: string;
+
+                /** GetStatusRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a GetStatusRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetStatusRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetStatusRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetStatusRequest;
+
+                /**
+                 * Creates a plain object from a GetStatusRequest message. Also converts values to other types if specified.
+                 * @param message GetStatusRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetStatusRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetStatusRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a TeamCloudAPI */
+            class TeamCloudAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new TeamCloudAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls GetTeamCloudInfo.
+                 * @param request GetTeamCloudInfoRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and GetTeamCloudInfoResponse
+                 */
+                public getTeamCloudInfo(request: colbylwilliams.teamcloud.v1.IGetTeamCloudInfoRequest, callback: colbylwilliams.teamcloud.v1.TeamCloudAPI.GetTeamCloudInfoCallback): void;
+
+                /**
+                 * Calls GetTeamCloudInfo.
+                 * @param request GetTeamCloudInfoRequest message or plain object
+                 * @returns Promise
+                 */
+                public getTeamCloudInfo(request: colbylwilliams.teamcloud.v1.IGetTeamCloudInfoRequest): Promise<colbylwilliams.teamcloud.v1.GetTeamCloudInfoResponse>;
+            }
+
+            namespace TeamCloudAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.TeamCloudAPI#getTeamCloudInfo}.
+                 * @param error Error, if any
+                 * @param [response] GetTeamCloudInfoResponse
+                 */
+                type GetTeamCloudInfoCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.GetTeamCloudInfoResponse) => void;
+            }
+
+            /** Properties of a GetTeamCloudInfoRequest. */
+            interface IGetTeamCloudInfoRequest {
+            }
+
+            /** Represents a GetTeamCloudInfoRequest. */
+            class GetTeamCloudInfoRequest implements IGetTeamCloudInfoRequest {
+
+                /**
+                 * Constructs a new GetTeamCloudInfoRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetTeamCloudInfoRequest);
+
+                /**
+                 * Verifies a GetTeamCloudInfoRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetTeamCloudInfoRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetTeamCloudInfoRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetTeamCloudInfoRequest;
+
+                /**
+                 * Creates a plain object from a GetTeamCloudInfoRequest message. Also converts values to other types if specified.
+                 * @param message GetTeamCloudInfoRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetTeamCloudInfoRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetTeamCloudInfoRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetTeamCloudInfoResponse. */
+            interface IGetTeamCloudInfoResponse {
+
+                /** GetTeamCloudInfoResponse code */
+                code?: (number|null);
+
+                /** GetTeamCloudInfoResponse status */
+                status?: (string|null);
+
+                /** GetTeamCloudInfoResponse data */
+                data?: (colbylwilliams.teamcloud.v1.ITeamCloudInfoData|null);
+            }
+
+            /** Represents a GetTeamCloudInfoResponse. */
+            class GetTeamCloudInfoResponse implements IGetTeamCloudInfoResponse {
+
+                /**
+                 * Constructs a new GetTeamCloudInfoResponse.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetTeamCloudInfoResponse);
+
+                /** GetTeamCloudInfoResponse code. */
+                public code: number;
+
+                /** GetTeamCloudInfoResponse status. */
+                public status: string;
+
+                /** GetTeamCloudInfoResponse data. */
+                public data?: (colbylwilliams.teamcloud.v1.ITeamCloudInfoData|null);
+
+                /**
+                 * Verifies a GetTeamCloudInfoResponse message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetTeamCloudInfoResponse message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetTeamCloudInfoResponse
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetTeamCloudInfoResponse;
+
+                /**
+                 * Creates a plain object from a GetTeamCloudInfoResponse message. Also converts values to other types if specified.
+                 * @param message GetTeamCloudInfoResponse
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetTeamCloudInfoResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetTeamCloudInfoResponse to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a TeamCloudInfoData. */
+            interface ITeamCloudInfoData {
+
+                /** TeamCloudInfoData imageVersion */
+                imageVersion?: (string|null);
+
+                /** TeamCloudInfoData templateVersion */
+                templateVersion?: (string|null);
+            }
+
+            /** Represents a TeamCloudInfoData. */
+            class TeamCloudInfoData implements ITeamCloudInfoData {
+
+                /**
+                 * Constructs a new TeamCloudInfoData.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.ITeamCloudInfoData);
+
+                /** TeamCloudInfoData imageVersion. */
+                public imageVersion: string;
+
+                /** TeamCloudInfoData templateVersion. */
+                public templateVersion: string;
+
+                /**
+                 * Verifies a TeamCloudInfoData message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a TeamCloudInfoData message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns TeamCloudInfoData
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.TeamCloudInfoData;
+
+                /**
+                 * Creates a plain object from a TeamCloudInfoData message. Also converts values to other types if specified.
+                 * @param message TeamCloudInfoData
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.TeamCloudInfoData, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this TeamCloudInfoData to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Represents a UserProjectsAPI */
+            class UserProjectsAPI extends $protobuf.rpc.Service {
+
+                /**
+                 * Constructs a new UserProjectsAPI service.
+                 * @param rpcImpl RPC implementation
+                 * @param [requestDelimited=false] Whether requests are length-delimited
+                 * @param [responseDelimited=false] Whether responses are length-delimited
+                 */
+                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                /**
+                 * Calls GetUserProjects.
+                 * @param request GetUserProjectsRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectListDataResult
+                 */
+                public getUserProjects(request: colbylwilliams.teamcloud.v1.IGetUserProjectsRequest, callback: colbylwilliams.teamcloud.v1.UserProjectsAPI.GetUserProjectsCallback): void;
+
+                /**
+                 * Calls GetUserProjects.
+                 * @param request GetUserProjectsRequest message or plain object
+                 * @returns Promise
+                 */
+                public getUserProjects(request: colbylwilliams.teamcloud.v1.IGetUserProjectsRequest): Promise<colbylwilliams.teamcloud.v1.ProjectListDataResult>;
+
+                /**
+                 * Calls GetUserProjectsMe.
+                 * @param request GetUserProjectsMeRequest message or plain object
+                 * @param callback Node-style callback called with the error, if any, and ProjectListDataResult
+                 */
+                public getUserProjectsMe(request: colbylwilliams.teamcloud.v1.IGetUserProjectsMeRequest, callback: colbylwilliams.teamcloud.v1.UserProjectsAPI.GetUserProjectsMeCallback): void;
+
+                /**
+                 * Calls GetUserProjectsMe.
+                 * @param request GetUserProjectsMeRequest message or plain object
+                 * @returns Promise
+                 */
+                public getUserProjectsMe(request: colbylwilliams.teamcloud.v1.IGetUserProjectsMeRequest): Promise<colbylwilliams.teamcloud.v1.ProjectListDataResult>;
+            }
+
+            namespace UserProjectsAPI {
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.UserProjectsAPI#getUserProjects}.
+                 * @param error Error, if any
+                 * @param [response] ProjectListDataResult
+                 */
+                type GetUserProjectsCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectListDataResult) => void;
+
+                /**
+                 * Callback as used by {@link colbylwilliams.teamcloud.v1.UserProjectsAPI#getUserProjectsMe}.
+                 * @param error Error, if any
+                 * @param [response] ProjectListDataResult
+                 */
+                type GetUserProjectsMeCallback = (error: (Error|null), response?: colbylwilliams.teamcloud.v1.ProjectListDataResult) => void;
+            }
+
+            /** Properties of a GetUserProjectsRequest. */
+            interface IGetUserProjectsRequest {
+
+                /** GetUserProjectsRequest organizationId */
+                organizationId?: (string|null);
+
+                /** GetUserProjectsRequest userId */
+                userId?: (string|null);
+            }
+
+            /** Represents a GetUserProjectsRequest. */
+            class GetUserProjectsRequest implements IGetUserProjectsRequest {
+
+                /**
+                 * Constructs a new GetUserProjectsRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetUserProjectsRequest);
+
+                /** GetUserProjectsRequest organizationId. */
+                public organizationId: string;
+
+                /** GetUserProjectsRequest userId. */
+                public userId: string;
+
+                /**
+                 * Verifies a GetUserProjectsRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetUserProjectsRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetUserProjectsRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetUserProjectsRequest;
+
+                /**
+                 * Creates a plain object from a GetUserProjectsRequest message. Also converts values to other types if specified.
+                 * @param message GetUserProjectsRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetUserProjectsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetUserProjectsRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a GetUserProjectsMeRequest. */
+            interface IGetUserProjectsMeRequest {
+
+                /** GetUserProjectsMeRequest organizationId */
+                organizationId?: (string|null);
+            }
+
+            /** Represents a GetUserProjectsMeRequest. */
+            class GetUserProjectsMeRequest implements IGetUserProjectsMeRequest {
+
+                /**
+                 * Constructs a new GetUserProjectsMeRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: colbylwilliams.teamcloud.v1.IGetUserProjectsMeRequest);
+
+                /** GetUserProjectsMeRequest organizationId. */
+                public organizationId: string;
+
+                /**
+                 * Verifies a GetUserProjectsMeRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a GetUserProjectsMeRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns GetUserProjectsMeRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): colbylwilliams.teamcloud.v1.GetUserProjectsMeRequest;
+
+                /**
+                 * Creates a plain object from a GetUserProjectsMeRequest message. Also converts values to other types if specified.
+                 * @param message GetUserProjectsMeRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: colbylwilliams.teamcloud.v1.GetUserProjectsMeRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this GetUserProjectsMeRequest to JSON.
                  * @returns JSON object
                  */
                 public toJSON(): { [k: string]: any };
@@ -2307,225 +13542,275 @@ export namespace validate {
     }
 }
 
-/** Namespace google. */
-export namespace google {
+/** Namespace clutch. */
+export namespace clutch {
 
     /** Namespace api. */
     namespace api {
 
-        /** Properties of a Http. */
-        interface IHttp {
+        /** Namespace v1. */
+        namespace v1 {
 
-            /** Http rules */
-            rules?: (google.api.IHttpRule[]|null);
+            /** ActionType enum. */
+            enum ActionType {
+                UNSPECIFIED = 0,
+                CREATE = 1,
+                READ = 2,
+                UPDATE = 3,
+                DELETE = 4
+            }
 
-            /** Http fullyDecodeReservedExpansion */
-            fullyDecodeReservedExpansion?: (boolean|null);
-        }
+            /** Properties of an Action. */
+            interface IAction {
 
-        /** Represents a Http. */
-        class Http implements IHttp {
+                /** Action type */
+                type?: (clutch.api.v1.ActionType|null);
+            }
 
-            /**
-             * Constructs a new Http.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: google.api.IHttp);
+            /** Represents an Action. */
+            class Action implements IAction {
 
-            /** Http rules. */
-            public rules: google.api.IHttpRule[];
+                /**
+                 * Constructs a new Action.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: clutch.api.v1.IAction);
 
-            /** Http fullyDecodeReservedExpansion. */
-            public fullyDecodeReservedExpansion: boolean;
+                /** Action type. */
+                public type: clutch.api.v1.ActionType;
 
-            /**
-             * Verifies a Http message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
+                /**
+                 * Verifies an Action message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
 
-            /**
-             * Creates a Http message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns Http
-             */
-            public static fromObject(object: { [k: string]: any }): google.api.Http;
+                /**
+                 * Creates an Action message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns Action
+                 */
+                public static fromObject(object: { [k: string]: any }): clutch.api.v1.Action;
 
-            /**
-             * Creates a plain object from a Http message. Also converts values to other types if specified.
-             * @param message Http
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: google.api.Http, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                /**
+                 * Creates a plain object from an Action message. Also converts values to other types if specified.
+                 * @param message Action
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: clutch.api.v1.Action, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
-            /**
-             * Converts this Http to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
+                /**
+                 * Converts this Action to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
 
-        /** Properties of a HttpRule. */
-        interface IHttpRule {
+            /** Properties of a Pattern. */
+            interface IPattern {
 
-            /** HttpRule selector */
-            selector?: (string|null);
+                /** Pattern typeUrl */
+                typeUrl?: (string|null);
 
-            /** HttpRule get */
-            get?: (string|null);
+                /** Pattern pattern */
+                pattern?: (string|null);
+            }
 
-            /** HttpRule put */
-            put?: (string|null);
+            /** Represents a Pattern. */
+            class Pattern implements IPattern {
 
-            /** HttpRule post */
-            post?: (string|null);
+                /**
+                 * Constructs a new Pattern.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: clutch.api.v1.IPattern);
 
-            /** HttpRule delete */
-            "delete"?: (string|null);
+                /** Pattern typeUrl. */
+                public typeUrl: string;
 
-            /** HttpRule patch */
-            patch?: (string|null);
+                /** Pattern pattern. */
+                public pattern: string;
 
-            /** HttpRule custom */
-            custom?: (google.api.ICustomHttpPattern|null);
+                /**
+                 * Verifies a Pattern message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
 
-            /** HttpRule body */
-            body?: (string|null);
+                /**
+                 * Creates a Pattern message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns Pattern
+                 */
+                public static fromObject(object: { [k: string]: any }): clutch.api.v1.Pattern;
 
-            /** HttpRule responseBody */
-            responseBody?: (string|null);
+                /**
+                 * Creates a plain object from a Pattern message. Also converts values to other types if specified.
+                 * @param message Pattern
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: clutch.api.v1.Pattern, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
-            /** HttpRule additionalBindings */
-            additionalBindings?: (google.api.IHttpRule[]|null);
-        }
+                /**
+                 * Converts this Pattern to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
 
-        /** Represents a HttpRule. */
-        class HttpRule implements IHttpRule {
+            /** Properties of an Identifier. */
+            interface IIdentifier {
 
-            /**
-             * Constructs a new HttpRule.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: google.api.IHttpRule);
+                /** Identifier patterns */
+                patterns?: (clutch.api.v1.IPattern[]|null);
+            }
 
-            /** HttpRule selector. */
-            public selector: string;
+            /** Represents an Identifier. */
+            class Identifier implements IIdentifier {
 
-            /** HttpRule get. */
-            public get?: (string|null);
+                /**
+                 * Constructs a new Identifier.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: clutch.api.v1.IIdentifier);
 
-            /** HttpRule put. */
-            public put?: (string|null);
+                /** Identifier patterns. */
+                public patterns: clutch.api.v1.IPattern[];
 
-            /** HttpRule post. */
-            public post?: (string|null);
+                /**
+                 * Verifies an Identifier message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
 
-            /** HttpRule delete. */
-            public delete?: (string|null);
+                /**
+                 * Creates an Identifier message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns Identifier
+                 */
+                public static fromObject(object: { [k: string]: any }): clutch.api.v1.Identifier;
 
-            /** HttpRule patch. */
-            public patch?: (string|null);
+                /**
+                 * Creates a plain object from an Identifier message. Also converts values to other types if specified.
+                 * @param message Identifier
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: clutch.api.v1.Identifier, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
-            /** HttpRule custom. */
-            public custom?: (google.api.ICustomHttpPattern|null);
+                /**
+                 * Converts this Identifier to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
 
-            /** HttpRule body. */
-            public body: string;
+            /** Properties of a Reference. */
+            interface IReference {
 
-            /** HttpRule responseBody. */
-            public responseBody: string;
+                /** Reference fields */
+                fields?: (string[]|null);
+            }
 
-            /** HttpRule additionalBindings. */
-            public additionalBindings: google.api.IHttpRule[];
+            /** Represents a Reference. */
+            class Reference implements IReference {
 
-            /** HttpRule pattern. */
-            public pattern?: ("get"|"put"|"post"|"delete"|"patch"|"custom");
+                /**
+                 * Constructs a new Reference.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: clutch.api.v1.IReference);
 
-            /**
-             * Verifies a HttpRule message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
+                /** Reference fields. */
+                public fields: string[];
 
-            /**
-             * Creates a HttpRule message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns HttpRule
-             */
-            public static fromObject(object: { [k: string]: any }): google.api.HttpRule;
+                /**
+                 * Verifies a Reference message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
 
-            /**
-             * Creates a plain object from a HttpRule message. Also converts values to other types if specified.
-             * @param message HttpRule
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: google.api.HttpRule, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                /**
+                 * Creates a Reference message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns Reference
+                 */
+                public static fromObject(object: { [k: string]: any }): clutch.api.v1.Reference;
 
-            /**
-             * Converts this HttpRule to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
+                /**
+                 * Creates a plain object from a Reference message. Also converts values to other types if specified.
+                 * @param message Reference
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: clutch.api.v1.Reference, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
-        /** Properties of a CustomHttpPattern. */
-        interface ICustomHttpPattern {
+                /**
+                 * Converts this Reference to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
 
-            /** CustomHttpPattern kind */
-            kind?: (string|null);
+            /** Properties of a Redacted. */
+            interface IRedacted {
 
-            /** CustomHttpPattern path */
-            path?: (string|null);
-        }
+                /** Redacted redactedTypeUrl */
+                redactedTypeUrl?: (string|null);
+            }
 
-        /** Represents a CustomHttpPattern. */
-        class CustomHttpPattern implements ICustomHttpPattern {
+            /** Represents a Redacted. */
+            class Redacted implements IRedacted {
 
-            /**
-             * Constructs a new CustomHttpPattern.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: google.api.ICustomHttpPattern);
+                /**
+                 * Constructs a new Redacted.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: clutch.api.v1.IRedacted);
 
-            /** CustomHttpPattern kind. */
-            public kind: string;
+                /** Redacted redactedTypeUrl. */
+                public redactedTypeUrl: string;
 
-            /** CustomHttpPattern path. */
-            public path: string;
+                /**
+                 * Verifies a Redacted message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
 
-            /**
-             * Verifies a CustomHttpPattern message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
+                /**
+                 * Creates a Redacted message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns Redacted
+                 */
+                public static fromObject(object: { [k: string]: any }): clutch.api.v1.Redacted;
 
-            /**
-             * Creates a CustomHttpPattern message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns CustomHttpPattern
-             */
-            public static fromObject(object: { [k: string]: any }): google.api.CustomHttpPattern;
+                /**
+                 * Creates a plain object from a Redacted message. Also converts values to other types if specified.
+                 * @param message Redacted
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: clutch.api.v1.Redacted, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
-            /**
-             * Creates a plain object from a CustomHttpPattern message. Also converts values to other types if specified.
-             * @param message CustomHttpPattern
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: google.api.CustomHttpPattern, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this CustomHttpPattern to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
+                /**
+                 * Converts this Redacted to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
         }
     }
+}
+
+/** Namespace google. */
+export namespace google {
 
     /** Namespace protobuf. */
     namespace protobuf {
@@ -4083,14 +15368,14 @@ export namespace google {
             /** MethodOptions uninterpretedOption */
             uninterpretedOption?: (google.protobuf.IUninterpretedOption[]|null);
 
-            /** MethodOptions .google.api.http */
-            ".google.api.http"?: (google.api.IHttpRule|null);
-
             /** MethodOptions .clutch.api.v1.action */
             ".clutch.api.v1.action"?: (clutch.api.v1.IAction|null);
 
             /** MethodOptions .clutch.api.v1.disableAudit */
             ".clutch.api.v1.disableAudit"?: (boolean|null);
+
+            /** MethodOptions .google.api.http */
+            ".google.api.http"?: (google.api.IHttpRule|null);
         }
 
         /** Represents a MethodOptions. */
@@ -4638,272 +15923,264 @@ export namespace google {
              */
             public toJSON(): { [k: string]: any };
         }
-    }
-}
 
-/** Namespace clutch. */
-export namespace clutch {
+        /** Properties of an Empty. */
+        interface IEmpty {
+        }
+
+        /** Represents an Empty. */
+        class Empty implements IEmpty {
+
+            /**
+             * Constructs a new Empty.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: google.protobuf.IEmpty);
+
+            /**
+             * Verifies an Empty message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an Empty message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Empty
+             */
+            public static fromObject(object: { [k: string]: any }): google.protobuf.Empty;
+
+            /**
+             * Creates a plain object from an Empty message. Also converts values to other types if specified.
+             * @param message Empty
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: google.protobuf.Empty, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Empty to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+    }
 
     /** Namespace api. */
     namespace api {
 
-        /** Namespace v1. */
-        namespace v1 {
+        /** Properties of a Http. */
+        interface IHttp {
 
-            /** ActionType enum. */
-            enum ActionType {
-                UNSPECIFIED = 0,
-                CREATE = 1,
-                READ = 2,
-                UPDATE = 3,
-                DELETE = 4
-            }
+            /** Http rules */
+            rules?: (google.api.IHttpRule[]|null);
 
-            /** Properties of an Action. */
-            interface IAction {
+            /** Http fullyDecodeReservedExpansion */
+            fullyDecodeReservedExpansion?: (boolean|null);
+        }
 
-                /** Action type */
-                type?: (clutch.api.v1.ActionType|null);
-            }
+        /** Represents a Http. */
+        class Http implements IHttp {
 
-            /** Represents an Action. */
-            class Action implements IAction {
+            /**
+             * Constructs a new Http.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: google.api.IHttp);
 
-                /**
-                 * Constructs a new Action.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: clutch.api.v1.IAction);
+            /** Http rules. */
+            public rules: google.api.IHttpRule[];
 
-                /** Action type. */
-                public type: clutch.api.v1.ActionType;
+            /** Http fullyDecodeReservedExpansion. */
+            public fullyDecodeReservedExpansion: boolean;
 
-                /**
-                 * Verifies an Action message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
+            /**
+             * Verifies a Http message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
 
-                /**
-                 * Creates an Action message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Action
-                 */
-                public static fromObject(object: { [k: string]: any }): clutch.api.v1.Action;
+            /**
+             * Creates a Http message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Http
+             */
+            public static fromObject(object: { [k: string]: any }): google.api.Http;
 
-                /**
-                 * Creates a plain object from an Action message. Also converts values to other types if specified.
-                 * @param message Action
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: clutch.api.v1.Action, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            /**
+             * Creates a plain object from a Http message. Also converts values to other types if specified.
+             * @param message Http
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: google.api.Http, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
-                /**
-                 * Converts this Action to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
+            /**
+             * Converts this Http to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
 
-            /** Properties of a Pattern. */
-            interface IPattern {
+        /** Properties of a HttpRule. */
+        interface IHttpRule {
 
-                /** Pattern typeUrl */
-                typeUrl?: (string|null);
+            /** HttpRule selector */
+            selector?: (string|null);
 
-                /** Pattern pattern */
-                pattern?: (string|null);
-            }
+            /** HttpRule get */
+            get?: (string|null);
 
-            /** Represents a Pattern. */
-            class Pattern implements IPattern {
+            /** HttpRule put */
+            put?: (string|null);
 
-                /**
-                 * Constructs a new Pattern.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: clutch.api.v1.IPattern);
+            /** HttpRule post */
+            post?: (string|null);
 
-                /** Pattern typeUrl. */
-                public typeUrl: string;
+            /** HttpRule delete */
+            "delete"?: (string|null);
 
-                /** Pattern pattern. */
-                public pattern: string;
+            /** HttpRule patch */
+            patch?: (string|null);
 
-                /**
-                 * Verifies a Pattern message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
+            /** HttpRule custom */
+            custom?: (google.api.ICustomHttpPattern|null);
 
-                /**
-                 * Creates a Pattern message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Pattern
-                 */
-                public static fromObject(object: { [k: string]: any }): clutch.api.v1.Pattern;
+            /** HttpRule body */
+            body?: (string|null);
 
-                /**
-                 * Creates a plain object from a Pattern message. Also converts values to other types if specified.
-                 * @param message Pattern
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: clutch.api.v1.Pattern, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            /** HttpRule responseBody */
+            responseBody?: (string|null);
 
-                /**
-                 * Converts this Pattern to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
+            /** HttpRule additionalBindings */
+            additionalBindings?: (google.api.IHttpRule[]|null);
+        }
 
-            /** Properties of an Identifier. */
-            interface IIdentifier {
+        /** Represents a HttpRule. */
+        class HttpRule implements IHttpRule {
 
-                /** Identifier patterns */
-                patterns?: (clutch.api.v1.IPattern[]|null);
-            }
+            /**
+             * Constructs a new HttpRule.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: google.api.IHttpRule);
 
-            /** Represents an Identifier. */
-            class Identifier implements IIdentifier {
+            /** HttpRule selector. */
+            public selector: string;
 
-                /**
-                 * Constructs a new Identifier.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: clutch.api.v1.IIdentifier);
+            /** HttpRule get. */
+            public get?: (string|null);
 
-                /** Identifier patterns. */
-                public patterns: clutch.api.v1.IPattern[];
+            /** HttpRule put. */
+            public put?: (string|null);
 
-                /**
-                 * Verifies an Identifier message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
+            /** HttpRule post. */
+            public post?: (string|null);
 
-                /**
-                 * Creates an Identifier message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Identifier
-                 */
-                public static fromObject(object: { [k: string]: any }): clutch.api.v1.Identifier;
+            /** HttpRule delete. */
+            public delete?: (string|null);
 
-                /**
-                 * Creates a plain object from an Identifier message. Also converts values to other types if specified.
-                 * @param message Identifier
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: clutch.api.v1.Identifier, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            /** HttpRule patch. */
+            public patch?: (string|null);
 
-                /**
-                 * Converts this Identifier to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
+            /** HttpRule custom. */
+            public custom?: (google.api.ICustomHttpPattern|null);
 
-            /** Properties of a Reference. */
-            interface IReference {
+            /** HttpRule body. */
+            public body: string;
 
-                /** Reference fields */
-                fields?: (string[]|null);
-            }
+            /** HttpRule responseBody. */
+            public responseBody: string;
 
-            /** Represents a Reference. */
-            class Reference implements IReference {
+            /** HttpRule additionalBindings. */
+            public additionalBindings: google.api.IHttpRule[];
 
-                /**
-                 * Constructs a new Reference.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: clutch.api.v1.IReference);
+            /** HttpRule pattern. */
+            public pattern?: ("get"|"put"|"post"|"delete"|"patch"|"custom");
 
-                /** Reference fields. */
-                public fields: string[];
+            /**
+             * Verifies a HttpRule message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
 
-                /**
-                 * Verifies a Reference message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
+            /**
+             * Creates a HttpRule message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns HttpRule
+             */
+            public static fromObject(object: { [k: string]: any }): google.api.HttpRule;
 
-                /**
-                 * Creates a Reference message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Reference
-                 */
-                public static fromObject(object: { [k: string]: any }): clutch.api.v1.Reference;
+            /**
+             * Creates a plain object from a HttpRule message. Also converts values to other types if specified.
+             * @param message HttpRule
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: google.api.HttpRule, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
-                /**
-                 * Creates a plain object from a Reference message. Also converts values to other types if specified.
-                 * @param message Reference
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: clutch.api.v1.Reference, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            /**
+             * Converts this HttpRule to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
 
-                /**
-                 * Converts this Reference to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
+        /** Properties of a CustomHttpPattern. */
+        interface ICustomHttpPattern {
 
-            /** Properties of a Redacted. */
-            interface IRedacted {
+            /** CustomHttpPattern kind */
+            kind?: (string|null);
 
-                /** Redacted redactedTypeUrl */
-                redactedTypeUrl?: (string|null);
-            }
+            /** CustomHttpPattern path */
+            path?: (string|null);
+        }
 
-            /** Represents a Redacted. */
-            class Redacted implements IRedacted {
+        /** Represents a CustomHttpPattern. */
+        class CustomHttpPattern implements ICustomHttpPattern {
 
-                /**
-                 * Constructs a new Redacted.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: clutch.api.v1.IRedacted);
+            /**
+             * Constructs a new CustomHttpPattern.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: google.api.ICustomHttpPattern);
 
-                /** Redacted redactedTypeUrl. */
-                public redactedTypeUrl: string;
+            /** CustomHttpPattern kind. */
+            public kind: string;
 
-                /**
-                 * Verifies a Redacted message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
+            /** CustomHttpPattern path. */
+            public path: string;
 
-                /**
-                 * Creates a Redacted message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Redacted
-                 */
-                public static fromObject(object: { [k: string]: any }): clutch.api.v1.Redacted;
+            /**
+             * Verifies a CustomHttpPattern message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
 
-                /**
-                 * Creates a plain object from a Redacted message. Also converts values to other types if specified.
-                 * @param message Redacted
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: clutch.api.v1.Redacted, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            /**
+             * Creates a CustomHttpPattern message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns CustomHttpPattern
+             */
+            public static fromObject(object: { [k: string]: any }): google.api.CustomHttpPattern;
 
-                /**
-                 * Converts this Redacted to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
+            /**
+             * Creates a plain object from a CustomHttpPattern message. Also converts values to other types if specified.
+             * @param message CustomHttpPattern
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: google.api.CustomHttpPattern, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this CustomHttpPattern to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
         }
     }
 }

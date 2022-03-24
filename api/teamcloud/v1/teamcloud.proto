@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package colbylwilliams.teamcloud.v1;
+
+option go_package = "github.com/colbylwilliams/clutch-teamcloud-gateway/backend/api/teamcloud/v1;teamcloudv1";
+
+import "google/api/annotations.proto";
+// import "validate/validate.proto";
+
+service TeamCloudAPI {
+  rpc GetTeamCloudInfo (GetTeamCloudInfoRequest) returns (GetTeamCloudInfoResponse) {
+    option (google.api.http) = {
+      post : "/v1/teamcloud/getTeamCloudInfo"
+      body : "*"
+    };
+  }
+}
+
+message GetTeamCloudInfoRequest {}
+
+message GetTeamCloudInfoResponse {
+  int32 code = 1;
+  string status = 2;
+  TeamCloudInfoData data = 3;
+}
+
+message TeamCloudInfoData {
+    string imageVersion = 1;
+    string templateVersion = 2;
+}

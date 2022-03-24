@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package colbylwilliams.config.service.teamcloud.v1;
+
+option go_package = "github.com/colbylwilliams/clutch-teamcloud-gateway/backend/api/config/service/teamcloud/v1;teamcloudv1";
+
+import "validate/validate.proto";
+
+message Config {
+    string host = 1 [ (validate.rules).string = {min_bytes : 1} ];
+    // string issuer = 1 [ (validate.rules).string = {min_bytes : 1} ];
+    string tenant_id = 2 [ (validate.rules).string = {min_bytes : 1} ];
+    string client_id = 3 [ (validate.rules).string = {min_bytes : 1} ];
+    // string scope = 4 [ (validate.rules).string = {min_bytes : 1} ];
+    // string client_secret = 4 [ (validate.rules).string = {min_bytes : 1} ];
+}

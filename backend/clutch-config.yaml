@@ -16,3 +16,12 @@ modules:
   - name: clutch.module.resolver
   - name: clutch.module.assets
   - name: colbylwilliams.module.echo
+  - name: colbylwilliams.module.teamcloud
+services:
+  - name: colbylwilliams.service.teamcloud
+    typed_config:
+      '@type': types.google.com/colbylwilliams.config.service.teamcloud.v1.Config
+      host: https://teamclouddemo-api.azurewebsites.net
+      tenant_id: ec509c4c-6b8f-4558-a7b7-030ff99b57e0 # ${MICROSOFT_TENANT_ID}
+      client_id: 02872803-6019-42c8-a691-2ac08cfdc539 # ${MICROSOFT_CLIENT_ID}
+
